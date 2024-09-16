@@ -1,6 +1,6 @@
 body {
-    font-family: "Noto Sans", sans-serif;
-
+    font-family: "Beiruti", sans-serif;
+    font-weight: 500;
 }
 
 @for $i from 1 through 300 {
@@ -81,12 +81,23 @@ a {
 
         li {
 
-            &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3),
             &:nth-child(4) {
-                border-inline-end: 1px solid #fff;
-                padding-inline-end: 1rem;
+
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 14px;
+                    background-color: #fff;
+                    right: -9px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                }
 
                 a {
                     transition: .3s all ease;
@@ -168,6 +179,7 @@ a {
     transition: .5s all ease;
     position: fixed;
     width: 100%;
+    z-index: 9999;
 
     .navbar-brand {
         margin: 0;
@@ -198,6 +210,7 @@ a {
                 padding: 0.8rem 1rem;
                 color: var(--main-color);
                 transition: .3s all ease;
+                font-size: 20px;
 
                 &:hover {
                     color: #fff;
@@ -261,6 +274,7 @@ a {
 
             .nav-link,
             .active-link {
+
                 &.active {
                     &::after {
                         content: "";
@@ -283,6 +297,10 @@ a {
                     }
                 }
             }
+
+            .nav-link {
+                font-size: 18px;
+            }
         }
 
         .dropdown-menu {
@@ -297,6 +315,7 @@ a {
                     padding: 0.8rem 1rem;
                     color: var(--main-color);
                     transition: .3s all ease;
+
 
                     &:hover {
                         color: #fff;
@@ -398,11 +417,12 @@ a {
     .overlay {
         position: absolute;
         z-index: 99;
+        top: 50%;
 
         .banner-title {
 
             font-weight: lighter;
-            font-size: 55px;
+            font-size: 53px;
 
             @media (max-width: 991px) {
                 font-size: 30px;
@@ -415,7 +435,7 @@ a {
 
         .banner-desc {
             font-size: 25px;
-            font-weight: 400;
+            font-weight: 500;
 
             @media (max-width: 991px) {
                 font-size: 18px;
@@ -484,18 +504,19 @@ a {
     }
 
     .right-layer {
-        top: 76%;
-        transform: rotate(180deg);
+        top: 80%;
 
-        @media screen and (max-width: 1600px) {
+
+
+        @media screen and (max-width: 1880px) {
             display: none;
         }
     }
 
     .left-layer {
         top: 10%;
-        z-index: -1;
-        transform: rotate(180deg);
+        opacity: .99;
+
 
         @media screen and (max-width: 1600px) {
             display: none;
@@ -516,12 +537,12 @@ a {
         .title {
             @media (min-width: 991px) {
                 font-size: 56px;
-                font-weight: 200;
+                font-weight: 400;
             }
         }
 
         .desc {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 500;
 
             @media screen and (max-width: 991px) {
@@ -534,6 +555,12 @@ a {
 // end our story styles
 // start offers
 .offers {
+    padding-top: 4em;
+
+    @media (min-width:1600px) {
+        padding-top: 14em;
+    }
+
     .offers-content {
         .title {
 
@@ -558,9 +585,9 @@ a {
 
     .offers-btn {
         padding: 15px 50px;
-        font-size: 18px;
+        font-size: 20px;
         border-radius: 10px;
-        letter-spacing: 4px;
+        font-weight: 600;
     }
 
     .offers-layer {
@@ -577,13 +604,22 @@ a {
     }
 
     .overlay {
-        transform: rotate(180deg);
-        top: 60%;
+        top: 75%;
 
         @media screen and (max-width: 1600px) {
             display: none;
         }
     }
+
+
+    .offers-img {
+        left: 3em;
+        top: 70%;
+        width: 32%;
+        transform: translateY(-50%);
+    }
+
+
 }
 
 
@@ -591,11 +627,17 @@ a {
 // start our products styles
 .our-products {
     .title {
+
+
         @media screen and (min-width: 991px) {
-            font-size: 56px;
-            font-weight: 200;
+            font-size: 50px;
+            font-weight: 400;
 
         }
+    }
+
+    .desc {
+        font-size: 22px;
     }
 
     .item {
@@ -607,7 +649,17 @@ a {
         }
 
         img {
-            width: 30%;
+            &:first-of-type {
+                width: 30%;
+            }
+
+        }
+
+        img {
+            &:last-of-type {
+                width: 60%;
+            }
+
         }
 
         h2 {
@@ -1107,5 +1159,40 @@ a {
         top: 40px;
         background-color: var(--secondary-color);
         border-radius: 4px;
+    }
+}
+
+// about page styles 
+.about-banner {
+
+
+    img {
+        height: 350px;
+        width: 100%;
+    }
+
+    .title {
+        color: #fff;
+        right: 11rem;
+        bottom: 80px;
+    }
+}
+
+.about-history {
+    .title {
+        color: var(--secondary-color);
+        font-size: 40px;
+        margin-bottom: 2.5rem;
+    }
+
+    .desc {
+        font-size: 19px;
+        font-weight: 500;
+        color: #53565a;
+    }
+
+    .overlay {
+        transform: rotate(0deg);
+        top: 40%;
     }
 }
