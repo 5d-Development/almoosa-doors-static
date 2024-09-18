@@ -1210,3 +1210,28 @@ a {
         top: 40%;
     }
 }
+
+// start career-1 page  style 
+.career-banner {
+    @media (max-width:1200px) {
+        img {
+            height: 300px;
+        }
+    }
+
+    .career-title {
+        top: 66%;
+        margin-inline-start: 4rem;
+
+    }
+}
+
+.who-we-are {
+    .container {
+        border-bottom: 1px solid var(--main-color);
+        font-size: 2.667em;
+
+
+    }
+
+}

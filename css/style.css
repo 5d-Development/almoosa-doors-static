@@ -2115,4 +2115,19 @@ a {
   top: 40%;
 }
 
+@media (max-width: 1200px) {
+  .career-banner img {
+    height: 300px;
+  }
+}
+.career-banner .career-title {
+  top: 66%;
+  margin-inline-start: 4rem;
+}
+
+.who-we-are .container {
+  border-bottom: 1px solid var(--main-color);
+  font-size: 2.667em;
+}
+
 /*# sourceMappingURL=style.css.map */
