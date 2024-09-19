@@ -183,7 +183,6 @@ a {
 
 // start navbar styles
 .navbar {
-    transition: all .8s ease-in-out;
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -358,7 +357,39 @@ a {
             }
         }
     }
-    
+
+    &.scrolled {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin-top: -150px;
+        background: #fff !important;
+
+        transition: .3s all ease-out;
+
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+        .navbar-nav {
+            .nav-link {
+                color: var(--main-color) !important;
+            }
+        }
+
+
+
+
+        &.awake {
+            margin-top: 0px;
+            transition: .3s all ease-out;
+        }
+
+        &.sleep {
+            transition: .3s all ease-out;
+        }
+
+
+    }
 }
 
 // end navbar styles

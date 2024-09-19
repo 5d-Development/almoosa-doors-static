@@ -1,24 +1,53 @@
-// navbar sticky logic
-window.addEventListener("scroll", function () {
-       let logo = document.getElementById("logo");
-    let bars = document.getElementById("bars");
-  var navbar = document.querySelector(".navbar");
-  if (window.scrollY >= 58) {
-      navbar.classList.add("fixed-top");
-      //    navbar.style.background = "#003ea5";
-              logo.src = "../images/home/navbar/colored-logo.svg";
-        bars.classList.remove("text-white");
-      navbar.classList.add("nav-bg-white-color");
 
+	// scrolled navbar 
+var scrollWindow = function () {
   
-  } else {
-    navbar.classList.remove("fixed-top");
-      navbar.style.background = "transparent";
-      navbar.classList.remove("nav-bg-white-color");
-              logo.src = "../images/home/navbar/logo.svg";
-          bars.classList.add("text-white");
-  }
-});
+    $(window).scroll(function () {
+               let logo = document.getElementById("logo");
+     let bars = document.getElementById("bars");
+   var navbar = document.querySelector(".navbar");
+			var $w = $(this),
+					st = $w.scrollTop(),
+					navbar = $('.ftco_navbar'),
+					sd = $('.js-scroll-wrap');
+
+			if (st > 150) {
+				if ( !navbar.hasClass('scrolled') ) {
+                    navbar.addClass('scrolled');	
+                  
+               document.getElementById("logo").src = "../images/home/navbar/colored-logo.svg";
+
+				}
+                
+			} 
+			if (st < 150) {
+				if ( navbar.hasClass('scrolled') ) {
+                    navbar.removeClass('scrolled sleep');
+                                   document.getElementById("logo").src = "../images/home/navbar/logo.svg";
+
+				}
+			} 
+			if ( st > 350 ) {
+				if ( !navbar.hasClass('awake') ) {
+					navbar.addClass('awake');	
+				}
+				
+				if(sd.length > 0) {
+					sd.addClass('sleep');
+				}
+			}
+			if ( st < 350 ) {
+				if ( navbar.hasClass('awake') ) {
+					navbar.removeClass('awake');
+					navbar.addClass('sleep');
+				}
+				if(sd.length > 0) {
+					sd.removeClass('sleep');
+				}
+			}
+		});
+	};
+	scrollWindow();
  
 // start our products logic
 $('.products-carousel').owlCarousel({
@@ -135,44 +164,4 @@ document.querySelectorAll('.dropdown-item').forEach(function(dropdownItem) {
 });
 
 
-	// scroll
-	var scrollWindow = function() {
-		$(window).scroll(function(){
-			var $w = $(this),
-					st = $w.scrollTop(),
-					navbar = $('.ftco_navbar'),
-					sd = $('.js-scroll-wrap');
-
-			if (st > 150) {
-				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
-				}
-			} 
-			if (st < 150) {
-				if ( navbar.hasClass('scrolled') ) {
-					navbar.removeClass('scrolled sleep');
-				}
-			} 
-			if ( st > 350 ) {
-				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
-				}
-				
-				if(sd.length > 0) {
-					sd.addClass('sleep');
-				}
-			}
-			if ( st < 350 ) {
-				if ( navbar.hasClass('awake') ) {
-					navbar.removeClass('awake');
-					navbar.addClass('sleep');
-				}
-				if(sd.length > 0) {
-					sd.removeClass('sleep');
-				}
-			}
-		});
-	};
-	scrollWindow();
-
-	
+ 
