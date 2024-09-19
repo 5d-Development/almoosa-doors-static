@@ -183,7 +183,7 @@ a {
 
 // start navbar styles
 .navbar {
-    transition: all .7s ease-in-out;
+    transition: all .8s ease-in-out;
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -759,7 +759,7 @@ a {
 // end offers
 // start our products styles
 .our-products {
-    padding: 150px 0;
+    padding: 150px 0 80px 0;
 
     @media (max-width:1400px) {
         padding: 48px 0;
@@ -1116,12 +1116,19 @@ a {
 // start companies
 .companies {
     .owl-carousel .owl-item img {
-        width: auto !important;
-        max-width: 100% !important;
+        max-width: 130px;
+
     }
 
     .owl-nav {
         display: none;
+    }
+
+    .owl-stage {
+        display: flex;
+        align-items: center;
+
+
     }
 }
 
