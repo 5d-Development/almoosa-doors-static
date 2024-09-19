@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY >= 58) {
       navbar.classList.add("fixed-top");
       //    navbar.style.background = "#003ea5";
-              logo.src = "../images/home/navbar/colored-logo.png";
+              logo.src = "../images/home/navbar/colored-logo.svg";
         bars.classList.remove("text-white");
       navbar.classList.add("nav-bg-white-color");
 
@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("fixed-top");
       navbar.style.background = "transparent";
       navbar.classList.remove("nav-bg-white-color");
-              logo.src = "../images/home/navbar/logo.png";
+              logo.src = "../images/home/navbar/logo.svg";
           bars.classList.add("text-white");
   }
 });

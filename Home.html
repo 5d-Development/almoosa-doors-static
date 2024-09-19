@@ -12,89 +12,98 @@
     <link rel="stylesheet" href="css/libraries/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/libraries/bootstrap.min.css">
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
- <!-- start top bar -->
- <div class="top-bar   py-2  bg-main-color">
-    <div class="container py-md-1 d-flex justify-content-center justify-content-lg-between flex-wrap gap-3 gap-lg-2">
-        <ul class="d-flex flex-row-reverse gap-4 align-items-center social">
+ <!-- start topbar  -->
+<div class="topbar bg-main-color  py-2">
+ <div class="container">
+  <div class="row align-items-center g-3">
+    <div class="col-lg-5">
+         <ul class="d-flex gap-4 align-items-center justify-content-center justify-content-lg-start    social"> 
             <li>
-                <a href="#">
-                    <i class="fa-brands fa-facebook-f fa-lg text-white"></i>
-                </a>
+              <a href="https://api.whatsapp.com/send?phone=15551234567">
+                <img src="images/home/topbar/whatsap.svg" alt="whatsapp">
+              </a>
             </li>
-            <li>
-                <a href="#">
-                  <i class="fa-brands fa-twitter fa-lg text-white"></i>
-                </a>
+                <li> 
+              <a href="#">
+                <img src="images/home/topbar/youtube.svg" alt="youtube">
+              </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-instagram fa-lg text-white"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-linkedin-in fa-lg text-white"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-youtube fa-lg text-white"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://api.whatsapp.com/send?phone=15551234567">
-                    <i class="fa-brands fa-whatsapp fa-lg text-white"></i>
-                </a>
-            </li>
-             
-        </ul>
-        <ul class="d-flex flex-row-reverse gap-lg-3 gap-2 align-items-center justify-content-center flex-wrap flex-md-nowrap nav-links">
-            <li>
-                <a href="tel:+44 20 7123 4567" class="text-white d-flex">
-           
-920017000                 
-    <img src="images/home/topbar/phone.svg" alt="phone" class="pe-2">
-                </a>
-            </li>
-             <li>
-                <a href="#" class="text-white">
- خدمة العملاء
-                </a>
-            </li>
-              <li >
-                <a href="#" class="text-white">
-               اتصل بنا
-                </a>
-            </li>
-             <li>
-                <a href="#" class="text-white">
-                 الوظائف
-                </a>
-            </li>
-            <li class="ms-xl-3">
-            <div class="dropdown">
-  <button class="btn d-flex align-items-center dropdown-toggle text-white" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" >
- <i class="fa-solid fa-chevron-down fa-xs ms-2"></i>
-    AR
-  </button>
-  <ul class="dropdown-menu lang-dropdown">
-    <li><a class="dropdown-item" href="#">EN</a></li>
-    <li><a class="dropdown-item" href="#">Ar</a></li>
 
-  </ul>
-</div>
+                 <li> 
+              <a href="#">
+               <i class="fa-brands fa-x-twitter text-white fa-lg twitter"></i>
+              </a>
             </li>
-        </ul>
+                <li> 
+              <a href="#">
+                <img src="images/home/topbar/instagram.svg" alt="instagram">
+              </a>
+            </li>
+               <li> 
+              <a href="#">
+                <img src="images/home/topbar/twitter.svg" alt="twitter">
+              </a>
+            </li>
+                <li> 
+              <a href="#">
+                <img src="images/home/topbar/facebook.svg" alt="facebook">
+              </a>
+            </li>
+          </ul>
     </div>
- </div>
-  <!-- end top bar -->
+        <div class="col-lg-7 ">
 
+       <div class="d-flex justify-content-center flex-wrap justify-content-lg-end  gap-sm-4 align-items-center">
+        <!-- language dropdown -->
+
+  <div class="dropdown">
+  <a class="btn text-white  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa-solid fa-chevron-down ms-2 cheveron"></i> AR 
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="#">AR</a></li>
+    <li><a class="dropdown-item" href="#">EN</a></li>
+   </ul>
+</div>
+         <ul class="d-flex topbar-links "> 
+          <li>
+            <a href="#" class="text-white">الوظائف</a>
+          </li>
+           <li>
+            <a href="#" class="text-white">اتصل بنا </a>
+          </li>
+            <li>
+            <a href="#" class="text-white"> خدمة العملاء   </a>
+          </li>
+         
+        </ul>
+        <div class="phone-link">
+         <a href="#" class="d-flexgap-sm-2 ">  
+            <span class="text-white">
+              920017000
+            </span>  
+            <img src="images/home/topbar/phone.svg" alt="phone">
+            </a>
+          
+        </div>
+       </div>
+  
+        </div>
+
+  </div>
+ </div>
+</div>
+
+ 
+ <!-- end topbar  -->
 <!-- start offcanvas -->
  <div class="offcanvas offcanvas-end py-4" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header justify-content-end">
@@ -154,10 +163,10 @@
  <!-- start banner -->
   <div class="home-banner  position-relative " id="home">
           <!-- start navbar -->
-<nav class="navbar navbar-expand-xl py-3 ">
+<nav class="navbar navbar-expand-xl py-3 " >
   <div class="container">
     <a class="navbar-brand" href="home.html">
-      <img src="images/home/navbar/logo.png" class="img-fluid" alt="logo" id="logo">
+      <img src="images/home/navbar/logo.svg"  alt="logo" id="logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
 <i class="fa-solid fa-bars text-white" id="bars"></i>
@@ -219,13 +228,15 @@
   </div>
 </nav>
 <!-- end navbar -->
- <img src="images/home/banner/banner.png" alt="banner" class="img-fluid banner-img">
- <div class="overlay  text-white position-absolute text-center   start-50 translate-middle "   data-aos="zoom-out-down"  data-aos-easing="linear"
-     data-aos-duration="1500">
-<h1 class="banner-title mb-3" data-aos="fade-up" data-aos-delay="100">مرحبا بكم في الموسى للابواب</h1>
-<p class="banner-desc"  data-aos="fade-up" data-aos-delay="300">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور</p>
- </div>
-<div class="position-absolute spinner-container end-50 d-flex flex-column gap-1">
+<div class="banner-container  position-relative ">
+ <img src="images/home/banner/banner.svg" class=" banner-img  " alt="banner-img">
+  <img src="images/home/banner/banner-layer.svg" class=" banner-layer  position-absolute top-0 start-0 end-0" alt="banner-img">
+    <img src="images/home/banner/left-layer.png"   class="position-absolute left-layer start-0">
+    <img src="images/home/banner/right-layer.png"   class="position-absolute right-layer end-0">
+    <div class="banner-content text-center   position-absolute   start-50 translate-middle-x">
+      <h3 class="title text-white pb-2">مرحبا بكم في الموسى للابواب</h3>
+      <p class="desc text-white">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور</p>
+    <div class="position-absolute spinner-container mt-3 end-50 d-flex flex-column gap-1">
     <a href="#home" class="text-center">
       <i class="fa-solid fa-chevron-up text-white pointer"></i>
     </a>
@@ -236,34 +247,35 @@
 
 
 </div>
-<img src="images/home/banner/right.png" alt="right-layer" class="img-fluid right-layer position-absolute end-0">
-<img src="images/home/banner/left-layer.png" alt="left-layer" class="img-fluid  left-layer position-absolute start-0">
+    </div>
 
-  </div>
+</div>
   <!-- end banner -->
 <!-- start our story  -->
-<div class="our-story text-center"  >
-     <div class="our-story-content m-auto">
-           <h2 class="title text-light-green pb-4" data-aos="fade-up" data-aos-delay="100">قصتنا </h2>
-           <p class="desc text-gray text-end" data-aos="fade-up" data-aos-delay="300">بدأت قصتنا من الباب الأول في أوائل الثمانينات عندما أردنا تغيير البوابة الخاصة بمنزلنا إلى بوابة ذكية تفتح بالر يموت، ولكننا لم نجد شركة تقدم البوابة في السعودية ومن هنا جاءت الفكرة بعد طلب أول باب وتركيبه وجدنا الفرصة والاحتياج في السوق المحلي لمنتجات مماثلة ساعدنا ذلك على النمو والتطور عبر البحث عن الأفضل والابتكار ومن فكرة وطموح إلى واقع ملموس خيار</p>
+<div class="our-story"  >
+    <div class="container">
+       <div class="our-story-content m-auto "> 
+           <h2 class="title text-light-green text-center mb-4" data-aos="fade-up" data-aos-delay="100">قصتنا </h2>
+           <p class="desc text-gray " data-aos="fade-up" data-aos-delay="300">بدأت قصتنا من الباب الأول في أوائل الثمانينات عندما أردنا تغيير البوابة الخاصة بمنزلنا إلى بوابة ذكية تفتح بالر يموت، ولكننا لم نجد شركة تقدم البوابة في السعودية ومن هنا جاءت الفكرة بعد طلب أول باب وتركيبه وجدنا الفرصة والاحتياج في السوق المحلي لمنتجات مماثلة ساعدنا ذلك على النمو والتطور عبر البحث عن الأفضل والابتكار ومن فكرة وطموح إلى واقع ملموس خيار</p>
  
      </div>
+    </div>
     </div>
 </div>
 <!-- end our story  -->
 <!-- start offers  -->
-<div class="offers  position-relative 5">
+ <div class="offers  position-relative 5">
     <div class="container ">
           <div class="row  px-0 m-0 align-items-center">
             
             
          <div class="col-lg-6">
-           <div class="offers-content text-light-green pe-xl-5">
+           <div class="offers-content text-light-green">
                 <h2 class="title text-center text-lg-end"  data-aos="fade-up" data-aos-delay="100">ما نقدمه</h2>
                 <p class="text-gray desc py-4"  data-aos="fade-up" data-aos-delay="200">نعمل في هذا المجال منذ عام 1984. نفتخر بأننا من الأوائل في المجال ونمتلك أكبر مصنع للأبواب في المملكة العر بية السعودية. بخبرة واسعة في تصنيع وتوريد الأبواب ذات الجودة العالية، نسعى من خلالها للنمو بالسوق المحلي والوصول للسوق العالمي توافقاً مع رؤية المملكة </p>
                 <p  class="text-gray desc mb-4"  data-aos="fade-up" data-aos-delay="400">نعتبر الجودة والموثوقية هما قيمتين أساسيتين في عملنا. نحرص على تقديم منتجات عالية الجودة ومتينة، مع مراعاة أحدث التقنيات والمعايير العالمية</p>
 <div class="d-flex justify-content-end">
-                  <a href="#" class="btn text-blue offers-btn fw-bold bg-secondary-color"  data-aos="fade-up" data-aos-delay="500">اكتشف المزيد</a>
+                  <a href="#" class="btn text-blue offers-btn fw-bold " >اكتشف المزيد</a>
 
 </div>
               </div>  
@@ -280,15 +292,11 @@
         <img src="./images/home/offers/overlay.png" class="overlay position-absolute end-0 " alt="overlay">
 
     </div>
- 
-
- 
- 
 
 <!-- end offers  -->
 <!-- start our products  -->
-<div class="our-products py-lg-5">
-<div class=" m-lg-5 py-5">
+ <div class="our-products ">
+<div class="container">
   <div class="container">
             <h1 class="text-light-green title  text-center text-lg-end " data-aos="fade-up" data-aos-delay="100">حول منتجاتنا</h1>
             <p class="py-4 text-gray desc" data-aos="fade-up" data-aos-delay="200">منتجاتنا مصممة بدقة ومصنوعة بأقصى عناية لتلبية أعلى معايير الجودة والوظائف، نقدم مجموعة واسعة من المنتجات المبتكرة والموثوقة التي تلبي متطلبات مختلف الصناعات والاحتياجات</p>
@@ -374,10 +382,10 @@
    
 </div>
 </div>
-</div>
+</div> 
 <!-- end our products  -->
 <!-- start our news -->
- <div class="our-news ">
+  <!-- <div class="our-news ">
    <div class="d-flex justify-content-between new-container">
     <div class="digital "  data-aos="fade-left" data-aos-delay="100">
          <img src="images/home/news/digital.png" class="d-none d-lg-block" alt="digital">
@@ -401,11 +409,11 @@
     </div>
    </div>
 
- </div>
+ </div>  -->
 <!-- end our news -->
  <!-- start  companies -->
-<div class="companies py-md-5 mt-md-5">
-    <div class="container">
+ <div class="companies py-md-5 mt-md-5">
+    
       <div class="owl-carousel companies-carousel owl-theme">
       <div class="d-flex justify-content-center"  data-aos="fade-up" data-aos-delay="100">
       <img src="./images/home/companies/img1.png" alt="company1" >
@@ -426,22 +434,21 @@
       <img src="./images/home/companies/img6.png" alt="company6" >
    </div>
    </div>
-         
-    </div>
-</div>
+
+</div> 
   <!-- end  companies -->
    <!-- start footer -->
-<div class="footer   ">
+<div class="footer  ">
   <div class="container">
-<div class="row g-3 align-items-start">
-  <div class="col-md-2 h-100 offset-md-1">
- <div class="d-flex flex-column justify-content-between h-100">
+<div class="row">
+  <div class="col-md-12  col-xl-2">
+ <div class="d-flex flex-column justify-content-between h-100 pb-4 pb-lg-0">
 <div>
-     <a href="Home.html">  <img src="./images/home/footer/logo.png " class="log" alt="logo"></a>
+     <a href="Home.html">  <img src="./images/home/footer/logo.svg " style="width: 160px;" class="log" alt="logo"></a>
 
 </div>
-  <div class="pt-2 mt-2 pt-lg-5 mt-lg-5">
-      <h4 class="font-22 text-blue fw-bold pb-3">FOLLOW US</h4>
+  <div class="pt-2 mt-2 pt-xl-5 mt-xl-5">
+      <h4 class="follow-title text-blue fw-bold pb-3">تابعونا</h4>
       <ul class="d-flex gap-lg-3 gap-2 social">
         <li>
           <a href="#">
@@ -474,9 +481,9 @@
  </div>
   </div>
 
-  <div class="col-sm-10 col-lg-5 ">
-      <div class="row   g-4 d-flex justify-content-between">
-          <div class="col col-6 col-sm-4 pt-3 pt-sm-0">
+  <div class="col-md-12  col-xl-7 ">
+      <div class="row   g-4 d-flex justify-content-between py-4 py-xl-0">
+          <div class="col-6 col-md-3 ">
               <ul class="pages-links d-flex flex-column gap-2">
                   <li>
                       <a href="#">الرئيسية</a>
@@ -498,7 +505,7 @@
                   </li>
               </ul>
           </div>
-          <div class="col col-6 col-sm-4 pt-3 pt-sm-0">
+          <div class="col-6 col-md-3  ">
               <ul class="pages-links d-flex flex-column gap-2">
                   <li>
                       <a href="#">منتجاتنا</a>
@@ -520,7 +527,7 @@
                   </li>
               </ul>
           </div>
-          <div class="col col-6 col-sm-4 pt-3 pt-sm-0">
+          <div class="col-6 col-md-3  ">
               <ul class="pages-links d-flex flex-column gap-2">
                   <li>
                       <a href="#">نبذة عنا</a>
@@ -536,7 +543,7 @@
                   </li>
               </ul>
           </div>
-          <div class="col col-6 col-sm-4 pt-3 pt-sm-0">
+          <div class="col-6 col-md-3  ">
               <ul class="pages-links d-flex flex-column gap-2">
                   <li>
                       <a href="#">المشروعات الجديدة</a>
@@ -555,16 +562,18 @@
                   </li>
               </ul>
           </div>
+  
       </div>
   </div>
-  <div class="col-md-4 py-3 py-md-0">
-      <h3 class="font-28 text-blue fw-bold pb-2">تواصل معانا</h3>
+          <div class="col-md-12 col-xl-3">
+      <h3 class="contact-us text-blue fw-bold pb-2">تواصل معانا</h3>
       <p class="text-blue mb-3 desc">المملكة العربية السعودية-مدينة الاحساء-شارع الثريات-برج الملحم-ص ب10070</p>
       <p class="text-blue desc mb-4">رقم الوحدة12-رقم المبنى (وسط المدينة)6369-المبرز2069-الرمز البريدي36341-رقم اضافي2096-العنوان</p>
-      <a href="tel:920017000" class="d-flex align-items-center gap-2 contact" />
+      <a href="tel:920017000" class="d-flex justify-content-end align-items-center gap-2 contact" >
 
       <h4 class=" font-20 number">920017000</h4>
-      <img src="./images/home/footer/phone.png" alt="phone" class="img-fluid phone">
+      <img src="./images/home/footer/phone.svg" alt="phone" class="img-fluid phone">
+      </a>
   </div>
   </div>
 </div>
@@ -574,33 +583,33 @@
   <div class="copyright bg-main-color py-3">
     <div class="container ">
    <div class="d-flex justify-content-between copyright-content">
-       <p class="text-white text-center text-md-start">Copyright © 2022 Almousa Doors. All Rights Reserved</p>
+       <p class="text-white text-center text-md-start">جميع الحقوق محفوظة لدى الموسى للأبواب  ٢٠٢٤©</p>
    
   
           <ul class="d-flex flex-column flex-md-row  align-items-center  gap-4 links ">
             <li>
               <a href="#" >
-             Privacy  Policy 
+           سياسة الخصوصية 
               </a>
               </li>
               <li>
               <a href="#" >
-             Terms & Conditions
+           الاحكام والشروط
               </a>
               </li>
               <li>
               <a href="#" >
-             About Almousa
+            نبذة عنا
               </a>
               </li>
                 <li>
               <a href="#" >
-          Careers
+          الوظائف
               </a>
               </li>
               <li>
               <a href="#" >
-          Site  Map
+      الموقع
               </a>
               </li>
 
