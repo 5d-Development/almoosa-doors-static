@@ -51,6 +51,10 @@ a {
     background-color: var(--main-color);
 }
 
+.bg-blue-opacity {
+    background-color: #003DA580;
+}
+
 .bg-secondary-color {
     background-color: var(--secondary-color);
 }
@@ -450,131 +454,7 @@ a {
 }
 
 // end offcanvas styles
-// start banner styles
-// .home-banner {
-
-//     @media (max-width: 768px) {
-//         max-height: 60vh;
-//     }
-
-//     .banner-img {
-//         height: 90vh;
-//         width: 100vw;
-
-//         @media (max-width: 768px) {
-//             max-height: 60vh;
-//         }
-//     }
-
-//     .overlay {
-//         position: absolute;
-//         z-index: 99;
-//         top: 50%;
-
-//         .banner-title {
-
-//             font-weight: lighter;
-//             font-size: 53px;
-
-//             @media (max-width: 991px) {
-//                 font-size: 30px;
-//             }
-
-//             @media (max-width:576px) {
-//                 font-size: 21px;
-//             }
-//         }
-
-//         .banner-desc {
-//             font-size: 25px;
-//             font-weight: 500;
-
-//             @media (max-width: 991px) {
-//                 font-size: 18px;
-//             }
-
-//             @media (max-width: 576px) {
-//                 font-size: 15px;
-//             }
-
-
-//         }
-
-//         @media (max-width: 768px) {
-//             width: 100%;
-//         }
-//     }
-
-
-//     .spinner-container {
-
-//         bottom: 6rem;
-
-//         @media screen and (max-width: 768px) {
-//             bottom: 3rem;
-
-//         }
-
-//         @media screen and (max-width: 576px) {
-//             bottom: 2rem;
-
-//         }
-
-//         .spinner {
-
-//             border: 3px solid #fff;
-//             width: 30px;
-//             height: 50px;
-//             border-radius: 30px;
-
-//             .line {
-//                 width: 3px;
-//                 height: 8px;
-//                 background-color: #fff;
-//                 bottom: 10px;
-//                 animation-name: move;
-//                 animation-duration: 2s;
-//                 animation-iteration-count: infinite;
-
-//             }
-//         }
-//     }
-
-//     @keyframes move {
-//         0% {
-//             bottom: 10px;
-//         }
-
-//         50% {
-//             bottom: 30px;
-//         }
-
-//         100% {
-//             bottom: 10px;
-//         }
-
-//     }
-
-//     .right-layer {
-//         top: 80%;
-
-
-
-//         @media screen and (max-width: 1880px) {
-//             display: none;
-//         }
-//     }
-
-//     .left-layer {
-//         top: 10%;
-//         opacity: .99;
-
-
-//         @media screen and (max-width: 1600px) {
-//             display: none;
-//         }
-//     }
-// }
+//  start banner style
 
 .home-banner {
     .banner-container {
@@ -1425,26 +1305,91 @@ a {
 }
 
 // start career-1 page  style 
-.career-banner {
-    @media (max-width:1200px) {
-        img {
-            height: 300px;
-        }
+.careers-banner {
+
+    img {
+        width: 100%;
+        min-height: 350px;
     }
 
-    .career-title {
-        top: 66%;
-        margin-inline-start: 4rem;
-
+    .title {
+        bottom: 1.8em;
+        font-size: 2.8rem;
+        font-weight: bold;
     }
+
 }
 
 .who-we-are {
     .container {
         border-bottom: 1px solid var(--main-color);
-        font-size: 2.667em;
+
+        .desc {
+            font-size: 1.8rem;
+            text-align: justify;
+        }
 
 
     }
 
+}
+
+.available-jobs {
+    .job-type {
+        .title {
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+
+        .desc {
+            font-size: 1.7rem;
+        }
+
+        .job-details {
+            border-bottom: 1px solid #53565A;
+        }
+
+        .salary {
+            border-inline-end: 2px solid #53565A;
+            font-size: 1.7rem;
+            color: #53565A;
+        }
+
+        p {
+            font-size: 1.7rem;
+            color: #53565A;
+        }
+
+        button {
+            padding: 0px 3.125rem;
+            font-size: 1.375rem;
+            border-radius: 100px;
+        }
+    }
+
+    .pagination {
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+
+            @media (max-width:575px) {
+                width: 40px;
+                height: 40px;
+                ;
+            }
+        }
+
+        .arrow-right {
+            transform: rotate(180deg);
+
+            cursor: pointer;
+            font-size: 90px;
+
+
+        }
+
+   
+    }
 }
