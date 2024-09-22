@@ -1302,11 +1302,15 @@ a {
 .topbar .phone-link span {
   font-size: 1.188rem;
   font-weight: bold;
+  transition: 0.2s all ease;
 }
 @media (max-width: 575px) {
   .topbar .phone-link span {
     font-size: 1.063rem;
   }
+}
+.topbar .phone-link span:hover {
+  color: var(--secondary-color) !important;
 }
 .topbar .dropdown-menu {
   z-index: 999999999 !important;
@@ -1621,6 +1625,10 @@ a {
     bottom: 10px;
   }
 }
+.home-banner .banner-container .opacity-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+}
 
 .our-story .our-story-content {
   width: 80%;
@@ -1896,6 +1904,10 @@ a {
   font-size: 1.3em;
   border-radius: 10px;
   font-weight: bold;
+  transition: 0.3s all ease;
+}
+.our-news .news-container .news-content .btn:hover {
+  background-color: #fff;
 }
 @media (max-width: 1400px) {
   .our-news .news-container .news-content .btn {
@@ -1920,7 +1932,7 @@ a {
 }
 .footer .contact .number {
   color: var(--main-color);
-  font-size: 1.5rem;
+  font-size: 2.1rem;
   font-weight: bold;
 }
 .footer .contact .number:hover {
@@ -2235,6 +2247,10 @@ a {
   font-size: 1.375rem;
   border-radius: 100px;
 }
+.available-jobs .job-type .btn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
 .available-jobs .pagination button {
   width: 50px;
   height: 50px;
@@ -2249,7 +2265,10 @@ a {
 }
 
 .job-description .job-title {
-  font-size: 2.5em;
+  font-size: 2.2em;
+}
+.job-description .desc-title {
+  font-size: 1.7em;
 }
 .job-description .desc {
   font-size: 1.5em;
@@ -2257,7 +2276,7 @@ a {
 }
 
 .job-application-form .title {
-  font-size: 2.5em;
+  font-size: 2.2em;
   border-bottom: 1px solid var(--main-color);
   display: inline-block;
 }
@@ -2265,15 +2284,20 @@ a {
   border: 0;
   border-radius: 0;
   border-bottom: 2px solid rgba(2, 79, 164, 0.7);
-}
-.job-application-form .form-control::-webkit-input-placeholder {
   color: rgba(2, 79, 164, 0.7);
-  font-size: 1.5em;
   font-weight: bold;
+}
+.job-application-form .form-control::placeholder {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.job-application-form .form-control:focus {
+  box-shadow: none;
 }
 .job-application-form .form-select {
   color: rgba(2, 79, 164, 0.7);
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   background-position: left 0.75rem center;
   padding: 0rem 0.7rem 0rem 0rem;
@@ -2297,7 +2321,6 @@ a {
   top: 0;
   left: 0;
   opacity: 0;
-  cursor: pointer;
 }
 .job-application-form .file-label {
   padding: 0rem 0.7rem 0rem 0.5rem;
@@ -2308,7 +2331,7 @@ a {
 }
 .job-application-form .file-placeholder {
   color: rgba(2, 79, 164, 0.7);
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 .job-application-form button[type=submit] {

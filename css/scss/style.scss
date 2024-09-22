@@ -126,12 +126,19 @@ a {
         span {
             font-size: 1.188rem;
             font-weight: bold;
+            transition: .2s all ease;
 
             @media (max-width:575px) {
                 font-size: 1.063rem;
                 ;
             }
+
+            &:hover {
+                color: var(--secondary-color) !important
+            }
         }
+
+
     }
 
     .dropdown-menu {
@@ -579,6 +586,11 @@ a {
 
         }
 
+        .opacity-overlay {
+            background-color: rgba(0, 0, 0, .4);
+            clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+
+        }
     }
 
 }
@@ -918,6 +930,11 @@ a {
                 font-size: 1.3em;
                 border-radius: 10px;
                 font-weight: bold;
+                transition: .3s all ease;
+
+                &:hover {
+                    background-color: #fff;
+                }
 
                 @media (max-width:1400px) {
 
@@ -954,7 +971,7 @@ a {
     .contact {
         .number {
             color: var(--main-color);
-            font-size: 1.5rem;
+            font-size: 2.1rem;
             font-weight: bold;
 
             &:hover {
@@ -1386,6 +1403,11 @@ a {
             padding: 0px 3.125rem;
             font-size: 1.375rem;
             border-radius: 100px;
+
+            &:hover {
+                background-color: var(--secondary-color);
+                color: #fff;
+            }
         }
     }
 
@@ -1407,12 +1429,18 @@ a {
 
 
     }
+
 }
 
 // career 2 page styles
 .job-description {
     .job-title {
-        font-size: 2.5em;
+        font-size: 2.2em;
+    }
+
+    .desc-title {
+        font-size: 1.7em;
+
     }
 
     .desc {
@@ -1423,7 +1451,7 @@ a {
 
 .job-application-form {
     .title {
-        font-size: 2.5em;
+        font-size: 2.2em;
         border-bottom: 1px solid var(--main-color);
         display: inline-block;
     }
@@ -1432,17 +1460,24 @@ a {
         border: 0;
         border-radius: 0;
         border-bottom: 2px solid rgb(2, 79, 164, .7);
+        color: rgb(2, 79, 164, .7);
+        font-weight: bold;
 
-        &::-webkit-input-placeholder {
+        &::placeholder {
             color: rgb(2, 79, 164, .7);
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: bold;
         }
+
+        &:focus {
+            box-shadow: none;
+        }
+
     }
 
     .form-select {
         color: rgb(2, 79, 164, .7);
-        font-size: 1.5em;
+        font-size: 1.4em;
         font-weight: bold;
         background-position: left .75rem center;
         padding: 0rem .7rem 0rem 0rem;
@@ -1469,7 +1504,6 @@ a {
         top: 0;
         left: 0;
         opacity: 0;
-        cursor: pointer;
     }
 
     .file-label {
@@ -1486,7 +1520,7 @@ a {
     .file-placeholder {
 
         color: rgb(2, 79, 164, .7);
-        font-size: 1.5em;
+        font-size: 1.4em;
         font-weight: bold;
     }
 
