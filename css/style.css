@@ -1524,6 +1524,9 @@ a {
   background-color: var(--secondary-color);
   color: #fff;
 }
+.offcanvas.show {
+  z-index: 999999;
+}
 
 .home-banner .banner-container img.banner-img,
 .home-banner .banner-container img.banner-layer {
@@ -1662,18 +1665,6 @@ a {
   background-color: var(--main-color);
   color: var(--secondary-color);
 }
-.offers .offers-layer {
-  position: absolute !important;
-  right: 2rem;
-  transform: rotate(180deg);
-  bottom: -1rem;
-  z-index: -1;
-}
-@media screen and (max-width: 1700px) {
-  .offers .offers-layer {
-    display: none;
-  }
-}
 .offers .overlay {
   top: 75%;
   width: 4%;
@@ -1686,8 +1677,29 @@ a {
 .offers .offers-img {
   left: 3em;
   top: 70%;
-  width: 32%;
+  width: 18%;
   transform: translateY(-50%);
+}
+.offers .offers-layer {
+  left: 5em;
+  top: 18%;
+  width: 30%;
+  z-index: 99;
+}
+@media (max-width: 1990px) {
+  .offers .offers-layer {
+    top: 25%;
+  }
+}
+@media (max-width: 1730px) {
+  .offers .offers-layer {
+    top: 30%;
+  }
+}
+@media (max-width: 1600px) {
+  .offers .offers-layer {
+    top: 19%;
+  }
 }
 
 .our-products {
@@ -1981,8 +1993,9 @@ a {
     max-width: 1598px;
   }
 }
-.companies .owl-carousel .owl-item img {
-  max-width: 130px;
+.companies img {
+  width: 150px !important;
+  margin: auto;
 }
 .companies .owl-nav {
   display: none;
@@ -2233,11 +2246,6 @@ a {
     width: 40px;
     height: 40px;
   }
-}
-.available-jobs .pagination .arrow-right {
-  transform: rotate(180deg);
-  cursor: pointer;
-  font-size: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */

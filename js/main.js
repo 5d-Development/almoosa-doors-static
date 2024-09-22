@@ -3,8 +3,7 @@
 var scrollWindow = function () {
   
     $(window).scroll(function () {
-               let logo = document.getElementById("logo");
-     let bars = document.getElementById("bars");
+      let bars = document.getElementById("bars");
    var navbar = document.querySelector(".navbar");
 			var $w = $(this),
 					st = $w.scrollTop(),
@@ -16,6 +15,7 @@ var scrollWindow = function () {
                     navbar.addClass('scrolled');	
                   
                document.getElementById("logo").src = "../images/home/navbar/colored-logo.svg";
+               document.getElementById("bars").style.color="red!important"
 
 				}
                 
@@ -97,7 +97,6 @@ $('.products-carousel').owlCarousel({
 //  companies section  logic
 $('.companies-carousel').owlCarousel({
    loop:true,
-    margin:10,
     rtl:true,
     animateOut: 'fadeOut',
     autoplay:true,
