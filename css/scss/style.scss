@@ -76,14 +76,19 @@ a {
 // end top bar styles
 .topbar {
     .social {
-        img {
-            width: 1.438rem;
-            height: 1.438rem;
+        .icon {
+            font-size: 1.7em;
+            color: #fff;
+            transition: .2s all ease;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
         }
 
         .twitter {
             font-size: 22px;
-            margin-top: 5px;
+
         }
 
     }

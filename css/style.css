@@ -1264,13 +1264,16 @@ a {
   color: var(--gray);
 }
 
-.topbar .social img {
-  width: 1.438rem;
-  height: 1.438rem;
+.topbar .social .icon {
+  font-size: 1.7em;
+  color: #fff;
+  transition: 0.2s all ease;
+}
+.topbar .social .icon:hover {
+  color: var(--secondary-color);
 }
 .topbar .social .twitter {
   font-size: 22px;
-  margin-top: 5px;
 }
 .topbar ul.topbar-links li {
   position: relative;
