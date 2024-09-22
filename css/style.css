@@ -1279,6 +1279,10 @@ a {
   padding: 0.8em;
   font-size: 1em;
   font-weight: 500;
+  transition: 0.3s all ease;
+}
+.topbar ul.topbar-links li a:hover {
+  color: var(--secondary-color) !important;
 }
 @media (max-width: 575px) {
   .topbar ul.topbar-links li a {

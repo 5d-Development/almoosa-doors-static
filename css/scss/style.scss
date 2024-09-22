@@ -93,10 +93,18 @@ a {
         li {
             position: relative;
 
+
             a {
                 padding: .8em;
                 font-size: 1em;
                 font-weight: 500;
+                transition: .3s all ease;
+
+                &:hover {
+                    color: var(--secondary-color) !important;
+                }
+
+
 
                 @media (max-width:575px) {
                     font-size: 0.938rem;
@@ -107,6 +115,8 @@ a {
                     padding: .5rem;
                     ;
                 }
+
+
             }
 
             &::before {
