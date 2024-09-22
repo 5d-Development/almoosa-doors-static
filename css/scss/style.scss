@@ -1413,10 +1413,28 @@ a {
             padding: 0px 3.125rem;
             font-size: 1.375rem;
             border-radius: 100px;
+            position: relative;
+            z-index: 100;
+            ;
 
             &:hover {
                 background-color: var(--secondary-color);
                 color: #fff;
+            }
+        }
+
+        &[data-aos] {
+            .btn {
+                pointer-events: none;
+                opacity: 0;
+            }
+
+            &.aos-animate {
+                .btn {
+                    pointer-events: auto;
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                }
             }
         }
     }
@@ -1536,6 +1554,11 @@ a {
 
     button[type="submit"] {
         font-size: 1.5rem;
+        transition: .3s all ease;
+
+        &:hover {
+            background-color: var(--secondary-color);
+        }
     }
 
 }
