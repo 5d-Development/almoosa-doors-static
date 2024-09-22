@@ -2230,7 +2230,7 @@ a {
   font-size: 1.7rem;
   color: #53565A;
 }
-.available-jobs .job-type button {
+.available-jobs .job-type .btn {
   padding: 0px 3.125rem;
   font-size: 1.375rem;
   border-radius: 100px;
@@ -2246,6 +2246,73 @@ a {
     width: 40px;
     height: 40px;
   }
+}
+
+.job-description .job-title {
+  font-size: 2.5em;
+}
+.job-description .desc {
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.job-application-form .title {
+  font-size: 2.5em;
+  border-bottom: 1px solid var(--main-color);
+  display: inline-block;
+}
+.job-application-form .form-control {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(2, 79, 164, 0.7);
+}
+.job-application-form .form-control::-webkit-input-placeholder {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.job-application-form .form-select {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.5em;
+  font-weight: bold;
+  background-position: left 0.75rem center;
+  padding: 0rem 0.7rem 0rem 0rem;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(2, 79, 164, 0.7);
+  background-image: url(../../images/careers/chevron.svg);
+}
+.job-application-form .form-select:focus {
+  box-shadow: none;
+}
+.job-application-form .file-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.job-application-form .file-input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.job-application-form .file-label {
+  padding: 0rem 0.7rem 0rem 0.5rem;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(2, 79, 164, 0.7);
+  cursor: pointer;
+}
+.job-application-form .file-placeholder {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.job-application-form button[type=submit] {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
