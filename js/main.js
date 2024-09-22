@@ -27,7 +27,7 @@ var scrollWindow = function () {
 
 				}
 			} 
-			if ( st > 250 ) {
+			if ( st > 150 ) {
 				if ( !navbar.hasClass('awake') ) {
 					navbar.addClass('awake');	
 				}
@@ -36,7 +36,7 @@ var scrollWindow = function () {
 					sd.addClass('sleep');
 				}
 			}
-			if ( st < 250 ) {
+			if ( st < 150 ) {
 				if ( navbar.hasClass('awake') ) {
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
