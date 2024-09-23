@@ -2489,6 +2489,7 @@ a {
   height: 100px;
   opacity: 0.7 !important;
   transition: 0.3s all ease;
+  object-fit: contain;
 }
 .our-clients img:hover {
   opacity: 1 !important;

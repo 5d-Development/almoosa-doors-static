@@ -262,7 +262,7 @@ a {
         .nav-item {
             position: relative;
             padding: 1.6rem 0;
- 
+
             .dropdown-menu {
                 overflow: hidden !important;
             }
@@ -1687,6 +1687,7 @@ a {
         height: 100px;
         opacity: .7 !important;
         transition: .3s all ease;
+        object-fit: contain;
 
         &:hover {
             opacity: 1 !important;
