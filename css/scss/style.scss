@@ -1691,3 +1691,25 @@ a {
     }
 
 }
+
+// start our clients styles
+.our-clients {
+    img {
+        width: 200px;
+        height: 100px;
+        opacity: .7 !important;
+        transition: .3s all ease;
+
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+
+    .logo-container {
+        &:not(&:first-of-type) {
+            border-inline-start: 1px solid var(--secondary-color);
+        }
+    }
+
+
+}

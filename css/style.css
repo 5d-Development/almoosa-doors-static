@@ -2503,4 +2503,17 @@ a {
   background-color: var(--secondary-color);
 }
 
+.our-clients img {
+  width: 200px;
+  height: 100px;
+  opacity: 0.7 !important;
+  transition: 0.3s all ease;
+}
+.our-clients img:hover {
+  opacity: 1 !important;
+}
+.our-clients .logo-container:not(.our-clients .logo-container:first-of-type) {
+  border-inline-start: 1px solid var(--secondary-color);
+}
+
 /*# sourceMappingURL=style.css.map */
