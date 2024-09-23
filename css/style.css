@@ -1399,12 +1399,12 @@ a {
 .navbar .navbar-nav .nav-item {
   position: relative;
   padding: 1.6rem 0;
-  transition: 1s all ease;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu {
   overflow: hidden !important;
 }
 .navbar .navbar-nav .nav-item:hover::after {
+  transition: 0.3s all ease;
   content: "";
   position: absolute;
   width: 70%;
