@@ -273,7 +273,6 @@ a {
                 &::after {
 
                     content: "";
-                    width: 100%;
                     position: absolute;
                     width: 70%;
                     height: 18px;
@@ -284,16 +283,16 @@ a {
             }
 
             &:last-child {
-                width: 100%;
+
 
                 &:hover {
 
                     &::after {
 
                         content: "";
-                        width: 100%;
+
                         position: absolute;
-                        width: 100%;
+
                         height: 18px;
                         background-color: var(--secondary-color);
                         border-radius: 4px;
@@ -310,44 +309,32 @@ a {
                 text-align: start;
 
             }
+ 
 
-            .nav-link,
-            .active-link {
-
-                &.active {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 70%;
-                        height: 18px;
-                        background-color: var(--secondary-color);
-                        bottom: 8px;
-                        right: 0;
-                        border-radius: 4px;
-                    }
-
-                }
-            }
-
-            &:first-child {
-                .nav-link {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 70%;
-                        height: 18px;
-                        background-color: var(--secondary-color);
-                        bottom: 8px;
-                        right: 0;
-                        border-radius: 4px;
-                        width: 50%;
-                    }
-                }
-            }
+ 
 
             .nav-link {
                 font-size: 1.25rem
             }
+
+            .active {
+
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 70%;
+                    height: 18px;
+                    background-color: var(--secondary-color);
+                    border-radius: 4px;
+                    top: 72px;
+
+                }
+
+            }
+
+           
         }
 
         .dropdown-menu {

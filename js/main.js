@@ -151,15 +151,23 @@ arrowDown.addEventListener("click", function () {
 });
 
 // active link in navbar
-document.querySelectorAll('.dropdown-item').forEach(function(dropdownItem) {
-    dropdownItem.addEventListener('click', function(event) {
-         document.querySelectorAll('.nav-link').forEach(function(navLink) {
-            navLink.classList.remove('active-link');
-        });
+// active link in navbar ..................................................
+   document.addEventListener("DOMContentLoaded", function () {
+     const navLinks = document.querySelectorAll(".nav-link");
 
-         const parentNavLink = event.target.closest('.dropdown').querySelector('.nav-link');
-        parentNavLink.classList.add('active-link');
-    });
-});
+     const currentUrl = window.location.href;
 
+     navLinks.forEach((link) => {
+       if (link.href === currentUrl) {
+         link.classList.add("active");
+
+         if (link.closest(".nav-dropdown")) {
+           link
+             .closest(".nav-item")
+             .querySelector(".nav-link")
+             .classList.add("active");
+         }
+       }
+     });
+   });
  
