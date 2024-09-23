@@ -228,6 +228,7 @@ a {
         &:focus:not(:focus-visible) {
             box-shadow: none;
         }
+        color: var(--main-color)
     }
 
     .navbar-nav {
