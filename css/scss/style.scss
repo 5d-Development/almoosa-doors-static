@@ -1687,8 +1687,7 @@ a {
         height: 100px;
         opacity: .7 !important;
         transition: .3s all ease;
-        object-fit: contain;
-
+  object-fit: contain; 
         &:hover {
             opacity: 1 !important;
         }
@@ -1702,3 +1701,5 @@ a {
 
 
 }
+
+ 
