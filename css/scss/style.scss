@@ -228,6 +228,7 @@ a {
         &:focus:not(:focus-visible) {
             box-shadow: none;
         }
+
         color: var(--main-color)
     }
 
@@ -1432,6 +1433,10 @@ a {
         .desc {
             font-size: 1.8rem;
             text-align: justify;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
 
 
@@ -1444,10 +1449,18 @@ a {
         .title {
             font-size: 1.7rem;
             font-weight: bold;
+
+            @media (max-width:575px) {
+                font-size: 1.5rem;
+            }
         }
 
         .desc {
             font-size: 1.7rem;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
 
         .job-details {
@@ -1458,11 +1471,19 @@ a {
             border-inline-end: 2px solid #53565A;
             font-size: 1.7rem;
             color: #53565A;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
 
         p {
             font-size: 1.7rem;
             color: #53565A;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
 
         .btn {
@@ -1477,6 +1498,21 @@ a {
                 background-color: var(--secondary-color);
                 color: #fff;
             }
+
+            @media (max-width:575px) {
+
+                justify-content: center;
+                width: 50%;
+                margin: auto;
+                ;
+            }
+
+            img {
+
+                @media (max-width:575px) {
+                    width: 30px;
+                }
+            }
         }
 
         &[data-aos] {
@@ -1490,6 +1526,14 @@ a {
                     pointer-events: auto;
                     opacity: 1;
                     transition: opacity 0.3s ease;
+                }
+            }
+        }
+
+        img {
+            &[alt="dollar"] {
+                @media (max-width:575px) {
+                    width: 20px;
                 }
             }
         }
@@ -1520,16 +1564,28 @@ a {
 .job-description {
     .job-title {
         font-size: 2.2em;
+
+        @media (max-width:575px) {
+            font-size: 2rem;
+        }
     }
 
     .desc-title {
         font-size: 1.7em;
+
+        @media (max-width:575px) {
+            font-size: 1.4rem;
+        }
 
     }
 
     .desc {
         font-size: 1.5em;
         text-align: justify;
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -1538,6 +1594,11 @@ a {
         font-size: 2.2em;
         border-bottom: 1px solid var(--main-color);
         display: inline-block;
+
+        @media (max-width:575px) {
+            font-size: 2rem;
+        }
+
     }
 
     .form-control {
@@ -1551,6 +1612,10 @@ a {
             color: rgb(2, 79, 164, .7);
             font-size: 1.4em;
             font-weight: bold;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
 
         &:focus {
@@ -1569,6 +1634,10 @@ a {
         border-radius: 0;
         border-bottom: 2px solid rgb(2, 79, 164, .7);
         background-image: url(../../images/careers/chevron.svg);
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
 
         &:focus {
             box-shadow: none;
@@ -1606,6 +1675,10 @@ a {
         color: rgb(2, 79, 164, .7);
         font-size: 1.4em;
         font-weight: bold;
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
     }
 
     button[type="submit"] {

@@ -2295,13 +2295,28 @@ a {
   font-size: 1.8rem;
   text-align: justify;
 }
+@media (max-width: 575px) {
+  .who-we-are .container .desc {
+    font-size: 1.2rem;
+  }
+}
 
 .available-jobs .job-type .title {
   font-size: 1.7rem;
   font-weight: bold;
 }
+@media (max-width: 575px) {
+  .available-jobs .job-type .title {
+    font-size: 1.5rem;
+  }
+}
 .available-jobs .job-type .desc {
   font-size: 1.7rem;
+}
+@media (max-width: 575px) {
+  .available-jobs .job-type .desc {
+    font-size: 1.2rem;
+  }
 }
 .available-jobs .job-type .job-details {
   border-bottom: 1px solid #53565A;
@@ -2311,9 +2326,19 @@ a {
   font-size: 1.7rem;
   color: #53565A;
 }
+@media (max-width: 575px) {
+  .available-jobs .job-type .salary {
+    font-size: 1.2rem;
+  }
+}
 .available-jobs .job-type p {
   font-size: 1.7rem;
   color: #53565A;
+}
+@media (max-width: 575px) {
+  .available-jobs .job-type p {
+    font-size: 1.2rem;
+  }
 }
 .available-jobs .job-type .btn {
   padding: 0px 3.125rem;
@@ -2326,6 +2351,18 @@ a {
   background-color: var(--secondary-color);
   color: #fff;
 }
+@media (max-width: 575px) {
+  .available-jobs .job-type .btn {
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+  }
+}
+@media (max-width: 575px) {
+  .available-jobs .job-type .btn img {
+    width: 30px;
+  }
+}
 .available-jobs .job-type[data-aos] .btn {
   pointer-events: none;
   opacity: 0;
@@ -2334,6 +2371,11 @@ a {
   pointer-events: auto;
   opacity: 1;
   transition: opacity 0.3s ease;
+}
+@media (max-width: 575px) {
+  .available-jobs .job-type img[alt=dollar] {
+    width: 20px;
+  }
 }
 .available-jobs .pagination button {
   width: 50px;
@@ -2351,18 +2393,38 @@ a {
 .job-description .job-title {
   font-size: 2.2em;
 }
+@media (max-width: 575px) {
+  .job-description .job-title {
+    font-size: 2rem;
+  }
+}
 .job-description .desc-title {
   font-size: 1.7em;
+}
+@media (max-width: 575px) {
+  .job-description .desc-title {
+    font-size: 1.4rem;
+  }
 }
 .job-description .desc {
   font-size: 1.5em;
   text-align: justify;
+}
+@media (max-width: 575px) {
+  .job-description .desc {
+    font-size: 1.2rem;
+  }
 }
 
 .job-application-form .title {
   font-size: 2.2em;
   border-bottom: 1px solid var(--main-color);
   display: inline-block;
+}
+@media (max-width: 575px) {
+  .job-application-form .title {
+    font-size: 2rem;
+  }
 }
 .job-application-form .form-control {
   border: 0;
@@ -2375,6 +2437,11 @@ a {
   color: rgba(2, 79, 164, 0.7);
   font-size: 1.4em;
   font-weight: bold;
+}
+@media (max-width: 575px) {
+  .job-application-form .form-control::placeholder {
+    font-size: 1.2rem;
+  }
 }
 .job-application-form .form-control:focus {
   box-shadow: none;
@@ -2389,6 +2456,11 @@ a {
   border-radius: 0;
   border-bottom: 2px solid rgba(2, 79, 164, 0.7);
   background-image: url(../../images/careers/chevron.svg);
+}
+@media (max-width: 575px) {
+  .job-application-form .form-select {
+    font-size: 1.2rem;
+  }
 }
 .job-application-form .form-select:focus {
   box-shadow: none;
@@ -2417,6 +2489,11 @@ a {
   color: rgba(2, 79, 164, 0.7);
   font-size: 1.4em;
   font-weight: bold;
+}
+@media (max-width: 575px) {
+  .job-application-form .file-placeholder {
+    font-size: 1.2rem;
+  }
 }
 .job-application-form button[type=submit] {
   font-size: 1.5rem;
