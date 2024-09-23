@@ -150,7 +150,7 @@ arrowDown.addEventListener("click", function () {
   window.scrollTo({ top:700, behavior: "smooth" });
 });
 
-// active link in navbar
+ 
 // active link in navbar ..................................................
    document.addEventListener("DOMContentLoaded", function () {
      const navLinks = document.querySelectorAll(".nav-link");
