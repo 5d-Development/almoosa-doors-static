@@ -622,12 +622,20 @@ a {
         }
 
         .title {
-            font-size: 3rem
+            font-size: 3rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
         }
 
         .desc {
             font-size: 1.5rem;
             text-align: justify;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
 
 
@@ -648,11 +656,19 @@ a {
 
 
             font-size: 3rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
         }
 
         .desc {
             font-size: 1.5rem;
             text-align: justify;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
 
         }
     }
@@ -668,6 +684,10 @@ a {
         &:hover {
             background-color: var(--main-color);
             color: var(--secondary-color);
+        }
+
+        @media (max-width:575px) {
+            font-size: 18px;
         }
     }
 
@@ -736,11 +756,19 @@ a {
     .title {
 
         font-size: 3rem;
+
+        @media (max-width:575px) {
+            font-size: 2rem;
+        }
     }
 
     .desc {
         font-size: 1.5rem;
         text-align: justify;
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
     }
 
     .item {
@@ -885,6 +913,10 @@ a {
                     font-size: 3rem;
                 }
 
+                @media (max-width:575px) {
+                    font-size: 2rem;
+                    color: #fff;
+                }
             }
 
             .main-desc {
@@ -906,6 +938,11 @@ a {
                 @media (max-width:991px) {
                     color: var(--gray);
                     font-size: 1.5rem;
+                }
+
+                @media (max-width:575px) {
+                    font-size: 1.2rem;
+                    color: #fff;
                 }
             }
 
@@ -929,6 +966,11 @@ a {
                 @media (max-width:991px) {
                     color: var(--gray);
                     font-size: 1.5rem;
+                }
+
+                @media (max-width:575px) {
+                    font-size: 1.2rem;
+                    color: #fff;
                 }
             }
 
@@ -955,8 +997,16 @@ a {
 
                     font-size: 1rem;
                 }
+
+                @media (max-width:575px) {
+                    font-size: 1.2rem;
+                }
             }
         }
+    }
+
+    @media (max-width:575px) {
+        background-color: var(--main-color);
     }
 }
 
