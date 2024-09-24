@@ -2266,6 +2266,7 @@ a {
 .careers-banner img {
   width: 100%;
   min-height: 350px;
+  object-fit: none;
 }
 .careers-banner .title {
   bottom: 1.8em;
