@@ -15,7 +15,6 @@ var scrollWindow = function () {
                     navbar.addClass('scrolled');	
                   
                document.getElementById("logo").src = "../images/home/navbar/colored-logo.svg";
-               document.getElementById("bars").style.color="red!important"
 
 				}
                 
