@@ -53,7 +53,7 @@ $('.products-carousel').owlCarousel({
    loop:true,
     margin:10,
     rtl:true,
-    animateOut: 'fadeOut',
+  
     autoplay:true,
 
     navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"], // Replace navigation text with Font Awesome icons
