@@ -1363,40 +1363,7 @@ a {
     }
 }
 
-// about page styles 
-.about-banner {
 
-
-    img {
-        height: 350px;
-        width: 100%;
-    }
-
-    .title {
-        color: #fff;
-        right: 11rem;
-        bottom: 80px;
-    }
-}
-
-.about-history {
-    .title {
-        color: var(--secondary-color);
-        font-size: 40px;
-        margin-bottom: 2.5rem;
-    }
-
-    .desc {
-        font-size: 19px;
-        font-weight: 500;
-        color: #53565a;
-    }
-
-    .overlay {
-        transform: rotate(0deg);
-        top: 40%;
-    }
-}
 
 // start career-1 page  style 
 .careers-banner {
@@ -1687,7 +1654,8 @@ a {
         height: 100px;
         opacity: .7 !important;
         transition: .3s all ease;
-  object-fit: contain; 
+        object-fit: contain;
+
         &:hover {
             opacity: 1 !important;
         }
@@ -1702,4 +1670,302 @@ a {
 
 }
 
+// about us style
+// start about history
+.about-mission {
+    padding-top: 4em;
+
+    @media (min-width:1600px) {
+        padding-top: 10em;
+    }
+
+    @media (max-width:991px) {
+        padding-top: 0em;
+    }
+
+    .about-mission-content {
+        .title {
+
+
+            font-size: 3rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+        }
+
+        .desc {
+            font-size: 1.5rem;
+            text-align: justify;
+
+
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
+
+        }
+    }
+
+
+
+
+    .overlay {
+        top: 58%;
+        width: 4%;
+
+        @media screen and (max-width: 1700px) {
+            display: none;
+        }
+    }
+
+
+    .about-mission-img {
+        left: 3em;
+        top: 70%;
+        width: 18%;
+        transform: translateY(-50%);
+    }
+
+    .about-mission-layer {
+        left: 5em;
+        top: 2%;
+        width: 30%;
+        z-index: 99;
+
+        @media (max-width:1990px) {
+            top: 10%;
+        }
+
+        @media (max-width:1730px) {
+            top: 15%;
+        }
+
+        @media (max-width:1600px) {
+            top: 10%;
+        }
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+}
+
+.about-history {
+    .about-history-img {
+        width: 70%;
+        object-fit: contain;
+    }
+
+    .about-history-content {
+        .title {
+
+
+            font-size: 3rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+        }
+
+        .desc {
+            font-size: 1.5rem;
+            text-align: justify;
+
+            @media (min-width:1700px) {
+                width: 80%
+            }
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
+
+        }
+
+
+    }
+
+    .overlay {
+        top: 40%;
+        width: 4%;
+
+        transform: rotate(180deg);
+
+        @media screen and (max-width: 1700px) {
+            display: none;
+        }
+    }
+}
+
+.our-vision {
+
+    .our-vision-img {
+
+        object-fit: contain;
+        position: relative;
+        left: 3rem;
+
+        @media (max-width:1700px) {
+            left: 0rem;
+        }
+
+        @media (min-width:2000px) {
+            left: 21%;
+        }
+    }
+
+    .our-vision-content {
+        .title {
+
+
+            font-size: 3rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+        }
+
+        .desc {
+            font-size: 1.5rem;
+            text-align: justify;
+
+            @media (min-width:1700px) {
+                width: 80%
+            }
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
+
+        }
+
+
+    }
+
+    .overlay {
+        top: 66%;
+        width: 2.5%;
+
+        transform: rotate(180deg);
+
+        @media screen and (max-width: 1700px) {
+            display: none;
+        }
+
+        &:first-of-type {
+            z-index: 9999;
+            top: 93%;
+
+            @media (min-width:2000px) {
+                top: 95%;
+            }
+
+
+        }
+
+        &:last-of-type {
+            width: 6%;
+            transform: rotate(0deg);
+
+
+
+        }
+    }
+
+
+
+
+    @media (min-width:1200px) {
+        padding-top: 50px;
+    }
+
+    @media (min-width:1700px) {
+        padding-top: 300px;
+    }
+
+    @media (min-width:2000px) {
+        padding-top: 300px;
+    }
+
+    .right-overlay {
+        z-index: -9999999;
+        top: 8.5rem;
+
+        @media (max-width:1700px) {
+            display: none;
+        }
+    }
+}
+
+.our-goals {
+    padding-bottom: 180px;
+    .title {
+
+
+        font-size: 3rem;
+        font-weight: 600;
+
+        @media (max-width:575px) {
+            font-size: 2rem;
+        }
+    }
+
+    .desc {
+        font-size: 1.5rem;
+        text-align: justify;
+        position: relative;
+
+        @media (min-width:1700px) {
+            width: 80%
+        }
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary-color);
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .overlay {
+        top: 30%;
+        width: 2.5%;
+
  
+        @media screen and (max-width: 1700px) {
+            display: none;
+        }
+
+        &:first-of-type {
+            z-index: 9999;
+            top: 73%;
+
+            @media (min-width:2000px) {
+                top: 77%;
+            }
+
+
+        }
+
+        &:last-of-type {
+            width: 6%;
+            transform: rotate(180deg);
+
+
+
+        }
+    }
+
+
+}
+
+// start about history
