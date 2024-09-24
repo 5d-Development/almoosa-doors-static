@@ -1178,7 +1178,8 @@ a {
 
     }
 
-    .owl-nav {
+    .owl-nav,
+    .owl-dots {
         display: none;
     }
 
@@ -1186,6 +1187,8 @@ a {
         display: flex;
         align-items: center;
     }
+
+
 }
 
 // end companies
@@ -1930,6 +1933,10 @@ a {
 .our-goals {
     padding-bottom: 180px;
 
+    @media (max-width:1700px) {
+        padding-bottom: 0px;
+    }
+
     .title {
 
 
@@ -1954,6 +1961,10 @@ a {
             font-size: 1.2rem;
         }
 
+        @media (max-width:575px) {
+            padding-inline-start: 1em;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -1963,6 +1974,17 @@ a {
             right: -100px;
             top: 50%;
             transform: translateY(-50%);
+
+            @media (max-width:575px) {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: var(--secondary-color);
+                right: 0px;
+                top: 28%;
+                transform: translateY(-50%);
+            }
         }
     }
 

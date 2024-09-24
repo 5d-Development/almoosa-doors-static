@@ -2091,7 +2091,8 @@ a {
   width: 150px !important;
   margin: auto;
 }
-.companies .owl-nav {
+.companies .owl-nav,
+.companies .owl-dots {
   display: none;
 }
 .companies .owl-stage {
@@ -2696,6 +2697,11 @@ a {
 .our-goals {
   padding-bottom: 180px;
 }
+@media (max-width: 1700px) {
+  .our-goals {
+    padding-bottom: 0px;
+  }
+}
 .our-goals .title {
   font-size: 3rem;
   font-weight: 600;
@@ -2720,6 +2726,11 @@ a {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 575px) {
+  .our-goals .desc {
+    padding-inline-start: 1em;
+  }
+}
 .our-goals .desc::before {
   content: "";
   position: absolute;
@@ -2729,6 +2740,18 @@ a {
   right: -100px;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (max-width: 575px) {
+  .our-goals .desc::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+    right: 0px;
+    top: 28%;
+    transform: translateY(-50%);
+  }
 }
 .our-goals .overlay {
   top: 30%;
