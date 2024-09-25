@@ -2275,19 +2275,25 @@ a {
 
 .careers-banner .banner-container {
   min-height: 350px;
+  position: relative;
 }
 @media (max-width: 575px) {
   .careers-banner .banner-container {
     background-image: url(../../images/careers/banner.svg);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Makes the background image cover the container */
   }
 }
 .careers-banner .banner-container img {
   width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 @media (max-width: 575px) {
   .careers-banner .banner-container img {
-    display: none;
+    display: none !important;
   }
 }
 .careers-banner .title {
@@ -2441,9 +2447,15 @@ a {
   color: rgba(2, 79, 164, 0.7);
   font-weight: bold;
 }
+.job-application-form .form-control:focus {
+  box-shadow: none;
+}
+.job-application-form .form-control:nth-child(1), .job-application-form .form-control:nth-child(3), .job-application-form .form-control:nth-child(4), .job-application-form .form-control:nth-child(5), .job-application-form .form-control:nth-child(7) {
+  font-size: 1.25rem;
+}
 .job-application-form .form-control::placeholder {
   color: rgba(2, 79, 164, 0.7);
-  font-size: 1.4em;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 @media (max-width: 575px) {
@@ -2451,12 +2463,9 @@ a {
     font-size: 1.2rem;
   }
 }
-.job-application-form .form-control:focus {
-  box-shadow: none;
-}
 .job-application-form .form-select {
   color: rgba(2, 79, 164, 0.7);
-  font-size: 1.4em;
+  font-size: 1.25rem;
   font-weight: bold;
   background-position: left 0.75rem center;
   padding: 0rem 0.7rem 0rem 0rem;
@@ -2495,12 +2504,12 @@ a {
 }
 .job-application-form .file-placeholder {
   color: rgba(2, 79, 164, 0.7);
-  font-size: 1.4em;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 @media (max-width: 575px) {
   .job-application-form .file-placeholder {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 .job-application-form button[type=submit] {
