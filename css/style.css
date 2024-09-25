@@ -1361,6 +1361,11 @@ a {
 .topbar .cheveron {
   font-size: 0.813rem;
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .topbar .container {
+    padding: 0em 5.5em;
+  }
+}
 
 .navbar {
   position: fixed;
@@ -1488,6 +1493,11 @@ a {
 .navbar.scrolled svg:not(:host).svg-inline--fa {
   color: var(--main-color) !important;
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .navbar .container {
+    padding: 0em 5.5em;
+  }
+}
 
 .offcanvas .offcanvas-items {
   display: flex;
@@ -1546,7 +1556,7 @@ a {
   bottom: -18%;
   max-width: 10%;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   .home-banner .banner-container .left-layer {
     display: none;
   }
@@ -1555,7 +1565,7 @@ a {
   top: 75%;
   max-width: 10%;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   .home-banner .banner-container .right-layer {
     display: none;
   }
@@ -1654,6 +1664,11 @@ a {
     font-size: 1.2rem;
   }
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .our-story .our-story-content {
+    width: 62%;
+  }
+}
 @media (max-width: 575px) {
   .our-story .container {
     padding: 0 24px !important;
@@ -1685,6 +1700,16 @@ a {
     font-size: 1.2rem;
   }
 }
+@media (min-width: 1200px) and (max-width: 1700px) {
+  .offers .offers-content {
+    padding: 0em 10em 0em 0em;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1700px) {
+  .offers {
+    padding-top: 6em;
+  }
+}
 .offers .offers-btn {
   padding: 10px 60px;
   font-size: 20px;
@@ -1706,7 +1731,7 @@ a {
   top: 75%;
   width: 4%;
 }
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1200px) {
   .offers .overlay {
     display: none;
   }
@@ -1735,7 +1760,17 @@ a {
 }
 @media (max-width: 1600px) {
   .offers .offers-layer {
-    top: 19%;
+    top: 30%;
+  }
+}
+@media (max-width: 1500px) {
+  .offers .offers-layer {
+    top: 33%;
+  }
+}
+@media (max-width: 1400px) {
+  .offers .offers-layer {
+    top: 42%;
   }
 }
 @media (max-width: 500px) {
@@ -1837,6 +1872,11 @@ a {
 }
 .our-products .owl-nav .owl-next svg:hover {
   color: var(--secondary-color);
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .our-products .parent-container .container {
+    padding: 0em 10em;
+  }
 }
 
 .our-news .news-container {
@@ -2057,6 +2097,11 @@ a {
     padding: 24px 0;
   }
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .footer .container {
+    padding: 0em 5.5em;
+  }
+}
 
 .copyright ul li:not(:last-of-type) {
   position: relative;
@@ -2086,6 +2131,11 @@ a {
     align-items: center;
   }
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .copyright .container {
+    padding: 0em 5.5em;
+  }
+}
 
 @media (min-width: 1400px) {
   .container,
@@ -2108,6 +2158,11 @@ a {
 .companies .owl-stage {
   display: flex;
   align-items: center;
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .companies .companies-carousel {
+    padding: 0em 3em;
+  }
 }
 
 @media screen and (max-width: 991px) {

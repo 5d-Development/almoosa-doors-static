@@ -209,6 +209,12 @@ a {
     .cheveron {
         font-size: 0.813rem;
     }
+
+    .container {
+        @media (min-width:1200px) and (max-width:1600px) {
+            padding: 0em 5.5em;
+        }
+    }
 }
 
 
@@ -413,6 +419,12 @@ a {
             color: var(--main-color) !important;
         }
     }
+
+    .container {
+        @media (min-width:1200px) and (max-width:1600px) {
+            padding: 0em 5.5em;
+        }
+    }
 }
 
 // end navbar styles
@@ -499,7 +511,7 @@ a {
 
 
 
-            @media (max-width:1600px) {
+            @media (max-width:1200px) {
                 display: none;
             }
 
@@ -511,7 +523,7 @@ a {
             top: 75%;
             max-width: 10%;
 
-            @media (max-width:1600px) {
+            @media (max-width:1200px) {
                 display: none;
             }
 
@@ -635,7 +647,9 @@ a {
             }
         }
 
-
+        @media (min-width:1200px) and (max-width:1600px) {
+            width: 62%;
+        }
     }
 
     .container {
@@ -674,6 +688,14 @@ a {
             }
 
         }
+
+        @media (min-width:1200px) and (max-width:1700px) {
+            padding: 0em 10em 0em 0em;
+        }
+    }
+
+    @media (min-width:1200px) and (max-width:1700px) {
+        padding-top: 6em;
     }
 
     .offers-btn {
@@ -711,7 +733,7 @@ a {
         top: 75%;
         width: 4%;
 
-        @media screen and (max-width: 1700px) {
+        @media screen and (max-width: 1200px) {
             display: none;
         }
     }
@@ -739,7 +761,15 @@ a {
         }
 
         @media (max-width:1600px) {
-            top: 19%;
+            top: 30%;
+        }
+
+        @media (max-width:1500px) {
+            top: 33%;
+        }
+
+        @media (max-width:1400px) {
+            top: 42%;
         }
     }
 
@@ -866,6 +896,13 @@ a {
         }
     }
 
+    .parent-container {
+        .container {
+            @media (min-width:1200px) and (max-width:1600px) {
+                padding: 0em 10em;
+            }
+        }
+    }
 
 }
 
@@ -1120,6 +1157,12 @@ a {
     @media (max-width:1500px) {
         padding: 24px 0;
     }
+
+    .container {
+        @media (min-width:1200px) and (max-width:1600px) {
+            padding: 0em 5.5em;
+        }
+    }
 }
 
 //end footer styles
@@ -1167,6 +1210,11 @@ a {
         }
     }
 
+    .container {
+        @media (min-width:1200px) and (max-width:1600px) {
+            padding: 0em 5.5em;
+        }
+    }
 }
 
 //container styles
@@ -1201,7 +1249,11 @@ a {
         align-items: center;
     }
 
-
+    .companies-carousel {
+        @media (min-width:1200px) and (max-width:1600px) {
+            padding: 0em 3em;
+        }
+    }
 }
 
 // end companies
