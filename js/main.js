@@ -148,5 +148,3 @@ var arrowDown = document.getElementById("scroll-down");
 arrowDown.addEventListener("click", function () {
   window.scrollTo({ top:700, behavior: "smooth" });
 });
-
- 

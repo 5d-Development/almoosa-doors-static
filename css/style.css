@@ -1654,6 +1654,11 @@ a {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 575px) {
+  .our-story .container {
+    padding: 0 24px !important;
+  }
+}
 
 .offers {
   padding-top: 4em;
@@ -1738,6 +1743,11 @@ a {
     background-color: #d3deee;
     padding: 1em 0;
     margin-top: 48px;
+  }
+}
+@media (max-width: 575px) {
+  .offers .container {
+    padding: 0 24px !important;
   }
 }
 
@@ -2263,10 +2273,22 @@ a {
   border-radius: 4px;
 }
 
-.careers-banner img {
-  width: 100%;
+.careers-banner .banner-container {
   min-height: 350px;
-  object-fit: none;
+}
+@media (max-width: 575px) {
+  .careers-banner .banner-container {
+    background-image: url(../../images/careers/banner.svg);
+    background-position: center;
+  }
+}
+.careers-banner .banner-container img {
+  width: 100%;
+}
+@media (max-width: 575px) {
+  .careers-banner .banner-container img {
+    display: none;
+  }
 }
 .careers-banner .title {
   bottom: 1.8em;

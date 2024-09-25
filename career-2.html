@@ -194,7 +194,9 @@
          <!-- end navbar -->
 <div class="careers-banner position-relative">
 
- <img src="images/careers/career-banner.png" class="img-fluid" alt="bannerLayer">
+<div class="banner-container">
+    <img src="images/careers/banner.svg" class="img-fluid" alt="bannerLayer">
+</div>
  
 
 <div class="container">
@@ -233,7 +235,7 @@
 </div>
 <!-- end job description -->
 <!-- start job application form -->
-<div class="job-application-form py-4 position-relative">
+<div class="job-application-form py-4 position-relative" id="jobApplicationForm">
 <div class="container">
 <h2 class="title text-blue fw-bold pb-3 ps-5">
     استمارة تقديم 
@@ -243,36 +245,36 @@
       <div class="col-lg-5"> 
 <form class="py-4">
        
-   <input type="text" class="form-control pb-4 mb-5"  placeholder="الاسم">
- <select class="form-select pb-4 mb-5">
+   <input type="text" class="form-control pb-4 mb-5"  placeholder="الاسم" required>
+ <select class="form-select pb-4 mb-5" required>
   <option selected>الجنسية</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
-   <input type="text" class="form-control pb-4 mb-5"  placeholder="مكان الاقامة">
-   <input type="email" class="form-control pb-4 mb-5"  placeholder="البريد الالكتروني ">
-   <input type="number" class="form-control pb-4 mb-5"  placeholder="رقم الهاتف">
+   <input type="text" class="form-control pb-4 mb-5"  required   placeholder="مكان الاقامة">
+   <input type="email" class="form-control pb-4 mb-5"  required  placeholder="البريد الالكتروني ">
+   <input type="number" id="phone"  class="form-control pb-4 mb-5"  required  placeholder="رقم الهاتف">
  <div class="file-input-container">
-  <input type="file" id="fileInput" class="file-input">
+  <input type="file" id="fileInput" class="file-input" required>
   <label for="fileInput" class="file-label d-flex pb-4 mb-5 justify-content-between">
-      <span class="file-placeholder" id="file-placeholder">ارفاق السيرة الذاتية</span>
+      <span class="file-placeholder" id="file-placeholder" >ارفاق السيرة الذاتية</span>
     <span class="file-icon">
         <img src="images/careers/attchment.svg" alt="attchment">
     </span> 
   </label>
 </div>
-   <input type="text" class="form-control pb-4 mb-5"  placeholder="المؤهل العلمي">
+   <input type="text" class="form-control pb-4 mb-5" required  placeholder="المؤهل العلمي">
  <div class="file-input-container">
-  <input type="file" id="fileInput" class="file-input">
+  <input type="file" id="fileInput" class="file-input" required>
   <label for="fileInput" class="file-label d-flex pb-4 mb-5 justify-content-between">
-      <span class="file-placeholder" id="file-placeholder">ارفاق الدورات التدريبية</span>
+      <span class="file-placeholder" id="file-placeholder" >ارفاق الدورات التدريبية</span>
     <span class="file-icon">
         <img src="images/careers/attchment.svg" alt="attchment">
     </span> 
   </label>
   </div>
-  <button type="submit" class="btn bg-main-color fw-bold w-100 text-white py-3 rounded-3" >طلب الخدمة</button>
+  <button type="submit" onsubmit="handelFormSubmit()" class="btn bg-main-color fw-bold w-100 text-white py-3 rounded-3" >طلب الخدمة</button>
 </form>
 </div>
     <div class="col-lg-7"> 
@@ -576,5 +578,28 @@
            once: false,     
          });
       </script>
-</body>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('jobApplicationForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+
+  const phoneInput = document.getElementById('phone');
+
+  phoneInput.addEventListener('keypress', function (e) {
+    const charCode = e.which ? e.which : e.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      e.preventDefault();
+    }
+  });
+  
+  phoneInput.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+});
+
+</script>
+ </body>
 </html>

@@ -637,6 +637,12 @@ a {
 
 
     }
+
+    .container {
+        @media (max-width:575px) {
+            padding: 0 24px !important;
+        }
+    }
 }
 
 // end our story styles
@@ -744,6 +750,11 @@ a {
         margin-top: 48px;
     }
 
+    .container {
+        @media (max-width:575px) {
+            padding: 0 24px !important;
+        }
+    }
 }
 
 
@@ -854,6 +865,8 @@ a {
             }
         }
     }
+
+
 }
 
 // start our-news styles
@@ -1399,12 +1412,24 @@ a {
 
 // start career-1 page  style 
 .careers-banner {
-
-    img {
-        width: 100%;
+    .banner-container {
         min-height: 350px;
-        object-fit: none;
+
+        @media (max-width:575px) {
+            background-image: url(../../images/careers/banner.svg);
+            background-position: center;
+        }
+
+        img {
+            width: 100%;
+
+            @media (max-width:575px) {
+                display: none;
+            }
+
+        }
     }
+
 
     .title {
         bottom: 1.8em;
