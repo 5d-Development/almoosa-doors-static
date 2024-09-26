@@ -486,7 +486,7 @@ a {
     }
 
     &.show {
-        z-index: 999999;
+        z-index: 99999999999;
     }
 }
 
@@ -1859,6 +1859,12 @@ a {
 .about-mission {
     padding-top: 4em;
 
+    @media (max-width:575px) {
+        background-color: #d3deee;
+        padding: 1.5em 0 !important;
+        margin: .5em 0;
+    }
+
     @media (min-width:1600px) {
         padding-top: 10em;
     }
@@ -2058,6 +2064,9 @@ a {
 }
 
 .our-vision {
+    @media (max-width:575px) {
+        margin: 1rem 0;
+    }
 
     .our-vision-img {
 
@@ -2228,6 +2237,12 @@ a {
 .our-goals {
     padding-bottom: 180px;
 
+    @media (max-width:575px) {
+        background-color: #d3deee;
+        padding: 1.5em 0 !important;
+
+    }
+
     @media (max-width:1700px) {
         padding-bottom: 0px;
     }
@@ -2371,6 +2386,10 @@ a {
         font-size: 1.5em;
         font-weight: 600;
 
+        @media (max-width:575px) {
+            font-size: 1.1em;
+        }
+
     }
 
     .container {
@@ -2457,6 +2476,12 @@ a {
 
 .our-approach {
     &.methodology {
+        @media (max-width:575px) {
+            background-color: #d3deee;
+            padding: 1.5em 0 !important;
+
+        }
+
         .right-layer {
             top: 3rem;
             width: 7%;

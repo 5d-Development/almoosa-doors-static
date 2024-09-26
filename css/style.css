@@ -1540,7 +1540,7 @@ a {
   color: #fff;
 }
 .offcanvas.show {
-  z-index: 999999;
+  z-index: 99999999999;
 }
 
 .home-banner .banner-container img.banner-img,
@@ -2644,6 +2644,13 @@ a {
 .about-mission {
   padding-top: 4em;
 }
+@media (max-width: 575px) {
+  .about-mission {
+    background-color: #d3deee;
+    padding: 1.5em 0 !important;
+    margin: 0.5em 0;
+  }
+}
 @media (min-width: 1600px) {
   .about-mission {
     padding-top: 10em;
@@ -2814,6 +2821,11 @@ a {
   }
 }
 
+@media (max-width: 575px) {
+  .our-vision {
+    margin: 1rem 0;
+  }
+}
 .our-vision .our-vision-img {
   object-fit: contain;
   position: relative;
@@ -2966,6 +2978,12 @@ a {
 .our-goals {
   padding-bottom: 180px;
 }
+@media (max-width: 575px) {
+  .our-goals {
+    background-color: #d3deee;
+    padding: 1.5em 0 !important;
+  }
+}
 @media (max-width: 1700px) {
   .our-goals {
     padding-bottom: 0px;
@@ -3097,6 +3115,11 @@ a {
   font-size: 1.5em;
   font-weight: 600;
 }
+@media (max-width: 575px) {
+  .our-tasks .desc {
+    font-size: 1.1em;
+  }
+}
 @media (min-width: 1400px) and (max-width: 1700px) {
   .our-tasks .container {
     max-width: 1350px !important;
@@ -3176,6 +3199,12 @@ a {
   }
 }
 
+@media (max-width: 575px) {
+  .our-approach.methodology {
+    background-color: #d3deee;
+    padding: 1.5em 0 !important;
+  }
+}
 .our-approach.methodology .right-layer {
   top: 3rem;
   width: 7%;
