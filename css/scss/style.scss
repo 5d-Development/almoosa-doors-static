@@ -211,7 +211,7 @@ a {
     }
 
     .container {
-        @media (min-width:1200px) and (max-width:1600px) {
+        @media (min-width:1200px) and (max-width:1650px) {
             padding: 0em 5.5em;
         }
     }
@@ -222,7 +222,7 @@ a {
 .navbar {
     position: fixed;
     width: 100%;
-    z-index: 9999;
+    z-index: 999999999;
 
 
 
@@ -390,6 +390,7 @@ a {
         right: 0;
         left: 0;
         top: 0;
+        z-index: 999999;
         margin-top: -150px;
         background: #fff !important;
 
@@ -409,6 +410,7 @@ a {
         &.awake {
             margin-top: 0px;
             transition: .3s all ease-out;
+            z-index: 9999999
         }
 
         &.sleep {
@@ -421,7 +423,7 @@ a {
     }
 
     .container {
-        @media (min-width:1200px) and (max-width:1600px) {
+        @media (min-width:1200px) and (max-width:1650px) {
             padding: 0em 5.5em;
         }
     }
@@ -1495,6 +1497,8 @@ a {
         font-weight: bold;
     }
 
+
+
 }
 
 .who-we-are {
@@ -1894,8 +1898,17 @@ a {
         top: 58%;
         width: 4%;
 
-        @media screen and (max-width: 1700px) {
+        @media screen and (max-width: 1400px) {
             display: none;
+        }
+
+        @media (min-width: 1400px) and (max-width: 1650px) {
+
+            top: 32%;
+            width: 6%;
+
+
+
         }
     }
 
@@ -1921,8 +1934,12 @@ a {
             top: 15%;
         }
 
-        @media (max-width:1600px) {
-            top: 10%;
+        @media (min-width:1400px) and (max-width:1500px) {
+            top: 20%;
+        }
+
+        @media (min-width:1600px) and (max-width:1700px) {
+            top: 23%;
         }
     }
 
@@ -1930,9 +1947,63 @@ a {
         margin-bottom: 0;
     }
 
+    @media (min-width: 1400px) and (max-width: 1650px) {
+        .container {
+            max-width: 1130px !important;
+
+        }
+    }
+}
+
+// about banner
+
+.about-banner {
+    .banner-container {
+        min-height: 350px;
+        position: relative;
+
+        @media (max-width: 575px) {
+            background-image: url(../../images/about-us/banner.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* Makes the background image cover the container */
+        }
+
+        img {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            @media (max-width: 575px) {
+                display: none !important;
+            }
+        }
+    }
+
+
+    .title {
+        bottom: 1.8em;
+        font-size: 2.8rem;
+        font-weight: bold;
+
+        @media (min-width: 1400px) and (max-width: 1650px) {
+            right: 7rem;
+        }
+    }
+
+
 }
 
 .about-history {
+    @media (min-width: 1400px) and (max-width: 1650px) {
+        .container {
+            max-width: 1300px !important;
+
+        }
+    }
+
     .about-history-img {
         width: 70%;
         object-fit: contain;
@@ -1961,6 +2032,9 @@ a {
                 font-size: 1.2rem;
             }
 
+            @media screen and (min-width:1400px) and (max-width:1650px) {
+                width: 85%;
+            }
         }
 
 
@@ -1972,8 +2046,13 @@ a {
 
         transform: rotate(180deg);
 
-        @media screen and (max-width: 1700px) {
+        @media screen and (max-width: 1400px) {
             display: none;
+        }
+
+        @media screen and (min-width:1400px) and (max-width:1650px) {
+            top: 27%;
+            width: 6%
         }
     }
 }
@@ -1993,6 +2072,31 @@ a {
         @media (min-width:2000px) {
             left: 21%;
         }
+
+        @media (min-width:1500px) and (max-width:1550px) {
+            left: 3rem;
+        }
+
+        @media (min-width:1550px) and (max-width:1600px) {
+            left: 4rem;
+        }
+
+        @media (min-width:1600px) and (max-width:1700px) {
+            left: 5.5rem;
+        }
+
+
+        // @media (min-width:1550px) and (max-width:1600px) {
+        //     left: 13%;
+        // }
+
+        // @media (min-width:1600px) and (max-width:1650px) {
+        //     left: 15%;
+        // }
+
+        // @media (min-width:1650px) and (max-width:1700px) {
+        //     left: 20%;
+        // }
     }
 
     .our-vision-content {
@@ -2018,6 +2122,9 @@ a {
                 font-size: 1.2rem;
             }
 
+            @media (min-width: 1400px) and (max-width: 1650px) {
+                width: 80%;
+            }
         }
 
 
@@ -2029,7 +2136,7 @@ a {
 
         transform: rotate(180deg);
 
-        @media screen and (max-width: 1700px) {
+        @media screen and (max-width: 1400px) {
             display: none;
         }
 
@@ -2038,6 +2145,10 @@ a {
             top: 93%;
 
             @media (min-width:2000px) {
+                top: 95%;
+            }
+
+            @media (min-width:1550px) and (max-width:1650px) {
                 top: 95%;
             }
 
@@ -2060,6 +2171,10 @@ a {
         padding-top: 50px;
     }
 
+    @media (min-width:1400px) and (max-width:1700px) {
+        padding-top: 200px;
+    }
+
     @media (min-width:1700px) {
         padding-top: 300px;
     }
@@ -2072,8 +2187,40 @@ a {
         z-index: -9999999;
         top: 8.5rem;
 
-        @media (max-width:1700px) {
+        @media (max-width:1400px) {
             display: none;
+        }
+
+        @media (min-width:1400px) and (max-width:1500px) {
+            top: 4.5rem;
+            width: 14%;
+        }
+
+        @media (min-width:1500px) and (max-width:1550px) {
+            top: 4.5rem;
+            width: 13%;
+        }
+
+
+        @media (min-width:1550px) and (max-width:1600px) {
+            top: 4rem;
+            width: 13%;
+        }
+
+        @media (min-width:1600px) and (max-width:1650px) {
+            top: 3.4rem;
+            width: 13%;
+        }
+
+        @media (min-width:1650px) and (max-width:1700px) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1400px) and (max-width: 1650px) {
+        .container {
+            max-width: 1300px !important;
+
         }
     }
 }
@@ -2141,18 +2288,21 @@ a {
         width: 2.5%;
 
 
-        @media screen and (max-width: 1700px) {
+        @media screen and (max-width: 1400px) {
             display: none;
         }
 
         &:first-of-type {
             z-index: 9999;
-            top: 73%;
+            top: 80%;
 
             @media (min-width:2000px) {
                 top: 77%;
             }
 
+            @media (min-width:1600px) and (max-width:1650px) {
+                top: 80%;
+            }
 
         }
 
@@ -2169,3 +2319,63 @@ a {
 }
 
 // start about history
+// start what we do styles 
+.what-we-do-banner {
+    .banner-container {
+        min-height: 350px;
+        position: relative;
+
+        @media (max-width: 575px) {
+            background-image: url(../../images/what-we-do/banner.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* Makes the background image cover the container */
+        }
+
+        img {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            @media (max-width: 575px) {
+                display: none !important;
+            }
+        }
+    }
+
+
+    .title {
+        bottom: 1.8em;
+        font-size: 2.8rem;
+        font-weight: bold;
+
+        @media (min-width: 1400px) and (max-width: 1650px) {
+            right: 7rem;
+        }
+    }
+
+
+}
+
+.our-tasks {
+    padding: 100px 0;
+
+    @media (max-width:991px) {
+        padding: 20px 0;
+    }
+
+    .desc {
+        text-align: justify;
+        font-size: 1.5em;
+        font-weight: 600;
+
+    }
+
+    .container {
+        @media (min-width:1400px) and (max-width:1700px) {
+            max-width: 1350px !important;
+        }
+    }
+}
