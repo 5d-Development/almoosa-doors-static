@@ -3103,4 +3103,92 @@ a {
   }
 }
 
+.our-approach {
+  padding-bottom: 180px;
+}
+@media (max-width: 1700px) {
+  .our-approach {
+    padding-bottom: 0px;
+  }
+}
+.our-approach .main-title,
+.our-approach .sub-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+@media (max-width: 575px) {
+  .our-approach .main-title,
+  .our-approach .sub-title {
+    font-size: 1.5rem;
+  }
+}
+.our-approach .sub-title {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+@media (max-width: 575px) {
+  .our-approach .sub-title {
+    font-size: 1.5rem;
+  }
+}
+.our-approach .desc {
+  font-size: 1.5rem;
+  text-align: justify;
+  position: relative;
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .our-approach .desc {
+    padding-inline-start: 2rem;
+    font-size: 1.2rem;
+  }
+}
+.our-approach .desc::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary-color);
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 575px) {
+  .our-approach .desc::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+    right: 10px;
+    top: 20%;
+    transform: translateY(-50%);
+  }
+}
+.our-approach .left-layer {
+  top: 3rem;
+  width: 8%;
+}
+@media (max-width: 1200px) {
+  .our-approach .left-layer {
+    display: none;
+  }
+}
+
+.our-approach.methodology .right-layer {
+  top: 3rem;
+  width: 6%;
+}
+@media (max-width: 1500px) {
+  .our-approach.methodology .right-layer {
+    width: 8%;
+  }
+}
+@media (max-width: 1200px) {
+  .our-approach.methodology .right-layer {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
