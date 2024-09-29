@@ -3220,4 +3220,331 @@ a {
   }
 }
 
+.contact-us-banner .banner-container {
+  min-height: 350px;
+  position: relative;
+}
+@media (max-width: 575px) {
+  .contact-us-banner .banner-container {
+    background-image: url(../../images/contact-us/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Makes the background image cover the container */
+  }
+}
+.contact-us-banner .banner-container img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+@media (max-width: 575px) {
+  .contact-us-banner .banner-container img {
+    display: none !important;
+  }
+}
+.contact-us-banner .title {
+  bottom: 1.8em;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+@media (min-width: 1400px) and (max-width: 1650px) {
+  .contact-us-banner .title {
+    right: 7rem;
+  }
+}
+
+.contact-method .container {
+  border-bottom: 1px solid var(--main-color);
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+@media (min-width: 1400px) and (max-width: 1700px) {
+  .contact-method .container {
+    max-width: 1300px !important;
+  }
+}
+@media (max-width: 991px) {
+  .contact-method .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.contact-method .desc span {
+  font-weight: 500;
+}
+.contact-method .desc span:first-of-type {
+  font-size: 1.4rem;
+}
+@media (max-width: 575px) {
+  .contact-method .desc span:first-of-type {
+    font-size: 1.2rem;
+  }
+}
+.contact-method .desc span:last-of-type {
+  font-size: 1.7rem;
+}
+@media (max-width: 575px) {
+  .contact-method .desc span:last-of-type {
+    font-size: 1.2rem;
+  }
+}
+.contact-method .desc img {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 575px) {
+  .contact-method .desc img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.contact-method .desc:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100px;
+  background-color: var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+  .contact-method .desc:after {
+    display: none;
+  }
+}
+.contact-method .welcome-message img {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 575px) {
+  .contact-method .welcome-message img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.contact-method .welcome-message span {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+@media (max-width: 575px) {
+  .contact-method .welcome-message span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1700px) {
+  .our-branches .container {
+    max-width: 1300px !important;
+  }
+}
+.our-branches .title {
+  font-size: 2.2rem;
+}
+@media (max-width: 991px) {
+  .our-branches .title {
+    font-size: 1.5rem;
+  }
+}
+.our-branches .branches-location {
+  max-height: 700px;
+  overflow-y: auto;
+}
+.our-branches .branches-location .branch-details img {
+  width: 30px;
+  height: 30px;
+}
+.our-branches .branches-location .branch-details .title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+@media (max-width: 991px) {
+  .our-branches .branches-location .branch-details .title {
+    font-size: 1.2rem;
+  }
+}
+.our-branches .branches-location .branch-details .desc {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+@media (max-width: 991px) {
+  .our-branches .branches-location .branch-details .desc {
+    font-size: 1.2rem;
+  }
+}
+.our-branches .branches-location .branch-details span {
+  font-size: 1.5rem;
+}
+@media (max-width: 991px) {
+  .our-branches .branches-location .branch-details span {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 991px) {
+  .our-branches .branches-location .branch-details {
+    width: 250px;
+    padding-bottom: 0 !important;
+  }
+}
+.our-branches .branches-location::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.our-branches .branches-location::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+@media (max-width: 991px) {
+  .our-branches .branches-location {
+    gap: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .our-branches #map {
+    max-height: 400px;
+  }
+}
+
+.inquiries {
+  margin-top: 100px;
+}
+@media (max-width: 991px) {
+  .inquiries {
+    margin-top: 50px;
+  }
+}
+.inquiries .container {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+@media (min-width: 1400px) and (max-width: 1700px) {
+  .inquiries .container {
+    max-width: 1300px !important;
+  }
+}
+@media (max-width: 991px) {
+  .inquiries .container {
+    border: 0;
+  }
+}
+.inquiries .title {
+  font-size: 2.2rem;
+}
+@media (max-width: 991px) {
+  .inquiries .title {
+    font-size: 1.5rem;
+  }
+}
+.inquiries .form-control {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(2, 79, 164, 0.7);
+  color: rgba(2, 79, 164, 0.7);
+  font-weight: bold;
+  width: 80%;
+  font-size: 1.25rem;
+}
+@media (max-width: 991px) {
+  .inquiries .form-control {
+    width: 100%;
+  }
+}
+.inquiries .form-control:focus {
+  box-shadow: none;
+}
+.inquiries .form-control::placeholder {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+@media (max-width: 575px) {
+  .inquiries .form-control::placeholder {
+    font-size: 1.2rem;
+  }
+}
+.inquiries button[type=submit] {
+  font-size: 1.5rem;
+  transition: 0.3s all ease;
+  background-color: var(--main-color);
+  color: #fff;
+  width: 40%;
+  margin: auto;
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.inquiries button[type=submit]:hover {
+  background-color: var(--secondary-color);
+}
+@media (max-width: 991px) {
+  .inquiries button[type=submit] {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1700px) {
+  .subscribe .container {
+    max-width: 1300px !important;
+  }
+}
+.subscribe .title {
+  font-size: 2.2rem;
+}
+@media (max-width: 991px) {
+  .subscribe .title {
+    font-size: 1.5rem;
+  }
+}
+.subscribe .form-control {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(2, 79, 164, 0.7);
+  color: rgba(2, 79, 164, 0.7);
+  font-weight: bold;
+  width: 90%;
+  font-size: 1.25rem;
+}
+@media (max-width: 991px) {
+  .subscribe .form-control {
+    width: 100%;
+  }
+}
+.subscribe .form-control:focus {
+  box-shadow: none;
+}
+.subscribe .form-control::placeholder {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+@media (max-width: 575px) {
+  .subscribe .form-control::placeholder {
+    font-size: 1.2rem;
+  }
+}
+.subscribe button[type=submit] {
+  font-size: 1.5rem;
+  transition: 0.3s all ease;
+  background-color: var(--main-color);
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  display: block;
+  font-weight: bold;
+}
+.subscribe button[type=submit]:hover {
+  background-color: var(--secondary-color);
+}
+@media (max-width: 991px) {
+  .subscribe button[type=submit] {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .subscribe {
+    background-color: #d3deee;
+    padding: 30px 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
