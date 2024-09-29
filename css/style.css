@@ -3274,15 +3274,15 @@ a {
   font-weight: 500;
 }
 .contact-method .desc span:first-of-type {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 @media (max-width: 575px) {
   .contact-method .desc span:first-of-type {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .contact-method .desc span:last-of-type {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 575px) {
   .contact-method .desc span:last-of-type {
@@ -3324,7 +3324,7 @@ a {
   }
 }
 .contact-method .welcome-message span {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 @media (max-width: 575px) {
@@ -3339,7 +3339,7 @@ a {
   }
 }
 .our-branches .title {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 @media (max-width: 991px) {
   .our-branches .title {
@@ -3350,12 +3350,16 @@ a {
   max-height: 700px;
   overflow-y: auto;
 }
+.our-branches .branches-location .branch-details {
+  transition: 0.3s all ease;
+  border-radius: 10px;
+}
 .our-branches .branches-location .branch-details img {
   width: 30px;
   height: 30px;
 }
 .our-branches .branches-location .branch-details .title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   text-wrap: nowrap;
 }
@@ -3386,6 +3390,26 @@ a {
     width: 250px;
     padding-bottom: 0 !important;
   }
+}
+.our-branches .branches-location .branch-details .icon {
+  font-size: 25px;
+  margin-top: 0.1em;
+}
+.our-branches .branches-location .branch-details:hover {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+.our-branches .branches-location .branch-details:hover .title {
+  color: #fff;
+}
+.our-branches .branches-location .branch-details:hover .desc {
+  color: #fff;
+}
+.our-branches .branches-location .branch-details:hover span {
+  color: var(--secondary-color);
+}
+.our-branches .branches-location .branch-details:hover .icon {
+  color: #fff;
 }
 .our-branches .branches-location::-webkit-scrollbar {
   width: 12px;
@@ -3428,7 +3452,7 @@ a {
   }
 }
 .inquiries .title {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 @media (max-width: 991px) {
   .inquiries .title {
@@ -3488,7 +3512,7 @@ a {
   }
 }
 .subscribe .title {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 @media (max-width: 991px) {
   .subscribe .title {
@@ -3530,6 +3554,7 @@ a {
   width: 90%;
   margin: auto;
   display: block;
+  padding: 10px 0;
   font-weight: bold;
 }
 .subscribe button[type=submit]:hover {
