@@ -3351,6 +3351,7 @@ a {
   overflow-y: auto;
 }
 .our-branches .branches-location .branch-details {
+  margin-bottom: 0.5em;
   transition: 0.3s all ease;
   border-radius: 10px;
 }
@@ -3409,6 +3410,22 @@ a {
   color: var(--secondary-color);
 }
 .our-branches .branches-location .branch-details:hover .icon {
+  color: #fff;
+}
+.our-branches .branches-location .branch-details.active {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+.our-branches .branches-location .branch-details.active .title {
+  color: #fff;
+}
+.our-branches .branches-location .branch-details.active .desc {
+  color: #fff;
+}
+.our-branches .branches-location .branch-details.active span {
+  color: var(--secondary-color);
+}
+.our-branches .branches-location .branch-details.active .icon {
   color: #fff;
 }
 .our-branches .branches-location::-webkit-scrollbar {

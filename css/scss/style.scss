@@ -2656,6 +2656,8 @@ a {
         overflow-y: auto;
 
         .branch-details {
+            margin-bottom: .5em;
+
             img {
                 width: 30px;
                 height: 30px;
@@ -2708,6 +2710,27 @@ a {
             }
 
             &:hover {
+                background-color: var(--main-color);
+                border-radius: 10px;
+
+                .title {
+                    color: #fff;
+                }
+
+                .desc {
+                    color: #fff;
+                }
+
+                span {
+                    color: var(--secondary-color);
+                }
+
+                .icon {
+                    color: #fff;
+                }
+            }
+
+            &.active {
                 background-color: var(--main-color);
                 border-radius: 10px;
 
