@@ -2750,7 +2750,38 @@ a {
             max-height: 400px;
         }
     }
+
+    .leaflet-container {
+        background: transparent !important;
+    }
+
+    .get-direction {
+        z-index: 99999999;
+
+
+        transition: .3s all ease;
+        background-color: var(--main-color);
+        color: #fff;
+
+        margin: auto;
+        display: block;
+        padding: 10px 0;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 10px 40px;
+        bottom: 1rem;
+        left: 1rem;
+
+        &:hover {
+            background-color: var(--secondary-color);
+        }
+
+
+
+    }
 }
+
+
 
 .inquiries {
     margin-top: 100px;
@@ -2824,6 +2855,7 @@ a {
         display: block;
         padding: 10px 0;
         font-weight: bold;
+        border-radius: 10px;
 
 
         &:hover {
@@ -2895,6 +2927,7 @@ a {
         display: block;
         padding: 10px 0;
         font-weight: bold;
+        border-radius: 10px;
 
 
         &:hover {
