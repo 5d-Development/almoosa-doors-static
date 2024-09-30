@@ -1325,7 +1325,7 @@ a {
   color: var(--secondary-color) !important;
 }
 .topbar .dropdown-menu {
-  z-index: 999999999 !important;
+  z-index: 99999999999 !important;
   transform: translate(3.063rem, 2.75rem) !important;
   text-align: center;
   font-size: 1em;
