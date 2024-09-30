@@ -16,6 +16,16 @@
       <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
+    
+ <div id="search-bar" class="d-none search-bar position-absolute w-100 end-0 top-0 start-0 d-flex justify-content-center align-items-center">
+         <div class="container d-flex gap-4 align-items-center">
+            <i onclick="document.getElementById('search-bar').classList.add('d-none')" id="close-search" class="fa-solid fa-xmark fa-2x text-white pointer"></i>
+            <input id="search-input" type="text" class="form-control" placeholder="ابحث هنا">
+            <button class="btn px-0"  id="search-button">        <i class="fa-solid fa-magnifying-glass text-white pointer fa-lg"></i>
+            </button>
+         </div>
+         <div id="search-results" class="results d-none"></div>
+      </div>
       <!-- start topbar  -->
       <div class="topbar bg-main-color  py-2">
          <div class="container">
@@ -52,6 +62,12 @@
                      <li> 
                         <a href="#">
                   <i class="fa-brands fa-facebook-f icon    "></i>
+                        </a>
+                     </li>
+                
+                     <li> 
+                        <a href="#" class="search-icon">
+                  <i class="fas fa-search icon    "></i>
                         </a>
                      </li>
                   </ul>
@@ -680,5 +696,25 @@
     this.value = this.value.replace(/[^0-9]/g, '');
   });
 });</script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const searchResults = document.getElementById('searchResults');
+    const results = JSON.parse(sessionStorage.getItem('searchResults')) || [];
+    console.log('Results on Search Page:', results); // Debugging line
+    if (results.length === 0) {
+        let noDataItem = document.createElement("div");
+        noDataItem.className = "result-item";
+        noDataItem.innerHTML = "<p>No data found</p>";
+        searchResults.appendChild(noDataItem);
+    } else {
+        results.forEach(result => {
+            let item = document.createElement("div");
+            item.className = "result-item";
+            item.innerHTML = `<h3 class="text-green">${result.title}</h3><p class="search-context">${result.context}</p><a href="${result.url}">${window.location.origin}/${result.url}</a>`;
+            searchResults.appendChild(item);
+        });
+    }
+});
+</script>
+
    </body>
 </html>

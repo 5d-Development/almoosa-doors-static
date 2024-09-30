@@ -3151,3 +3151,135 @@ button[type="submit"] {
 
 
 }
+
+/* search bar style */
+.search-bar {
+    min-height: 160px;
+    z-index: 999999999999999999;
+    background-color: var(--main-color);
+    transition: .4s all ease;
+
+    .container {
+        @media (min-width: 1400px) and (max-width: 1600px) {
+            max-width: 1300px;
+        }
+    }
+
+    .results {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        right: 0;
+        background: white;
+        max-height: 200px;
+        overflow-y: auto;
+        min-height: calc(100vh - 140px);
+        z-index: 999999999999999;
+
+
+        @media (max-width:991px) {
+
+            min-height: 100vh !important;
+
+        }
+
+    }
+}
+
+
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+
+    p {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: var(--main-color);
+        margin-bottom: 1rem;
+    }
+
+    .search-page-link {
+        color: var(--secondary-color);
+        font-size: 1.2em;
+
+
+    }
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+
+
+
+/* search style */
+
+.search-page {
+    #searchResults {
+        padding: 2em 0;
+
+        @media (min-width:1200px) {
+
+            margin-bottom: 22rem !important;
+
+        }
+    }
+
+}
+
+
+
+.search-context {
+    width: 50%;
+    margin: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+@media (max-width:768px) {
+    .search-context {
+        width: 100%;
+    }
+}
+
+.search-banner {
+    .banner-container {
+
+        position: relative;
+
+        @media (max-width: 575px) {
+            background-image: url("https://placehold.co/600x400/146eb0/FFF");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* Makes the background image cover the container */
+        }
+
+        img {
+            width: 100%;
+            height: 400px;
+
+            object-fit: cover;
+
+            @media (max-width: 575px) {
+                display: none !important;
+            }
+        }
+    }
+
+
+    .title {
+        bottom: 1.8em;
+        font-size: 2.8rem;
+        font-weight: bold;
+
+        @media (min-width: 1400px) and (max-width: 1650px) {
+            right: 7rem;
+        }
+    }
+
+
+}

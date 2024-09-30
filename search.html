@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>What We Do  </title>
+      <title> Search   </title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap" rel="stylesheet">
@@ -12,18 +12,18 @@
       <link rel="stylesheet" href="css/libraries/owl.theme.default.min.css">
       <link rel="stylesheet" href="css/libraries/bootstrap.min.css">
       <link rel="stylesheet" href="css/libraries/aos.css">
+      <link rel="stylesheet" href="css/libraries/leaflet.css">
       <link rel="stylesheet" href="css/style.css">
    </head>
-   <body>
+   <body id="content">
   <div id="search-bar" class="d-none search-bar position-absolute w-100 end-0 top-0 start-0 d-flex justify-content-center align-items-center">
-         <div class="container d-flex gap-4 align-items-center">
-            <i onclick="document.getElementById('search-bar').classList.add('d-none')" id="close-search" class="fa-solid fa-xmark fa-2x text-white pointer"></i>
-            <input id="search-input" type="text" class="form-control" placeholder="ابحث هنا">
-            <button class="btn px-0"  id="search-button">        <i class="fa-solid fa-magnifying-glass text-white pointer fa-lg"></i>
-            </button>
-         </div>
-         <div id="search-results" class="results d-none"></div>
-      </div>
+    <div class="container d-flex gap-4">
+        <i onclick="document.getElementById('search-bar').classList.add('d-none')" id="close-search" class="fa-solid fa-xmark fa-2x text-white pointer"></i>
+        <input id="search-input" type="text" class="form-control" placeholder="ابحث هنا">
+    </div>
+    <div id="search-results" class="results d-none"></div>
+</div>
+
       <!-- start topbar  -->
       <div class="topbar bg-main-color  py-2">
          <div class="container">
@@ -62,9 +62,8 @@
                   <i class="fa-brands fa-facebook-f icon    "></i>
                         </a>
                      </li>
-                
                      <li> 
-                        <a href="#" class="search-icon">
+                        <a href="#">
                   <i class="fas fa-search icon    "></i>
                         </a>
                      </li>
@@ -107,57 +106,51 @@
          </div>
       </div>
       <!-- end topbar  -->
-      <!-- start offcanvas -->
-      <div class="offcanvas offcanvas-end py-4" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-         <div class="offcanvas-header justify-content-end">
-            <i class="fa-solid fa-xmark fa-lg"  data-bs-dismiss="offcanvas" aria-label="Close"></i>
-         </div>
-         <ul class="offcanvas-items mb-2 mb-lg-0">
-            <li class="nav-item">
-               <a class="nav-link px-0  fw-bold  d-flex text-nowrap" aria-current="page" href="#">الرئيسية <span class="px-4 d-none d-xl-block">.</span></a>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           نبذة عنا <i class="fa-solid fa-angle-down"></i>
-               </a>
-           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+     <!-- start offcanvas -->
+<div class="offcanvas offcanvas-end py-4" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+   <div class="offcanvas-header justify-content-end">
+      <i class="fa-solid fa-xmark fa-lg"  data-bs-dismiss="offcanvas" aria-label="Close"></i>
+   </div>
+   <ul class="offcanvas-items mb-2 mb-lg-0">
+      <li class="nav-item">
+         <a class="nav-link px-0 fw-bold d-flex text-nowrap" aria-current="page" href="#">الرئيسية <span class="px-4 d-none d-xl-block">.</span></a>
+      </li>
+      <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            نبذة عنا <i class="fa-solid fa-angle-down"></i>
+         </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="about-us.html">عن الموسي </a></li>
                   <li><a class="dropdown-item" href="what-we-do.html">  مانقوم به  </a></li>
                   <li><a class="dropdown-item" href="how-we-work.html">   كيف نعمل </a></li>
                </ul>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            منتجاتنا  <i class="fa-solid fa-angle-down"></i>
-               </a>
-               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">الابواب السحابة</a></li>
-                  <li><a class="dropdown-item" href="#">  الابواب الشبك  </a></li>
-                  <li><a class="dropdown-item" href="#"> الابواب الجانبية  </a></li>
-                   <li><a class="dropdown-item" href="#">   </a></li>
-                  <li><a class="dropdown-item" href="#">  الابواب الفولاذية</a></li>
-                  <li><a class="dropdown-item" href="#"> ابواب ذات الدرفتين   </a></li>
-                
-               </ul>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             المشاريع الجديدة 
-               </a>
-           
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         عملاؤنا 
-               </a>
-              
-            </li>
-           
+      </li>
+      <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            منتجاتنا <i class="fa-solid fa-angle-down"></i>
+         </a>
+         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">الابواب السحابة</a></li>
+            <li><a class="dropdown-item" href="#">الابواب الشبك</a></li>
+            <li><a class="dropdown-item" href="#">الابواب الجانبية</a></li>
+            <li><a class="dropdown-item" href="#"> </a></li>
+            <li><a class="dropdown-item" href="#">الابواب الفولاذية</a></li>
+            <li><a class="dropdown-item" href="#">ابواب ذات الدرفتين</a></li>
          </ul>
-      </div>
-      <!-- end offcanvas -->
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#">المشاريع الجديدة</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#">عملاؤنا</a>
+      </li>
+   </ul>
+</div>
+<!-- end offcanvas -->
+
+  
        <!-- start banner -->
-  <div class="home-banner  position-relative " id="home">
+  <div class="home-banner  position-relative " id="home"  >
     <!-- start navbar -->
          <nav class="navbar navbar-expand-xl ftco_navbar"    >
             <div class="container">
@@ -173,7 +166,7 @@
                         <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="home.html">الرئيسية <span class="px-4 d-none d-xl-block">.</span></a>
                      </li>
                      <li class="nav-item dropdown">
-                        <a class="nav-link px-0 align-items-center   pe-none fw-bold text-white d-flex text-nowrap" href="what-we-do.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">
+                        <a class="nav-link px-0 align-items-center   pe-none fw-bold text-white d-flex text-nowrap" href="about-us.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">
                         <span> نبذة عنا </span> <i class="fa-solid fa-chevron-down fa-xs me-2"></i>
                         <span class="px-4 d-none d-xl-block">.</span></a>
                         <ul class="dropdown-menu" >
@@ -206,145 +199,26 @@
             </div>
          </nav>
          <!-- end navbar -->
-<div class="what-we-do-banner position-relative">
+<div class="search-banner  position-relative">
 
 <div class="banner-container">
-    <img src="images/what-we-do/banner.png" class="img-fluid" alt="bannerLayer">
+    <img src="https://placehold.co/600x400/146eb0/FFF" class="img-fluid" alt="bannerLayer">
 </div>
  
 
-<div class="container">
-    <h2 class="position-absolute text-white title">مانقوم به   </h2>
-</div>
+
  
 </div>
 
 
   </div>
   <!-- end banner -->
+<div class="search-page bg-white">
+      <div id="searchResults"></div>
 
-<!-- start out tasks -->
-<div class="our-tasks">
-   <div class="container">
-<div class="row flex-column-reverse flex-lg-row">
-   <div class="col-lg-6">
-      <div class="out-tasks-content">
-         <p class="desc text-blue pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="400">
-            في إطار أعمالنا اليومية في شركة الموسى للأبواب، نقوم بعملية بيع وتركيب منتجاتنا بعناية واهتمام. تتخصص الشركة في تقديم مجموعة متنوعة من المنتجات، تشمل أبواب الرول للكراجات، وأبواب المحلات التجارية الأنيقة، والأبواب المضادة للحريق، وأيضًا الأبواب المضادة للرصاص، مما يوفر حلاً شاملاً لاحتياجات العملاء. بالإضافة إلى بيعنا للأفراد، نحرص على بناء شراكات قوية مع عدة جهات حكومية وشركات خاصة، لتلبية احتياجاتهم المتنوعة من المنتجات بكفاءة وجودة عالية. تتميز شركتنا بالتزامها بتقديم خدمات متميزة ومنتجات عالية الجودة، ونسعى دائمًا لتحقيق رضا العملاء وتلبية توقعاتهم بأعلى معايير الاحترافية
-         </p>
-      </div>
-   </div>
-    <div class="col-lg-6">
-      <div class="img" data-aos="fade-right" data-aos-delay="400">
-         <img src="images/what-we-do/tasks-min.png" class="img-fluid" alt="our-tasks">
-      </div>
-    </div>
 </div>
-   </div>
-</div>
-<!-- end out tasks -->
 
 
-      <!-- start  companies -->
-      <div class="companies  pb-lg-3">
-         <div class="owl-carousel companies-carousel owl-theme pt-md-5"  data-aos="fade-up" data-aos-delay="300">
-            <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img1.png" alt="company1" >
-            </div>
-            <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img2.png" alt="company3" >
-            </div>
-            <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img3.png" alt="company3" >
-            </div>
-            <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img4.png" alt="company4" >
-            </div>
-            <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img5.png" alt="company5" >
-            </div>
-            <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img6.png" alt="company6" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img7.png" alt="company7" >
-            </div>
-           
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img9.png" alt="company9" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img10.png" alt="company10" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img11.png" alt="company11" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img12.png" alt="company12" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img13.png" alt="company13" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img14.png" alt="company14" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img15.png" alt="company15" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img16.png" alt="company16" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img17.png" alt="company17" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img18.png" alt="company18" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img19.png" alt="company19" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img20.png" alt="company20" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img21.png" alt="company21" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img22.png" alt="company22" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img23.png" alt="company23" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img24.png" alt="company24" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img25.png" alt="company25" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img26.png" alt="company26" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img27.png" alt="company27" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img28.png" alt="company28" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img29.png" alt="company29" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img30.png" alt="company30" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img31.png" alt="company31" >
-            </div>
-                <div class="d-flex justify-content-center"  >
-               <img src="./images/home/companies/img32.png" alt="company31" >
-            </div>
-         </div>
-      </div>
-      <!-- end  companies -->
       <!-- start footer -->
       <div class="footer  ">
          <div class="container">
@@ -382,8 +256,8 @@
                               <i class="fa-brands fa-youtube text-blue fa-xl"></i>
                               </a>
                            </li>
-                              <li> 
-                                <a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank">
+                           <li> 
+                                <a href="https://api.whatsapp.com/send?phone=15551234567" >
                                     <i class="fa-brands fa-whatsapp text-blue fa-xl"></i>
                                 </a>
                             </li>
@@ -528,6 +402,7 @@
       <script src="js/libraries/jquery-3.7.1.min.js"></script>
       <script src="js/libraries/owl.carousel.min.js"></script>
       <script src="js/libraries/aos.js"></script>
+      <script src="js/libraries/leaflet.js"></script>
       <script src="js/main.js"></script>
       <script>
    window.addEventListener('load', () => {
@@ -538,5 +413,48 @@
 });
   });
       </script>
+ 
+
+ <script> //remove e letter from input in customer support page 
+   document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('customer-contact-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+
+  const phoneInput = document.getElementById('Phone');
+
+  phoneInput.addEventListener('keypress', function (e) {
+    const charCode = e.which ? e.which : e.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      e.preventDefault();
+    }
+  });
+  
+  phoneInput.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+});</script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const searchResults = document.getElementById('searchResults');
+    const results = JSON.parse(sessionStorage.getItem('searchResults')) || [];
+    console.log('Results on Search Page:', results); // Debugging line
+    if (results.length === 0) {
+        let noDataItem = document.createElement("div");
+        noDataItem.className = "result-item";
+        noDataItem.innerHTML = "<p>No data found</p>";
+        searchResults.appendChild(noDataItem);
+    } else {
+        results.forEach(result => {
+            let item = document.createElement("div");
+            item.className = "result-item";
+            item.innerHTML = `<p class="search-context">${result.context}</p><a class="search-page-link" href="${result.url}">${window.location.origin}/${result.url}</a>`;
+            searchResults.appendChild(item);
+        });
+    }
+});
+</script>
+
    </body>
 </html>

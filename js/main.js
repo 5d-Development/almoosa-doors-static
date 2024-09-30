@@ -1,4 +1,121 @@
-
+ 
+         document.addEventListener("DOMContentLoaded", function() {
+             let searchBar = document.getElementById("search-bar");
+             let closeSearch = document.getElementById("close-search");
+             let searchButton = document.getElementById("search-button");
+             let searchInput = document.getElementById("search-input");
+             let searchResults = document.getElementById("search-results");
+         
+             const pages = ["about-us.html", "career-1.html", "career-2.html", "contact-us.html", "customer-support.html", "home.html", "how-we-work.html", "our-clients.html", "products.html", "what-we-do.html"];
+             document.querySelectorAll(".search-icon").forEach(function(icon) {
+                 icon.addEventListener("click", function() {
+                     searchBar.classList.toggle("d-none");
+                     searchResults.classList.add("d-none");
+                 });
+             });
+         
+             closeSearch.addEventListener("click", function() {
+                 searchBar.classList.add("d-none");
+                 searchResults.classList.add("d-none");
+             });
+         
+             searchInput.addEventListener("input", function() {
+                 let query = searchInput.value.toLowerCase();
+                 if (query.length === 0) {
+                     searchResults.classList.add("d-none");
+                 }
+             });
+         
+             searchInput.addEventListener("keypress", function(event) {
+                 if (event.key === "Enter") {
+                     event.preventDefault();
+                     let query = searchInput.value.toLowerCase();
+                     if (query.length > 0) {
+                         searchInAllPages(query);
+                     } else {
+                         searchResults.classList.add("d-none");
+                     }
+                 }
+             });
+         
+             searchButton.addEventListener("click", function(event) {
+                 event.preventDefault();
+                 let query = searchInput.value.toLowerCase();
+                 if (query.length > 0) {
+                     searchInAllPages(query);
+                 } else {
+                     searchResults.classList.add("d-none");
+                 }
+             });
+         
+             async function searchInAllPages(query) {
+                 let results = [];
+                 for (let page of pages) {
+                     let content = await fetchPageContent(page);
+                     results = results.concat(searchInContent(query, content, page));
+                 }
+                 displayResults(results);
+             }
+         
+             function searchInContent(query, { content, title }, pageUrl) {
+                 let results = [];
+                 let lowerCaseContent = content.toLowerCase();
+                 let index = lowerCaseContent.indexOf(query);
+                 while (index !== -1) {
+                     let context = content.substring(index - 200, index + 50 + query.length);
+                     results.push({ context, url: pageUrl, title });
+                     index = lowerCaseContent.indexOf(query, index + 1);
+                 }
+                 return results;
+             }
+         
+             async function fetchPageContent(url) {
+                 try {
+                     let response = await fetch(url);
+                     if (response.ok) {
+                         const html = await response.text();
+                         const tempElement = document.createElement('div');
+                         tempElement.innerHTML = html;
+         
+                         // Remove footer
+                         const footer = tempElement.querySelector('footer');
+                         if (footer) {
+                             footer.remove();
+                         }
+         
+                         // Remove copyright section
+                         const copyrightSection = tempElement.querySelector('.copyright');
+                         if (copyrightSection) {
+                             copyrightSection.remove();
+                         }
+         
+                         const title = tempElement.querySelector('.banner-title')?.innerHTML;
+                         return { content: tempElement.textContent, title };
+                     } else {
+                         console.error("Failed to fetch content from", url);
+                         return { content: "", title: "Error" };
+                     }
+                 } catch (error) {
+                     console.error("Error fetching content from", url, error);
+                     return { content: "", title: "Error" };
+                 }
+             }
+         
+             function displayResults(results) {
+                 searchResults.innerHTML = "";
+                 if (results.length === 0) {
+                     let noDataItem = document.createElement("div");
+                     noDataItem.className = "result-item";
+                     noDataItem.innerHTML = "<p>No data found</p>";
+                     searchResults.appendChild(noDataItem);
+                 } else {
+                     sessionStorage.setItem('searchResults', JSON.stringify(results));
+                     window.location.href = '/search.html';
+                 }
+                 searchResults.classList.remove("d-none");
+             }
+         });
+    
 	// scrolled navbar 
 var scrollWindow = function () {
   
