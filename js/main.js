@@ -1,4 +1,4 @@
- 
+//  search bar logic 
          document.addEventListener("DOMContentLoaded", function() {
              let searchBar = document.getElementById("search-bar");
              let closeSearch = document.getElementById("close-search");
