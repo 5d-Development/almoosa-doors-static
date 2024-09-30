@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New Projects </title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/libraries/all.css">
+      <link rel="stylesheet" href="css/libraries/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/libraries/owl.theme.default.min.css">
+      <link rel="stylesheet" href="css/libraries/bootstrap.min.css">
+      <link rel="stylesheet" href="css/libraries/aos.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+  <div id="search-bar" class="d-none search-bar position-absolute w-100 end-0 top-0 start-0 d-flex justify-content-center align-items-center">
+         <div class="container d-flex gap-4 align-items-center">
+            <i onclick="document.getElementById('search-bar').classList.add('d-none')" id="close-search" class="fa-solid fa-xmark fa-2x text-white pointer"></i>
+            <input id="search-input" type="text" class="form-control rounded" placeholder="ابحث هنا">
+            <button class="btn px-0"  id="search-button">        <i class="fa-solid fa-magnifying-glass text-white pointer fa-lg"></i>
+            </button>
+         </div>
+         <div id="search-results" class="results d-none"></div>
+      </div>
+      <!-- start topbar  -->
+      <div class="topbar bg-main-color  py-2">
+         <div class="container">
+            <div class="row align-items-center g-3">
+               <div class="col-lg-5">
+                  <ul class="d-flex gap-4 align-items-center justify-content-center justify-content-lg-start    social">
+                     <li>
+                        <a href="https://api.whatsapp.com/send?phone=15551234567">
+                            <i class="fa-brands fa-whatsapp   icon"></i>
+                        </a>
+                     </li>
+                     <li> 
+                        <a href="#">
+                             <i class="fa-brands fa-youtube   icon"></i>
+                        </a>
+                     </li>
+                       <li> 
+                        <a href="#">
+                             <i class="fa-brands fa-linkedin-in   icon"></i>
+                        </a>
+                     </li>
+                       <li> 
+                        <a href="#">
+                  <i class="fa-brands fa-instagram icon   "></i>
+                        </a>
+                     </li>
+                     <li> 
+                        <a href="#">
+                        <i class="fa-brands fa-x-twitter  icon twitter"></i>
+                        </a>
+                     </li>
+                   
+                
+                     <li> 
+                        <a href="#">
+                  <i class="fa-brands fa-facebook-f icon    "></i>
+                        </a>
+                     </li>
+                
+                     <li> 
+                        <a href="#" class="search-icon">
+                  <i class="fas fa-search icon    "></i>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-lg-7 ">
+                  <div class="d-flex justify-content-center flex-wrap justify-content-lg-end  gap-sm-4 align-items-center">
+                     <!-- language dropdown -->
+                     <div class="dropdown">
+                        <a class="btn text-white  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-chevron-down ms-2 cheveron"></i> AR 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                           <li><a class="dropdown-item" href="#">AR</a></li>
+                           <li><a class="dropdown-item" href="#">EN</a></li>
+                        </ul>
+                     </div>
+                     <ul class="d-flex topbar-links ">
+                        <li>
+                           <a href="#" class="text-white">الوظائف</a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-white">اتصل بنا </a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-white"> خدمة العملاء   </a>
+                        </li>
+                     </ul>
+                     <div class="phone-link">
+                        <a href="tel:920017000" class="d-flex gap-sm-2 ">  
+                        <span class="text-white">
+                        920017000
+                        </span>  
+                        <img src="images/home/topbar/phone.svg" alt="phone">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end topbar  -->
+      <!-- start offcanvas -->
+      <div class="offcanvas offcanvas-end py-4" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+         <div class="offcanvas-header justify-content-end">
+            <i class="fa-solid fa-xmark fa-lg"  data-bs-dismiss="offcanvas" aria-label="Close"></i>
+         </div>
+         <ul class="offcanvas-items mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link px-0  fw-bold  d-flex text-nowrap" aria-current="page" href="#">الرئيسية <span class="px-4 d-none d-xl-block">.</span></a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           نبذة عنا <i class="fa-solid fa-angle-down"></i>
+               </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="about-us.html">عن الموسي </a></li>
+                  <li><a class="dropdown-item" href="what-we-do.html">  مانقوم به  </a></li>
+                  <li><a class="dropdown-item" href="how-we-work.html">   كيف نعمل </a></li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            منتجاتنا  <i class="fa-solid fa-angle-down"></i>
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">الابواب السحابة</a></li>
+                  <li><a class="dropdown-item" href="#">  الابواب الشبك  </a></li>
+                  <li><a class="dropdown-item" href="#"> الابواب الجانبية  </a></li>
+                   <li><a class="dropdown-item" href="#">   </a></li>
+                  <li><a class="dropdown-item" href="#">  الابواب الفولاذية</a></li>
+                  <li><a class="dropdown-item" href="#"> ابواب ذات الدرفتين   </a></li>
+                
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             المشاريع الجديدة 
+               </a>
+           
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         عملاؤنا 
+               </a>
+              
+            </li>
+           
+         </ul>
+      </div>
+      <!-- end offcanvas -->
+       <!-- start banner -->
+  <div class="home-banner  position-relative " id="home">
+    <!-- start navbar -->
+         <nav class="navbar navbar-expand-xl ftco_navbar"    >
+            <div class="container">
+               <a class="navbar-brand" href="home.html">
+               <img src="images/home/navbar/logo.svg"  alt="logo" id="logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+               <i class="fa-solid fa-bars " ></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mb-2 mb-lg-0 main">
+                     <li class="nav-item">
+                        <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="home.html">الرئيسية <span class="px-4 d-none d-xl-block">.</span></a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link px-0 align-items-center   pe-none fw-bold text-white d-flex text-nowrap" href="what-we-do.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">
+                        <span> نبذة عنا </span> <i class="fa-solid fa-chevron-down fa-xs me-2"></i>
+                        <span class="px-4 d-none d-xl-block">.</span></a>
+                        <ul class="dropdown-menu" >
+                           <li><a class="dropdown-item" href="about-us.html">  عن الموسي  </a></li>
+                           <li><a class="dropdown-item" href="what-we-do.html">    مانقوم به  </a></li>
+                           <li><a class="dropdown-item" href="how-we-work.html">     كيف نعمل</a></li>
+                        </ul>
+                     </li>
+                   <li class="nav-item dropdown">
+                        <a class="nav-link px-0 align-items-center   pe-none fw-bold text-white d-flex text-nowrap" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">
+                        <span>    منتجاتنا </span> <i class="fa-solid fa-chevron-down fa-xs me-2"></i>
+                        <span class="px-4 d-none d-xl-block">.</span></a>
+                        <ul class="dropdown-menu" >
+                           <li><a class="dropdown-item" href="#">  الابواب السحابة </a></li>
+                           <li><a class="dropdown-item" href="#">    الابواب الشبك </a></li>
+                           <li><a class="dropdown-item" href="#">   الابواب الجانبية  </a></li>
+                           <li><a class="dropdown-item" href="#">   الابواب الفولاذية  </a></li>
+                           <li><a class="dropdown-item" href="#">    ابواب ذات الدرفتين  </a></li>
+                        </ul>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link px-0     fw-bold text-white d-flex text-nowrap" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#"> المشاريع الجديدة <span class="px-4 d-none d-xl-block">.</span></a>
+                      
+                     </li>
+                      <li class="nav-item    ">
+                        <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="our-clients.html">عملاءنا <span class="px-4 d-none d-xl-block">.</span></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <!-- end navbar -->
+<div class="new-projects-banner position-relative">
+
+<div class="banner-container">
+    <img src="./images/new-projects/banner.png" class="img-fluid" alt="bannerLayer">
+</div>
+ 
+
+<div class="container">
+    <h2 class="position-absolute text-white title banner-title">   المشاريع الجديدة   </h2>
+</div>
+ 
+</div>
+  </div>
+  <!-- end banner -->
+<!-- start our new projects  -->
+ <div class="our-new-projects">
+  <div class="container mt-lg-5">
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs" >
+        <li class="nav-item" >
+            <button class="nav-link active"  data-bs-toggle="tab" data-bs-target="#All" type="button"   aria-selected="true">الكل</button>
+        </li>
+        <li class="nav-item" >
+            <button class="nav-link"  data-bs-toggle="tab" data-bs-target="#red-sea-projects" type="button"   aria-selected="false">مشاريع البحر الاحمر</button>
+        </li>
+        <li class="nav-item" >
+            <button class="nav-link"  data-bs-toggle="tab" data-bs-target="#seven-projects" type="button"   aria-selected="false">المشاريع السبعة</button>
+        </li>
+        <li class="nav-item" >
+            <button class="nav-link"  data-bs-toggle="tab" data-bs-target="#project-criteria" type="button"   aria-selected="false"> معايير المشروع</button>
+        </li>
+        <li class="nav-item" >
+            <button class="nav-link"  data-bs-toggle="tab" data-bs-target="#collaborate-with-us" type="button"   aria-selected="false">  تعاون معنا </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="All"  >
+     <div class="row my-0 my-lg-5 g-2 g-lg-4">
+ <div class="col-md-4">
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img1.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold"> حظائر صيانة الطائرات الجديدة – مطار الملك عبد العز يز الدولي  </h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img2.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+قاعدة الملك سلمان الجوية       </h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img3.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+مشاريع البحر الاحمر  </h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img4.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+أمالا - سيكس سينس</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img5.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+ أمالا - منتجع تر يبل باي
+</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img6.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+القر ية الساحلية
+</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+   
+      </div>
+     </div>
+        <div class="tab-pane fade" id="red-sea-projects" >
+      <div class="row my-0 my-lg-5 g-2 g-lg-4"> 
+ <div class="col-md-4">
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img7.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+خليج السلاحف       </h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img8.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+جز يرة الشورى
+     </h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img9.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+المشاريع السبعة - الوجهة الترفيهية - ينبع
+ </h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img10.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+- المشاريع السبعة الوجهة الترفيهية - المدينة المنورة
+</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img11.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+المشاريع السبعة - الوجهة الترفيهية - تبوك
+</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img12.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+SWCC - مصنع RO- المشاريع السبعة 
+</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+  <div class="col-md-4"> 
+   <div class="all-tab-content">
+ <div class="card" >
+  <img src="images/new-projects/img13.svg"   alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center pt-0 pt-lg-3 m-auto fw-bold">
+مباني أمن أرامكو بالمنطقة الشرقية
+</h5>
+   </div>
+ 
+ 
+</div>
+   </div>
+ </div>
+   
+      </div>
+     </div>
+      
+        <div class="tab-pane fade" id="seven-projects"  >
+             <div class="row">
+   المشاريع السبعة
+     
+            </div>
+        </div>
+
+         <div class="tab-pane fade" id="project-criteria"  >
+             <div class="row">
+معايير المشروع
+     
+            </div>
+        </div>
+         <div class="tab-pane fade" id="collaborate-with-us"  >
+             <div class="row">
+تعاون معنا 
+     
+            </div>
+        </div>
+        </div>
+     
+     
+    </div>
+</div>
+ 
+<!-- end our new projects  -->
+
+      <!-- start  companies -->
+      <div class="companies  pb-lg-3">
+         <div class="owl-carousel companies-carousel owl-theme pt-md-5"  data-aos="fade-up" data-aos-delay="300">
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img1.png" alt="company1" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img2.png" alt="company3" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img3.png" alt="company3" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img4.png" alt="company4" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img5.png" alt="company5" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img6.png" alt="company6" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img7.png" alt="company7" >
+            </div>
+           
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img9.png" alt="company9" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img10.png" alt="company10" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img11.png" alt="company11" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img12.png" alt="company12" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img13.png" alt="company13" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img14.png" alt="company14" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img15.png" alt="company15" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img16.png" alt="company16" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img17.png" alt="company17" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img18.png" alt="company18" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img19.png" alt="company19" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img20.png" alt="company20" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img21.png" alt="company21" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img22.png" alt="company22" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img23.png" alt="company23" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img24.png" alt="company24" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img25.png" alt="company25" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img26.png" alt="company26" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img27.png" alt="company27" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img28.png" alt="company28" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img29.png" alt="company29" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img30.png" alt="company30" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img31.png" alt="company31" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img32.png" alt="company31" >
+            </div>
+         </div>
+      </div>
+      <!-- end  companies -->
+      <!-- start footer -->
+      <div class="footer  ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12  col-xl-2">
+                  <div class="d-flex flex-column justify-content-between h-100 pb-4 pb-lg-0">
+                     <div>
+                        <a href="home.html">  <img src="./images/home/footer/logo.svg " style="width: 160px;" class="log" alt="logo"></a>
+                     </div>
+                     <div class="pt-2 mt-2 pt-xl-5 mt-xl-5">
+                        <h4 class="follow-title text-blue fw-bold pb-3">تابعونا</h4>
+                        <ul class="d-flex gap-lg-3 gap-2 social">
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-facebook-f text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-x-twitter text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-instagram text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-linkedin-in text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-youtube text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                              <li> 
+                                <a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank">
+                                    <i class="fa-brands fa-whatsapp text-blue fa-xl"></i>
+                                </a>
+                            </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12  col-xl-7 ">
+                  <div class="row   g-4 d-flex justify-content-between py-4 py-xl-0">
+                     <div class="col-6 col-md-3 ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#">الرئيسية</a>
+                           </li>
+                           <li>
+                              <a href="#">عملائنا</a>
+                           </li>
+                           <li>
+                              <a href="#">الوظائف</a>
+                           </li>
+                           <li>
+                              <a href="#">خدمة العملاء</a>
+                           </li>
+                           <li>
+                              <a href="#">الفروع</a>
+                           </li>
+                           <li>
+                              <a href="#">الاسئلة المتداولة</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-6 col-md-3  ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#">منتجاتنا</a>
+                           </li>
+                           <li>
+                              <a href="#">الابواب السحابة</a>
+                           </li>
+                           <li>
+                              <a href="#">الابواب الشبك</a>
+                           </li>
+                           <li>
+                              <a href="#">الابواب الجانبية</a>
+                           </li>
+                           <li>
+                              <a href="#">الابواب الفولاذية</a>
+                           </li>
+                           <li>
+                              <a href="#">ابواب ذات الدرفتين</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-6 col-md-3  ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#">نبذة عنا</a>
+                           </li>
+                           <li>
+                              <a href="#">عن الموسى</a>
+                           </li>
+                           <li>
+                              <a href="#">ما نقوم به</a>
+                           </li>
+                           <li>
+                              <a href="#">كيف نعمل</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-6 col-md-3  ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#">المشروعات الجديدة</a>
+                           </li>
+                           <li>
+                              <a href="#">العروض والخصومات</a>
+                           </li>
+                           <li>
+                              <a href="#">الاكثر مبيعا</a>
+                           </li>
+                           <li>
+                              <a href="#">منتجات مميزة</a>
+                           </li>
+                           <li>
+                              <a href="#">وصل حديثا</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 col-xl-3">
+                  <h3 class="contact-us text-blue fw-bold pb-2">تواصل معانا</h3>
+                  <p class="text-blue mb-3 desc">المملكة العربية السعودية-مدينة الاحساء-شارع الثريات-برج الملحم-ص ب10070</p>
+                  <p class="text-blue desc mb-4">رقم الوحدة12-رقم المبنى (وسط المدينة)6369-المبرز2069-الرمز البريدي36341-رقم اضافي2096-العنوان</p>
+                  <a href="tel:920017000" class="d-flex justify-content-end align-items-center gap-2 contact" >
+                     <h4 class=" font-20 number">920017000</h4>
+                     <img src="./images/home/footer/phone.svg" alt="phone" class="img-fluid phone">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end footer -->
+      <!-- start copyrights -->
+      <div class="copyright bg-main-color py-3">
+         <div class="container ">
+            <div class="d-flex justify-content-between copyright-content">
+               <p class="text-white text-center text-md-start">جميع الحقوق محفوظة لدى الموسى للأبواب  ٢٠٢٤©</p>
+               <ul class="d-flex flex-column flex-md-row  align-items-center  gap-4 links ">
+                  <li>
+                     <a href="#" >
+                     سياسة الخصوصية 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                     الاحكام والشروط
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                     نبذة عنا
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                     الوظائف
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                     الموقع
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- end copyrights -->
+      <script src="js/libraries/all.min.js"></script>
+      <script src="js/libraries/bootstrap.bundle.min.js"></script>
+      <script src="js/libraries/jquery-3.7.1.min.js"></script>
+      <script src="js/libraries/owl.carousel.min.js"></script>
+      <script src="js/libraries/aos.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+   window.addEventListener('load', () => {
+      AOS.init({
+  duration: 1000, // Animation duration in milliseconds
+  once: true,     // Ensures animation happens only once when scrolling down
+  offset: 120,    // Change offset (default is 120px)
+});
+  });
+      </script>
+   </body>
+</html>
