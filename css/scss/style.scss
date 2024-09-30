@@ -2967,3 +2967,187 @@ a {
         padding: 30px 0;
     }
 }
+
+// customer support styles
+.familiar-questions {
+    padding: 80px 0;
+
+    .container {
+
+        @media (min-width:1400px) and (max-width:1700px) {
+            max-width: 1300px !important;
+        }
+    }
+
+    .title {
+        font-size: 2.2rem;
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width:575px) {
+        padding: 20px 0;
+    }
+
+    .accordion {
+        width: 90%;
+        margin: auto;
+
+        .accordion-item {
+            border: 0;
+            border-bottom: 4px solid #003DA51A;
+
+        }
+
+        .accordion-button {
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--main-color);
+            text-align: right;
+
+            &::after {
+                margin-left: 0;
+                margin-right: auto;
+                background-image: url(../../images/customer-support/accordion.svg);
+                width: 20px;
+                height: 20px;
+
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:not(.collapsed) {
+                box-shadow: none;
+                background-color: transparent;
+
+            }
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        .accordion-body {
+            padding-top: 0;
+
+            h4 {
+                position: relative;
+                margin-bottom: 1rem;
+                padding-inline-start: 1rem;
+
+
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: var(--main-color);
+                    right: -1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                @media (max-width:575px) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            ul {
+                li {
+                    font-size: 1.2rem;
+                    color: var(--secondary-color);
+
+                    @media (max-width:575px) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.customer-contact-form {
+    margin: 100px 0;
+
+    @media (max-width:575px) {
+        margin: 30px 0;
+    }
+
+    .container {
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        @media (min-width:1400px) and (max-width:1700px) {
+            max-width: 1300px !important;
+        }
+    }
+
+    .title {
+        font-size: 2.2rem;
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
+    }
+
+
+}
+
+.form-control,
+.services-type {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(2, 79, 164, .7);
+    color: rgb(2, 79, 164, .7);
+    font-weight: bold;
+
+
+
+
+    &:focus {
+        box-shadow: none;
+        color: rgb(2, 79, 164, .7);
+
+    }
+
+
+    font-size: 1.25rem;
+
+
+    &::placeholder {
+        color: rgb(2, 79, 164, .7);
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        @media (max-width:575px) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+button[type="submit"] {
+    font-size: 1.5rem;
+    transition: .3s all ease;
+    background-color: var(--main-color);
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+    border-radius: 10px;
+
+
+    &:hover {
+        background-color: var(--secondary-color);
+    }
+
+
+}

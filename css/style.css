@@ -3611,4 +3611,162 @@ a {
   }
 }
 
+.familiar-questions {
+  padding: 80px 0;
+}
+@media (min-width: 1400px) and (max-width: 1700px) {
+  .familiar-questions .container {
+    max-width: 1300px !important;
+  }
+}
+.familiar-questions .title {
+  font-size: 2.2rem;
+}
+@media (max-width: 575px) {
+  .familiar-questions .title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 575px) {
+  .familiar-questions {
+    padding: 20px 0;
+  }
+}
+.familiar-questions .accordion {
+  width: 90%;
+  margin: auto;
+}
+.familiar-questions .accordion .accordion-item {
+  border: 0;
+  border-bottom: 4px solid rgba(0, 61, 165, 0.1019607843);
+}
+.familiar-questions .accordion .accordion-button {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--main-color);
+  text-align: right;
+}
+.familiar-questions .accordion .accordion-button::after {
+  margin-left: 0;
+  margin-right: auto;
+  background-image: url(../../images/customer-support/accordion.svg);
+  width: 20px;
+  height: 20px;
+}
+.familiar-questions .accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.familiar-questions .accordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: transparent;
+}
+@media (max-width: 575px) {
+  .familiar-questions .accordion .accordion-button {
+    font-size: 1.2rem;
+  }
+}
+.familiar-questions .accordion .accordion-body {
+  padding-top: 0;
+}
+.familiar-questions .accordion .accordion-body h4 {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-inline-start: 1rem;
+}
+.familiar-questions .accordion .accordion-body h4::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 575px) {
+  .familiar-questions .accordion .accordion-body h4 {
+    font-size: 1.2rem;
+  }
+}
+.familiar-questions .accordion .accordion-body ul li {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+@media (max-width: 575px) {
+  .familiar-questions .accordion .accordion-body ul li {
+    font-size: 1rem;
+  }
+}
+
+.customer-contact-form {
+  margin: 100px 0;
+}
+@media (max-width: 575px) {
+  .customer-contact-form {
+    margin: 30px 0;
+  }
+}
+.customer-contact-form .container {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (min-width: 1400px) and (max-width: 1700px) {
+  .customer-contact-form .container {
+    max-width: 1300px !important;
+  }
+}
+.customer-contact-form .title {
+  font-size: 2.2rem;
+}
+@media (max-width: 575px) {
+  .customer-contact-form .title {
+    font-size: 1.2rem;
+  }
+}
+
+.form-control,
+.services-type {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(2, 79, 164, 0.7);
+  color: rgba(2, 79, 164, 0.7);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.form-control:focus,
+.services-type:focus {
+  box-shadow: none;
+  color: rgba(2, 79, 164, 0.7);
+}
+.form-control::placeholder,
+.services-type::placeholder {
+  color: rgba(2, 79, 164, 0.7);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+@media (max-width: 575px) {
+  .form-control::placeholder,
+  .services-type::placeholder {
+    font-size: 1.2rem;
+  }
+}
+
+button[type=submit] {
+  font-size: 1.5rem;
+  transition: 0.3s all ease;
+  background-color: var(--main-color);
+  color: #fff;
+  width: 100%;
+  margin: auto;
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 10px;
+}
+button[type=submit]:hover {
+  background-color: var(--secondary-color);
+}
+
 /*# sourceMappingURL=style.css.map */
