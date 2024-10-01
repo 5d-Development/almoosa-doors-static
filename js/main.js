@@ -1,3 +1,24 @@
+//remove e letter from input in  our new projects page (collaborate with us tab)
+   document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('collaborate-with-us-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+
+  const phoneInput = document.getElementById('phone');
+
+  phoneInput.addEventListener('keypress', function (e) {
+    const charCode = e.which ? e.which : e.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      e.preventDefault();
+    }
+  });
+  
+  phoneInput.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+});
 //  search bar logic 
          document.addEventListener("DOMContentLoaded", function() {
              let searchBar = document.getElementById("search-bar");

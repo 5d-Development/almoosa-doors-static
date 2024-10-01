@@ -3098,57 +3098,57 @@ a {
     }
 
 
-}
-
-.form-control,
-.services-type {
-    border: 0;
-    border-radius: 0;
-    border-bottom: 2px solid rgb(2, 79, 164, .7);
-    color: rgb(2, 79, 164, .7);
-    font-weight: bold;
-
-
-
-
-    &:focus {
-        box-shadow: none;
+    .form-control,
+    .services-type {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 2px solid rgb(2, 79, 164, .7);
         color: rgb(2, 79, 164, .7);
-
-    }
-
-
-    font-size: 1.25rem;
-
-
-    &::placeholder {
-        color: rgb(2, 79, 164, .7);
-        font-size: 1.25rem;
         font-weight: bold;
 
-        @media (max-width:575px) {
-            font-size: 1.2rem;
+
+
+
+        &:focus {
+            box-shadow: none;
+            color: rgb(2, 79, 164, .7);
+
+        }
+
+
+        font-size: 1.25rem;
+
+
+        &::placeholder {
+            color: rgb(2, 79, 164, .7);
+            font-size: 1.25rem;
+            font-weight: bold;
+
+            @media (max-width:575px) {
+                font-size: 1.2rem;
+            }
         }
     }
-}
 
-button[type="submit"] {
-    font-size: 1.5rem;
-    transition: .3s all ease;
-    background-color: var(--main-color);
-    color: #fff;
-    width: 100%;
-    margin: auto;
-    display: block;
-    padding: 10px 0;
-    font-weight: bold;
-    border-radius: 10px;
+    button[type="submit"] {
+        font-size: 1.5rem;
+        transition: .3s all ease;
+        background-color: var(--main-color);
+        color: #fff;
+        width: 100%;
+        margin: auto;
+        display: block;
+        padding: 10px 0;
+        font-weight: bold;
+        border-radius: 10px;
 
 
-    &:hover {
-        background-color: var(--secondary-color);
+        &:hover {
+            background-color: var(--secondary-color);
+        }
+
+
     }
-
 
 }
 
@@ -3406,4 +3406,182 @@ button[type="submit"] {
             }
         }
     }
+
+    #collaborate-with-us {
+        padding: 80px 0;
+
+        @media (max-width:991px) {
+            padding: 30px 0;
+        }
+
+        .collaborate-with-us-form {
+
+            .title {
+                font-size: 2.2rem;
+
+                @media (max-width:575px) {
+                    font-size: 1.2rem;
+                }
+            }
+
+
+            .form-control {
+                border: 0;
+                border-radius: 0;
+                border-bottom: 2px solid rgb(2, 79, 164, .7);
+                color: rgb(2, 79, 164, .7);
+                font-weight: bold;
+                margin-bottom: 4.5rem;
+                width: 90%;
+
+                @media (max-width:1700px) {
+                    margin-bottom: 3.5rem;
+                }
+
+                @media (max-width:991px) {
+                    width: 100%;
+                    margin-bottom: 2.5rem;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    color: rgb(2, 79, 164, .7);
+
+                }
+
+
+                font-size: 1.25rem;
+
+
+                &::placeholder {
+                    color: rgb(2, 79, 164, .7);
+                    font-size: 1.25rem;
+                    font-weight: bold;
+
+                    @media (max-width:575px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            button[type="submit"] {
+                font-size: 1.5rem;
+                transition: .3s all ease;
+                background-color: var(--main-color);
+                color: #fff;
+                width: 100%;
+                display: block;
+                padding: 10px 0;
+                font-weight: bold;
+                border-radius: 10px;
+                width: 90%;
+
+                @media (max-width:991px) {
+                    width: 100%;
+                }
+
+                &:hover {
+                    background-color: var(--secondary-color);
+                }
+
+
+            }
+
+        }
+    }
+
+    #project-criteria {
+        padding-top: 60px;
+
+        @media (max-width:575px) {
+            padding: 0;
+        }
+
+        .desc {
+            font-size: 1.6rem;
+            text-align: justify;
+            position: relative;
+            margin-bottom: 3rem;
+            padding-right: 2.5rem;
+
+            @media (max-width:575px) {
+                padding-right: 1rem;
+                margin-bottom: 1.8rem;
+
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                background-color: var(--secondary-color);
+                right: 0;
+                top: 0%;
+
+                @media (max-width:575px) {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: var(--secondary-color);
+
+                    transform: translateY(-50%);
+                    right: 0;
+                    top: .9rem;
+                }
+            }
+
+            p {
+                &:first-child {
+                    line-height: 2rem;
+
+                    @media (max-width:575px) {
+                        font-size: 1.2rem;
+                        line-height: normal;
+                    }
+                }
+
+                &.sub-desc {
+                    font-size: 1.1rem;
+
+                    @media (max-width:575px) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .criteria-img {
+            left: 0em;
+            top: 49%;
+            width: 25%;
+            transform: translateY(-50%);
+        }
+
+        .criteria-layer {
+            left: 2em;
+            top: 20.5%;
+            width: 42%;
+            z-index: 99;
+
+            @media (max-width:1700px) and (min-width:1400px) {
+                left: 2.4em;
+                top: 29.5%;
+                width: 42%;
+                z-index: 99;
+
+            }
+
+            @media (max-width:1400px) and (min-width:1200px) {
+                left: 2.4em;
+                top: 33.5%;
+
+
+            }
+        }
+
+    }
+
+
 }
