@@ -1,6 +1,11 @@
 body {
     font-family: "Beiruti", sans-serif;
     font-weight: 500;
+
+    :dir(ltr) {
+        font-family: "Noto Sans", sans-serif;
+
+    }
 }
 
 @for $i from 1 through 300 {
@@ -113,7 +118,11 @@ a {
 
                 @media (max-width:575px) {
                     font-size: 0.938rem;
-                    ;
+
+                    &:dir(ltr) {
+                        font-size: .8rem;
+                    }
+
                 }
 
                 @media (max-width:360px) {
@@ -150,6 +159,11 @@ a {
 
             @media (max-width:575px) {
                 font-size: 1.063rem;
+
+                &:dir(ltr) {
+                    font-size: 1rem
+                }
+
                 ;
             }
 
@@ -168,9 +182,42 @@ a {
         font-size: 1em;
         padding: 0;
 
-        @media (max-width:575px) {
-            transform: translate(1.063rem, 2.5rem) !important;
+        &:dir(ltr) {
+            transform: translate(-24%, 34%) !important;
+
+            @media (min-width: 1500px) and (max-width: 1600px) {
+
+                transform: translate(34%, 34%) !important;
+
+
+            }
+
+
+            @media (max-width: 575px) {
+
+                transform: translate(7%, 29%) !important
+            }
+
+            @media (max-width: 393px) {
+
+                transform: translate(-28%, 29%) !important
+            }
+
+            @media (max-width: 1800px) and (min-width:1600px) {
+
+
+                transform: translate(33%, 34%) !important
+            }
+
+            @media (max-width: 873px) and (min-width:768px) {
+
+
+                transform: translate(24%, 34%) !important
+            }
+
         }
+
+
 
         li {
             a {
@@ -256,11 +303,19 @@ a {
             right: 0;
             width: 200px;
 
+            &:dir(ltr) {
+                left: 0;
+            }
+
             .dropdown-item {
                 padding: 0.8rem 1rem;
                 color: var(--main-color);
                 transition: .3s all ease;
                 font-size: 20px;
+
+                &:dir(ltr) {
+                    font-size: 1rem;
+                }
 
                 &:hover {
                     color: #fff;
@@ -273,6 +328,10 @@ a {
         .nav-item {
             position: relative;
             padding: 1.6rem 0;
+
+            &:dir(ltr) {
+                padding: 2rem 0;
+            }
 
             .dropdown-menu {
                 overflow: hidden !important;
@@ -326,7 +385,12 @@ a {
 
 
             .nav-link {
-                font-size: 1.25rem
+                font-size: 1.25rem;
+
+                &:dir(ltr) {
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                }
             }
 
             .active {
@@ -540,6 +604,10 @@ a {
 
             @media (max-width:1100px) {
                 bottom: 35%;
+
+                &:dir(ltr) {
+                    width: 80%;
+                }
             }
 
             @media (max-width:768px) {
@@ -638,11 +706,23 @@ a {
             @media (max-width:575px) {
                 font-size: 2rem;
             }
+
+            &:dir(ltr) {
+                font-weight: 200
+            }
         }
 
         .desc {
             font-size: 1.5rem;
             text-align: justify;
+
+            &:dir(ltr) {
+                font-size: 1.2rem;
+
+                @media (max-width:991px) {
+                    font-size: 1rem;
+                }
+            }
 
             @media (max-width:575px) {
                 font-size: 1.2rem;
@@ -670,6 +750,17 @@ a {
         padding-top: 14em;
     }
 
+    @media (min-width:2000px) {
+        padding-top: 18em;
+    }
+
+    @media (max-width:991px) {
+
+        &:dir(ltr) {
+            padding-top: 40px;
+        }
+    }
+
     .offers-content {
         .title {
 
@@ -678,12 +769,28 @@ a {
 
             @media (max-width:575px) {
                 font-size: 2rem;
+
+                &:dir(ltr) {
+                    font-size: 1.7rem;
+                }
+            }
+
+            &:dir(ltr) {
+                font-weight: 200
             }
         }
 
         .desc {
             font-size: 1.5rem;
             text-align: justify;
+
+            &:dir(ltr) {
+                font-size: 1.2rem;
+
+                @media (max-width:991px) {
+                    font-size: 1rem;
+                }
+            }
 
             @media (max-width:575px) {
                 font-size: 1.2rem;
@@ -718,18 +825,7 @@ a {
         }
     }
 
-    // .offers-layer {
-    //     position: absolute !important;
-    //     right: 2rem;
 
-    //     transform: rotate(180deg);
-    //     bottom: -1rem;
-    //     z-index: -1;
-
-    //     @media screen and (max-width: 1700px) {
-    //         display: none;
-    //     }
-    // }
 
     .overlay {
         top: 75%;
@@ -746,33 +842,43 @@ a {
         top: 70%;
         width: 18%;
         transform: translateY(-50%);
+
+        &:dir(ltr) {
+            width: 22%;
+        }
     }
 
     .offers-layer {
         left: 5em;
-        top: 18%;
+        top: 24%;
         width: 30%;
         z-index: 99;
 
-        @media (max-width:1990px) {
-            top: 25%;
+        &:dir(ltr) {
+            width: 36%;
+            top: 11.5%;
+
+            @media (min-width:1900px) {
+                top: 12%;
+                left: 5%;
+
+            }
+
+            @media (max-width:1500px) {
+                top: 18%
+            }
+
+            @media (max-width:1400px) {
+                top: 32%
+            }
         }
 
-        @media (max-width:1730px) {
-            top: 30%;
-        }
 
-        @media (max-width:1600px) {
-            top: 30%;
-        }
 
-        @media (max-width:1500px) {
-            top: 33%;
-        }
 
-        @media (max-width:1400px) {
-            top: 42%;
-        }
+
+
+
     }
 
 
@@ -795,6 +901,22 @@ a {
 .our-products {
     padding: 150px 0 80px 0;
 
+    &:dir(ltr) {
+        padding: 350px 0 80px 0;
+
+        @media (min-width:1500px) and (max-width:1800px) {
+            padding: 275px 0 40px 0
+        }
+
+        @media (max-width:1500px) and (min-width:1200px) {
+            padding: 200px 0 40px 0
+        }
+
+        @media (max-width:1200px) {
+            padding: 40px 0;
+        }
+    }
+
     @media (max-width:1400px) {
         padding: 48px 0;
     }
@@ -805,12 +927,35 @@ a {
 
         @media (max-width:575px) {
             font-size: 2rem;
+
+            &:dir(ltr) {
+                font-size: 1.7rem;
+            }
+        }
+
+        &:dir(ltr) {
+            font-weight: 200
         }
     }
 
     .desc {
         font-size: 1.5rem;
         text-align: justify;
+
+        &:dir(ltr) {
+            font-size: 1.2rem;
+            width: 85%;
+            margin: auto;
+
+            @media (max-width:1400px) and (max-width:1200px) {
+                width: 100%;
+            }
+
+            @media (max-width:991px) {
+
+                font-size: 1rem;
+            }
+        }
 
         @media (max-width:575px) {
             font-size: 1.2rem;
@@ -898,13 +1043,22 @@ a {
         }
     }
 
-    .parent-container {
-        .container {
-            @media (min-width:1200px) and (max-width:1600px) {
-                padding: 0em 10em;
+    .products-carousel {
+        &:dir(ltr) {
+            padding-top: 80px;
+
+            @media (max-width:1200px) {
+                padding-top: 40px 0;
             }
         }
     }
+
+    .container {
+        @media (min-width:1200px) and (max-width:1600px) {
+            max-width: 1300px;
+        }
+    }
+
 
 }
 
@@ -931,13 +1085,13 @@ a {
 
         }
 
-        @media (min-width:500px) {
+        @media (min-width:575px) {
             .news-img-mobile {
                 display: none;
             }
         }
 
-        @media (max-width:500px) {
+        @media (max-width:575px) {
             .news-img-mobile {
                 border-radius: 10px;
             }
@@ -952,6 +1106,10 @@ a {
         .digital-img {
             width: 60%;
             left: 85%;
+
+            &:dir(ltr) {
+                right: 85%;
+            }
         }
 
         .news-content {
@@ -968,6 +1126,8 @@ a {
             .main-title {
                 font-size: 3rem;
                 color: #fff;
+
+
 
                 @media (max-width:1400px) {
                     font-size: 2rem;
@@ -1023,6 +1183,10 @@ a {
                 margin: 2rem 0;
                 text-align: justify;
 
+                &:dir(ltr) {
+                    text-align: left;
+                }
+
                 @media (max-width:1400px) {
                     margin: 1rem 0;
                     font-size: 1.2rem;
@@ -1073,11 +1237,54 @@ a {
                     font-size: 1.2rem;
                 }
             }
+
         }
     }
 
     @media (max-width:575px) {
         background-color: var(--main-color);
+    }
+
+    &.our-news-en {
+        .news-container {
+            .news-content {
+                .main-title {
+                    font-size: 2rem;
+                    font-weight: light;
+                }
+
+                .main-desc {
+                    padding-top: 2rem;
+                    padding-bottom: .5rem;
+                    font-weight: bold;
+                }
+
+                .date {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+                .second-desc {
+                    margin: .5rem 0;
+                    font-size: 1rem;
+
+                    &:last-of-type {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+            @media (max-width:991px) {
+                width: 90%;
+            }
+
+            @media (max-width: 575px) {
+
+                min-height: 1200px;
+
+
+            }
+        }
     }
 }
 
@@ -1088,10 +1295,18 @@ a {
 .footer {
     .follow-title {
         font-size: 2rem;
+
+        &:dir(ltr) {
+            font-size: 1.5rem;
+        }
     }
 
     .contact-us {
         font-size: 2rem;
+
+        &:dir(ltr) {
+            font-size: 1.5rem;
+        }
     }
 
     @media screen and (min-width: 1500px) {
@@ -1110,6 +1325,10 @@ a {
             font-size: 2.1rem;
             font-weight: bold;
 
+            &:dir(ltr) {
+                font-size: 1.5rem;
+            }
+
             &:hover {
                 color: var(--secondary-color) !important;
             }
@@ -1122,6 +1341,10 @@ a {
             font-weight: 500;
             font-size: 1.2rem;
 
+            &:dir(ltr) {
+                font-size: 1rem;
+            }
+
             &:hover {
                 transition: .3s all ease;
                 color: var(--secondary-color) !important;
@@ -1132,6 +1355,10 @@ a {
     .desc {
         font-weight: 500;
         font-size: 1.2rem;
+
+        &:dir(ltr) {
+            font-size: 1rem;
+        }
     }
 
 
