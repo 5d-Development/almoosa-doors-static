@@ -2892,7 +2892,7 @@ a {
 
             .title {
                 font-size: 1.4rem;
-                font-weight: 550;
+                font-weight: 600;
                 text-wrap: nowrap;
 
                 @media (max-width:991px) {
@@ -2902,13 +2902,10 @@ a {
             }
 
             .desc {
-                font-size: 1.2rem;
-                font-weight: 450;
+                font-size: 1.1rem;
+                font-weight: 500;
 
-                @media (max-width:991px) {
-                    font-size: 1.2rem;
-
-                }
+             
             }
 
             span {
