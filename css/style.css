@@ -3540,17 +3540,17 @@ a {
 }
 .our-branches .branches-location .branch-details .title {
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 550;
   text-wrap: nowrap;
 }
 @media (max-width: 991px) {
   .our-branches .branches-location .branch-details .title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .our-branches .branches-location .branch-details .desc {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 450;
 }
 @media (max-width: 991px) {
   .our-branches .branches-location .branch-details .desc {
