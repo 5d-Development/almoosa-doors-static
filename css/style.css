@@ -1721,7 +1721,7 @@ a {
   }
 }
 .our-story .our-story-content .title:dir(ltr) {
-  font-weight: 400;
+  font-weight: 450;
 }
 .our-story .our-story-content .desc {
   font-size: 1.5rem;
@@ -1781,7 +1781,7 @@ a {
   }
 }
 .offers .offers-content .title:dir(ltr) {
-  font-weight: 400;
+  font-weight: 450;
 }
 .offers .offers-content .desc {
   font-size: 1.5rem;
@@ -1922,7 +1922,7 @@ a {
   }
 }
 .our-products .title:dir(ltr) {
-  font-weight: 400;
+  font-weight: 450;
 }
 .our-products .desc {
   font-size: 1.5rem;
