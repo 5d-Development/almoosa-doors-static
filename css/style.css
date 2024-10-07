@@ -1721,7 +1721,7 @@ a {
   }
 }
 .our-story .our-story-content .title:dir(ltr) {
-  font-weight: 200;
+  font-weight: 400;
 }
 .our-story .our-story-content .desc {
   font-size: 1.5rem;
@@ -1781,7 +1781,7 @@ a {
   }
 }
 .offers .offers-content .title:dir(ltr) {
-  font-weight: 200;
+  font-weight: 400;
 }
 .offers .offers-content .desc {
   font-size: 1.5rem;
@@ -1922,7 +1922,7 @@ a {
   }
 }
 .our-products .title:dir(ltr) {
-  font-weight: 200;
+  font-weight: 400;
 }
 .our-products .desc {
   font-size: 1.5rem;
@@ -1930,8 +1930,7 @@ a {
 }
 .our-products .desc:dir(ltr) {
   font-size: 1.2rem;
-  width: 85%;
-  margin: auto;
+  width: 90%;
 }
 @media (max-width: 1400px) and (max-width: 1200px) {
   .our-products .desc:dir(ltr) {
