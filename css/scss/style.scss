@@ -86,6 +86,10 @@ a {
             color: #fff;
             transition: .2s all ease;
 
+            &:dir(ltr) {
+                font-size: 1.5rem;
+            }
+
             &:hover {
                 color: var(--secondary-color);
             }
@@ -109,6 +113,10 @@ a {
                 font-size: 1em;
                 font-weight: 500;
                 transition: .3s all ease;
+
+                &:dir(ltr) {
+                    font-size: .9rem;
+                }
 
                 &:hover {
                     color: var(--secondary-color) !important;
@@ -156,6 +164,10 @@ a {
             font-size: 1.188rem;
             font-weight: bold;
             transition: .2s all ease;
+
+            &:dir(ltr) {
+                font-size: 1rem;
+            }
 
             @media (max-width:575px) {
                 font-size: 1.063rem;
@@ -239,6 +251,10 @@ a {
 
         a {
             font-weight: 500;
+
+            &:dir(ltr) {
+                font-size: .9rem;
+            }
         }
     }
 
@@ -350,6 +366,8 @@ a {
                     background-color: var(--secondary-color);
                     border-radius: 4px;
 
+
+
                 }
             }
 
@@ -368,6 +386,15 @@ a {
                         background-color: var(--secondary-color);
                         border-radius: 4px;
 
+
+                    }
+                }
+
+                &:dir(ltr) {
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -988,6 +1015,10 @@ a {
             font-size: 30px;
             color: var(--main-color);
 
+            &:dir(ltr) {
+                font-weight: bold;
+            }
+
             &:last-of-type {
                 margin-bottom: 20px;
             }
@@ -1059,7 +1090,13 @@ a {
         }
     }
 
-
+    .container {
+        &:dir(ltr) {
+            @media (max-width:575px) {
+                padding: 0 24px;
+            }
+        }
+    }
 }
 
 // start our-news styles
@@ -1420,11 +1457,21 @@ a {
 // end copyrights
 .copyright {
     .copyright-content {
+        .desc {
+            &:dir(ltr) {
+                font-size: .9rem;
+            }
+        }
+
         .links {
             li {
                 a {
                     color: #fff;
                     transition: .3s all ease;
+
+                    &:dir(ltr) {
+                        font-size: .9rem;
+                    }
 
                     &:hover {
                         color: var(--secondary-color) !important;
