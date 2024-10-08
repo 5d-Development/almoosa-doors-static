@@ -729,7 +729,7 @@ a {
 
         .title {
             font-size: 3rem;
-       
+
 
             @media (max-width:575px) {
                 font-size: 2rem;
@@ -2153,6 +2153,7 @@ a {
 
             font-size: 3rem;
 
+
             @media (max-width:575px) {
                 font-size: 2rem;
             }
@@ -2206,9 +2207,12 @@ a {
         width: 30%;
         z-index: 99;
 
-        @media (max-width:1990px) {
-            top: 10%;
+        &:dir(ltr) {
+            top: 30% !important;
+
         }
+
+
 
         @media (max-width:1730px) {
             top: 15%;
@@ -2221,6 +2225,10 @@ a {
         @media (min-width:1600px) and (max-width:1700px) {
             top: 23%;
         }
+
+
+
+
     }
 
     .title {
@@ -2230,6 +2238,54 @@ a {
     @media (min-width: 1400px) and (max-width: 1650px) {
         .container {
             max-width: 1130px !important;
+
+        }
+    }
+
+    &.about-mission-en {
+        font-family: "Noto Sans", sans-serif;
+
+        .about-mission-layer {
+            top: 8%;
+
+            @media (max-width:1600px) {
+                top: 12%;
+            }
+
+            @media (min-width:2000px) {
+                top: 12%;
+            }
+        }
+
+        .title {
+
+
+            font-size: 2.5rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+
+
+        }
+
+        .desc {
+
+            font-size: 1.3rem;
+            text-align: left;
+
+            @media (max-width:1600px) {
+                font-size: 1.2rem;
+            }
+
+            @media (max-width:575px) {
+                font-size: 1rem;
+            }
+
+            @media (min-width:2000px) {
+                font-size: 1.6rem;
+
+            }
 
         }
     }
@@ -2268,8 +2324,18 @@ a {
         font-size: 2.8rem;
         font-weight: bold;
 
+        &:dir(ltr) {
+            font-weight: 550;
+            font-size: 2.4rem;
+            letter-spacing: 3px;
+        }
+
         @media (min-width: 1400px) and (max-width: 1650px) {
             right: 7rem;
+
+            &:dir(ltr) {
+                left: 7rem;
+            }
         }
     }
 
@@ -2284,6 +2350,12 @@ a {
         }
     }
 
+    @media (max-width:575px) {
+        .container {
+            padding: 0 24px;
+        }
+    }
+
     .about-history-img {
         width: 70%;
         object-fit: contain;
@@ -2295,6 +2367,14 @@ a {
 
             font-size: 3rem;
 
+            &:dir(ltr) {
+                font-size: 2.5rem;
+
+                @media (max-width:575px) {
+                    font-size: 2rem;
+                }
+            }
+
             @media (max-width:575px) {
                 font-size: 2rem;
             }
@@ -2303,6 +2383,24 @@ a {
         .desc {
             font-size: 1.5rem;
             text-align: justify;
+
+
+            @media (max-width:1600px) {
+                font-size: 1.2rem;
+            }
+
+            &:dir(ltr) {
+                font-size: 1.3rem;
+
+                @media (max-width:575px) {
+                    font-size: 1rem;
+                }
+
+                @media (min-width:2000px) {
+                    font-size: 1.6rem;
+
+                }
+            }
 
             @media (min-width:1700px) {
                 width: 80%
@@ -2317,6 +2415,11 @@ a {
             }
         }
 
+        &:dir(ltr) {
+            @media (min-width:2000px) {
+                padding-inline-start: 0 !important;
+            }
+        }
 
     }
 
@@ -2335,6 +2438,8 @@ a {
             width: 6%
         }
     }
+
+
 }
 
 .our-vision {
@@ -2506,6 +2611,57 @@ a {
 
         }
     }
+
+    &.our-vision-en {
+        font-family: "Noto Sans", sans-serif;
+
+        .title {
+            width: 90%;
+
+            @media (max-width:1200px) {
+                width: 100%;
+            }
+
+            font-size: 2.5rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+
+
+        }
+
+        .desc {
+            width: 90%;
+
+            @media (max-width:1200px) {
+                width: 100%;
+            }
+
+            font-size: 1.3rem;
+            text-align: left;
+
+            @media (max-width:1600px) {
+                font-size: 1.2rem;
+            }
+
+            @media (max-width:575px) {
+                font-size: 1rem;
+            }
+
+            @media (min-width:2000px) {
+                font-size: 1.6rem;
+
+            }
+
+        }
+
+        .container {
+            @media (max-width:575px) {
+                padding: 0 24px;
+            }
+        }
+    }
 }
 
 .our-goals {
@@ -2527,6 +2683,15 @@ a {
         font-size: 3rem;
         font-weight: 600;
 
+        &:dir(ltr) {
+            font-size: 2.5rem;
+            font-weight: 500;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+        }
+
         @media (max-width:575px) {
             font-size: 2rem;
         }
@@ -2536,6 +2701,20 @@ a {
         font-size: 1.5rem;
         text-align: justify;
         position: relative;
+
+        &:dir(ltr) {
+            font-size: 1.3rem;
+            padding-inline-start: 5rem;
+            text-align: left;
+            width: 90%;
+
+            @media (max-width:575px) {
+                width: 100%;
+                padding-inline-start: 2rem;
+                font-size: 1rem;
+            }
+
+        }
 
         @media (min-width:1700px) {
             width: 80%
@@ -2559,6 +2738,7 @@ a {
             top: 50%;
             transform: translateY(-50%);
 
+
             @media (max-width:575px) {
                 content: "";
                 position: absolute;
@@ -2568,6 +2748,24 @@ a {
                 right: 0px;
                 top: 28%;
                 transform: translateY(-50%);
+            }
+
+
+        }
+
+        &:dir(ltr) {
+            &::before {
+                left: 0%;
+                width: 25px;
+                top: 40%;
+                height: 25px;
+
+                @media (max-width:575px) {
+                    width: 15px;
+                    height: 15px;
+                    top: 24%;
+                    ;
+                }
             }
         }
     }
@@ -2583,7 +2781,23 @@ a {
 
         &:first-of-type {
             z-index: 9999;
-            top: 80%;
+
+
+            &:dir(ltr) {
+                top: 72%;
+
+                @media (max-width:1700px) {
+                    top: 85%;
+                }
+
+                @media (max-width:1600px) {
+                    top: 78%;
+                }
+
+                @media (min-width:2000px) {
+                    top: 75%;
+                }
+            }
 
             @media (min-width:2000px) {
                 top: 77%;
@@ -2604,7 +2818,14 @@ a {
         }
     }
 
+    &:dir(ltr) {
 
+        .container {
+            @media (max-width:575px) {
+                padding: 0 24px;
+            }
+        }
+    }
 }
 
 // start about history

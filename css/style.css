@@ -2912,10 +2912,8 @@ a {
   width: 30%;
   z-index: 99;
 }
-@media (max-width: 1990px) {
-  .about-mission .about-mission-layer {
-    top: 10%;
-  }
+.about-mission .about-mission-layer:dir(ltr) {
+  top: 30% !important;
 }
 @media (max-width: 1730px) {
   .about-mission .about-mission-layer {
@@ -2938,6 +2936,49 @@ a {
 @media (min-width: 1400px) and (max-width: 1650px) {
   .about-mission .container {
     max-width: 1130px !important;
+  }
+}
+.about-mission.about-mission-en {
+  font-family: "Noto Sans", sans-serif;
+}
+.about-mission.about-mission-en .about-mission-layer {
+  top: 8%;
+}
+@media (max-width: 1600px) {
+  .about-mission.about-mission-en .about-mission-layer {
+    top: 12%;
+  }
+}
+@media (min-width: 2000px) {
+  .about-mission.about-mission-en .about-mission-layer {
+    top: 12%;
+  }
+}
+.about-mission.about-mission-en .title {
+  font-size: 2.5rem;
+}
+@media (max-width: 575px) {
+  .about-mission.about-mission-en .title {
+    font-size: 2rem;
+  }
+}
+.about-mission.about-mission-en .desc {
+  font-size: 1.3rem;
+  text-align: left;
+}
+@media (max-width: 1600px) {
+  .about-mission.about-mission-en .desc {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 575px) {
+  .about-mission.about-mission-en .desc {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 2000px) {
+  .about-mission.about-mission-en .desc {
+    font-size: 1.6rem;
   }
 }
 
@@ -2969,15 +3010,28 @@ a {
   font-size: 2.8rem;
   font-weight: bold;
 }
+.about-banner .title:dir(ltr) {
+  font-weight: 550;
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+}
 @media (min-width: 1400px) and (max-width: 1650px) {
   .about-banner .title {
     right: 7rem;
+  }
+  .about-banner .title:dir(ltr) {
+    left: 7rem;
   }
 }
 
 @media (min-width: 1400px) and (max-width: 1650px) {
   .about-history .container {
     max-width: 1300px !important;
+  }
+}
+@media (max-width: 575px) {
+  .about-history .container {
+    padding: 0 24px;
   }
 }
 .about-history .about-history-img {
@@ -2987,6 +3041,14 @@ a {
 .about-history .about-history-content .title {
   font-size: 3rem;
 }
+.about-history .about-history-content .title:dir(ltr) {
+  font-size: 2.5rem;
+}
+@media (max-width: 575px) {
+  .about-history .about-history-content .title:dir(ltr) {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 575px) {
   .about-history .about-history-content .title {
     font-size: 2rem;
@@ -2995,6 +3057,24 @@ a {
 .about-history .about-history-content .desc {
   font-size: 1.5rem;
   text-align: justify;
+}
+@media (max-width: 1600px) {
+  .about-history .about-history-content .desc {
+    font-size: 1.2rem;
+  }
+}
+.about-history .about-history-content .desc:dir(ltr) {
+  font-size: 1.3rem;
+}
+@media (max-width: 575px) {
+  .about-history .about-history-content .desc:dir(ltr) {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 2000px) {
+  .about-history .about-history-content .desc:dir(ltr) {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 1700px) {
   .about-history .about-history-content .desc {
@@ -3009,6 +3089,11 @@ a {
 @media screen and (min-width: 1400px) and (max-width: 1650px) {
   .about-history .about-history-content .desc {
     width: 85%;
+  }
+}
+@media (min-width: 2000px) {
+  .about-history .about-history-content:dir(ltr) {
+    padding-inline-start: 0 !important;
   }
 }
 .about-history .overlay {
@@ -3181,6 +3266,53 @@ a {
     max-width: 1300px !important;
   }
 }
+.our-vision.our-vision-en {
+  font-family: "Noto Sans", sans-serif;
+}
+.our-vision.our-vision-en .title {
+  width: 90%;
+  font-size: 2.5rem;
+}
+@media (max-width: 1200px) {
+  .our-vision.our-vision-en .title {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .our-vision.our-vision-en .title {
+    font-size: 2rem;
+  }
+}
+.our-vision.our-vision-en .desc {
+  width: 90%;
+  font-size: 1.3rem;
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .our-vision.our-vision-en .desc {
+    width: 100%;
+  }
+}
+@media (max-width: 1600px) {
+  .our-vision.our-vision-en .desc {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 575px) {
+  .our-vision.our-vision-en .desc {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 2000px) {
+  .our-vision.our-vision-en .desc {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 575px) {
+  .our-vision.our-vision-en .container {
+    padding: 0 24px;
+  }
+}
 
 .our-goals {
   padding-bottom: 180px;
@@ -3200,6 +3332,15 @@ a {
   font-size: 3rem;
   font-weight: 600;
 }
+.our-goals .title:dir(ltr) {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+@media (max-width: 575px) {
+  .our-goals .title:dir(ltr) {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 575px) {
   .our-goals .title {
     font-size: 2rem;
@@ -3209,6 +3350,19 @@ a {
   font-size: 1.5rem;
   text-align: justify;
   position: relative;
+}
+.our-goals .desc:dir(ltr) {
+  font-size: 1.3rem;
+  padding-inline-start: 5rem;
+  text-align: left;
+  width: 90%;
+}
+@media (max-width: 575px) {
+  .our-goals .desc:dir(ltr) {
+    width: 100%;
+    padding-inline-start: 2rem;
+    font-size: 1rem;
+  }
 }
 @media (min-width: 1700px) {
   .our-goals .desc {
@@ -3247,6 +3401,19 @@ a {
     transform: translateY(-50%);
   }
 }
+.our-goals .desc:dir(ltr)::before {
+  left: 0%;
+  width: 25px;
+  top: 40%;
+  height: 25px;
+}
+@media (max-width: 575px) {
+  .our-goals .desc:dir(ltr)::before {
+    width: 15px;
+    height: 15px;
+    top: 24%;
+  }
+}
 .our-goals .overlay {
   top: 30%;
   width: 2.5%;
@@ -3258,7 +3425,24 @@ a {
 }
 .our-goals .overlay:first-of-type {
   z-index: 9999;
-  top: 80%;
+}
+.our-goals .overlay:first-of-type:dir(ltr) {
+  top: 72%;
+}
+@media (max-width: 1700px) {
+  .our-goals .overlay:first-of-type:dir(ltr) {
+    top: 85%;
+  }
+}
+@media (max-width: 1600px) {
+  .our-goals .overlay:first-of-type:dir(ltr) {
+    top: 78%;
+  }
+}
+@media (min-width: 2000px) {
+  .our-goals .overlay:first-of-type:dir(ltr) {
+    top: 75%;
+  }
 }
 @media (min-width: 2000px) {
   .our-goals .overlay:first-of-type {
@@ -3273,6 +3457,11 @@ a {
 .our-goals .overlay:last-of-type {
   width: 6%;
   transform: rotate(180deg);
+}
+@media (max-width: 575px) {
+  .our-goals:dir(ltr) .container {
+    padding: 0 24px;
+  }
 }
 
 .what-we-do-banner .banner-container {
