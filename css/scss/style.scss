@@ -2995,7 +2995,7 @@ a {
             letter-spacing: 5px;
 
             @media (max-width:575px) {
-           
+
                 margin-bottom: 1rem;
             }
 
@@ -3099,7 +3099,9 @@ a {
         bottom: 1.8em;
         font-size: 2.8rem;
         font-weight: bold;
-
+&:dir(ltr){
+    font-size: 2.5rem;
+}
         @media (min-width: 1400px) and (max-width: 1650px) {
             right: 7rem;
         }
@@ -3581,6 +3583,16 @@ a {
                 width: 20px;
                 height: 20px;
 
+
+
+            }
+
+            &:dir(ltr) {
+                &::after {
+                    margin-right: 0;
+
+                    margin-left: auto;
+                }
             }
 
             &:focus {
