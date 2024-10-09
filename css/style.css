@@ -3494,7 +3494,6 @@ a {
 }
 .what-we-do-banner .title:dir(ltr) {
   font-size: 2.5rem;
-  font-weight: 600;
 }
 @media (min-width: 1400px) and (max-width: 1650px) {
   .what-we-do-banner .title {
@@ -3607,6 +3606,50 @@ a {
 @media (max-width: 1200px) {
   .our-approach .left-layer {
     display: none;
+  }
+}
+.our-approach:dir(ltr) .main-title {
+  color: #0093B2;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+@media (max-width: 575px) {
+  .our-approach:dir(ltr) .main-title {
+    margin-bottom: 1rem;
+  }
+}
+.our-approach:dir(ltr) .sub-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media (min-width: 1200px) and (max-width: 1700px) {
+  .our-approach:dir(ltr) .sub-title {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (max-width: 575px) {
+  .our-approach:dir(ltr) .sub-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}
+.our-approach:dir(ltr) .desc {
+  font-size: 1.3rem;
+}
+@media (max-width: 575px) {
+  .our-approach:dir(ltr) .desc {
+    font-size: 1rem;
+    text-align: inherit;
+  }
+}
+.our-approach:dir(ltr) .desc::before {
+  left: -3rem;
+}
+@media (max-width: 575px) {
+  .our-approach:dir(ltr) .desc::before {
+    left: 0rem;
+    top: 27%;
   }
 }
 
