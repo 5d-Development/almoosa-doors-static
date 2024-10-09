@@ -2757,7 +2757,7 @@ a {
             &::before {
                 left: 0%;
                 width: 25px;
-                top: 40%;
+                top: 50%;
                 height: 25px;
 
                 @media (max-width:575px) {
@@ -2861,8 +2861,17 @@ a {
         font-size: 2.8rem;
         font-weight: bold;
 
+        &:dir(ltr) {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
         @media (min-width: 1400px) and (max-width: 1650px) {
             right: 7rem;
+
+            &:dir(ltr) {
+                left: 7rem;
+            }
         }
     }
 
@@ -2880,6 +2889,15 @@ a {
         text-align: justify;
         font-size: 1.5em;
         font-weight: 600;
+
+        &:dir(ltr) {
+            font-size: 1.2rem;
+
+            @media (max-width:575px) {
+                font-size: 1rem;
+            }
+
+        }
 
         @media (max-width:575px) {
             font-size: 1.1em;
