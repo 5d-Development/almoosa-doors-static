@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Us </title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/libraries/all.css">
+      <link rel="stylesheet" href="css/libraries/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/libraries/owl.theme.default.min.css">
+      <link rel="stylesheet" href="css/libraries/bootstrap.min.css">
+      <link rel="stylesheet" href="css/libraries/aos.css">
+      <link rel="stylesheet" href="css/libraries/leaflet.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+     <div id="search-bar" class="d-none search-bar position-absolute w-100 end-0 top-0 start-0 d-flex justify-content-center align-items-center">
+         <div class="container d-flex gap-4 align-items-center">
+            <i onclick="document.getElementById('search-bar').classList.add('d-none')" id="close-search" class="fa-solid fa-xmark fa-2x text-white pointer"></i>
+            <input id="search-input" type="text" class="form-control rounded" placeholder="Search here">
+            <button class="btn px-0"  id="search-button">        <i class="fa-solid fa-magnifying-glass text-white pointer fa-lg"></i>
+            </button>
+         </div>
+         <div id="search-results" class="results d-none"></div>
+      </div>
+      <!-- start topbar  -->
+      <div class="topbar bg-main-color  py-2">
+         <div class="container">
+            <div class="row align-items-center g-3">
+               <div class="col-lg-5">
+                  <ul class="d-flex flex-row-reverse gap-4 align-items-center justify-content-center justify-content-lg-end    social">
+                     <li>
+                        <a href="https://api.whatsapp.com/send?phone=15551234567">
+                            <i class="fa-brands fa-whatsapp   icon"></i>
+                        </a>
+                     </li>
+                     <li> 
+                        <a href="#">
+                             <i class="fa-brands fa-youtube   icon"></i>
+                        </a>
+                     </li>
+                       <li> 
+                        <a href="#">
+                             <i class="fa-brands fa-linkedin-in   icon"></i>
+                        </a>
+                     </li>
+                       <li> 
+                        <a href="#">
+                  <i class="fa-brands fa-instagram icon   "></i>
+                        </a>
+                     </li>
+                     <li> 
+                        <a href="#">
+                        <i class="fa-brands fa-x-twitter  icon twitter"></i>
+                        </a>
+                     </li>
+                   
+                
+                     <li> 
+                        <a href="#">
+                  <i class="fa-brands fa-facebook-f icon    "></i>
+                        </a>
+                     </li>
+                
+                     <li> 
+                        <a href="#" class="search-icon">
+                  <i class="fas fa-search icon    "></i>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-lg-7 ">
+                  <div class="d-flex flex-row-reverse justify-content-center flex-wrap justify-content-lg-start  gap-sm-4 align-items-center">
+                     <!-- language dropdown -->
+                     <div class="dropdown">
+                        <a class="btn text-white p-0  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-chevron-down ms-2 cheveron"></i> AR 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                           <li><a class="dropdown-item" href="#">AR</a></li>
+                           <li><a class="dropdown-item" href="#">EN</a></li>
+                        </ul>
+                     </div>
+                     <ul class="d-flex topbar-links ">
+                        <li>
+                           <a href="#" class="text-white">CAREERS</a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-white"> CONTACT US   </a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-white">    CUSTOMER SUPPORT   </a>
+                        </li>
+                     </ul>
+                     <div class="phone-link">
+                        <a href="tel:920017000" class="d-flex flex-row-reverse gap-sm-2 ">  
+                        <span class="text-white">
+                        920017000
+                        </span>  
+                        <img src="images/home/topbar/phone.svg" alt="phone">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end topbar  -->
+        <!-- start offcanvas -->
+      <div class="offcanvas offcanvas-end py-4" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+         <div class="offcanvas-header justify-content-start">
+            <i class="fa-solid fa-xmark fa-lg"  data-bs-dismiss="offcanvas" aria-label="Close"></i>
+         </div>
+         <ul class="offcanvas-items mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link px-0  fw-bold  d-flex text-nowrap" aria-current="page" href="#">HOME <span class="px-4 d-none d-xl-block">.</span></a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         ABOUT US<i class="fa-solid fa-angle-down"></i>
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="about-us.html">   ABOUT ALMOUSA </a></li>
+                  <li><a class="dropdown-item" href="what-we-do.html">   WHAT WE DO </a></li>
+                  <li><a class="dropdown-item" href="how-we-work.html">    HOW WE WORK</a></li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            OUR PRODUCTS  <i class="fa-solid fa-angle-down"></i>
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">CLOUD DOORS  </a></li>
+                  <li><a class="dropdown-item" href="#">MESH  DOORS    </a></li>
+                  <li><a class="dropdown-item" href="#"> SIDE DOORS    </a></li>
+                   <li><a class="dropdown-item" href="#"> STEEL DOORS  </a></li>
+                  <li><a class="dropdown-item" href="#">  DOORS  </a></li>
+                  <li><a class="dropdown-item" href="#">DOUBLE DOORS    </a></li>
+                
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            NEW PROJECTS
+               </a>
+           
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         OUR CLIENTS 
+               </a>
+              
+            </li>
+         
+         </ul>
+      </div>
+      <!-- end offcanvas -->
+       <!-- start navbar -->
+         <nav class="navbar navbar-expand-xl ftco_navbar"    >
+            <div class="container">
+               <a class="navbar-brand" href="home.html">
+               <img src="images/home/navbar/logo.svg"  alt="logo" id="logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+               <i class="fa-solid fa-bars " ></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mb-2 mb-lg-0 main">
+                     <li class="nav-item">
+                        <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="home-en.html">HOME <span class="px-4 d-none d-xl-block">.</span></a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link px-0 align-items-center   pe-none fw-bold text-white d-flex text-nowrap" href="what-we-do.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">
+                        <span>    ABOUT US </span> <i class="fa-solid fa-chevron-down fa-xs ms-2"></i>
+                        <span class="px-4 d-none d-xl-block">.</span></a>
+                        <ul class="dropdown-menu" >
+                           <li><a class="dropdown-item" href="about-us.html"> ABOUT ALMOUSA </a></li>
+                           <li><a class="dropdown-item" href="what-we-do.html">    WHAT WE WORK </a></li>
+                           <li><a class="dropdown-item" href="how-we-work.html"> HOW WE WORK</a></li>
+                        </ul>
+                     </li>
+            
+
+   <li class="nav-item">
+                        <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="#">OUR PRODUCTS <span class="px-4 d-none d-xl-block">.</span></a>
+                     </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="new-projects.html">   NEW PROJECTS  <span class="px-4 d-none d-xl-block">.</span></a>
+                     </li>
+                      <li class="nav-item    ">
+                        <a class="nav-link px-0   fw-bold  text-white d-flex text-nowrap " aria-current="page" href="our-clients.html">OUR CLIENTS </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <!-- end navbar -->
+       <!-- start banner -->
+  <div class="home-banner  position-relative " id="home">
+
+<div class="contact-us-banner  position-relative">
+
+<div class="banner-container">
+    <img src="images/contact-us/banner.png" class="img-fluid" alt="bannerLayer">
+</div>
+ 
+
+<div class="container">
+    <h2 class="position-absolute text-white title banner-title">  CONTACT US       </h2>
+</div>
+ 
+</div>
+
+
+  </div>
+  <!-- end banner -->
+ 
+<!-- start contact method -->
+<div class="contact-method">
+<div class="container">
+      <div class="d-flex flex-column gap-3 gap-lg-0 flex-lg-row justify-content-center align-items-center">
+          <div>
+            <p class="text-gray desc position-relative">
+                <span>    Call us on      </span>
+                     <img src="./images/contact-us/phone.png"  alt="phone" class="img-fluid mx-2 mx-lg-4 ">
+          <span class="text-blue mx-4 d-inline-block">920017000</span>
+            </p>
+          </div>
+    <div class="welcome-message">
+        <img src="images/contact-us/location.svg" class="ms-2 ms-lg-4 me-0 me-lg-4" alt="location">
+        <span  class="text-blue">       Visit us on the nearest branch</span>
+    </div> 
+      </div>
+</div>
+</div>
+<!-- end contact method -->
+<!-- start our branches -->
+<div class="our-branches position-relative">
+    <div class="container">
+        <h3 class="text-blue fw-bold  my-3 my-lg-5 title"> Our Branches </h3>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="branches-location d-flex flex-row flex-lg-column">
+                    <a class="branch-details  p-2  d-flex gap-3   pb-4 " href="https://maps.google.com/?q=21.6111698136357,39.1414703480122
+" data-lat="21.6111698136357" data-lng="39.1414703480122" >
+                       <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+                        <div>
+                            <h2 class="text-blue title">    El Hasaa                         </h2>
+                            <h3 class="text-blue desc">              2929 lorem ipsum            </h3>
+                            <span class="text-light-green mt-2 d-block">Open</span>
+                        </div>
+                    </a>
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=21.536126,39.21335
+   " data-lat="21.536126" data-lng="39.21335" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">   وحدة فرع  أبها       </h2>
+      <h3 class="text-blue desc"> طريق الملك عبد العزيز       </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=16.9130091757076,42.5609867650585
+
+   " data-lat="16.9130091757076" data-lng="42.5609867650585" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">   وحدة فرع الباحة       </h2>
+      <h3 class="text-blue desc"> طريق الملك عبد العزيز       </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=27.4923225457947,41.7058241087835" data-lat="27.4923225457947" data-lng="41.705824108783" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title"> وحدة فرع البكيرية       </h2>
+      <h3 class="text-blue desc">  طريق الملك عبد العزيز       </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=27.4923225457947,41.7058241087835" data-lat="27.4923225457947" data-lng="41.705824108783" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">   وحدة فرع الجبيل       </h2>
+      <h3 class="text-blue desc"> طريق الأمير محمد      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=28.4363265946965,45.9673144220901
+" data-lat="28.4363265946965" data-lng="45.9673144220901" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">   فرع الخبر       </h2>
+      <h3 class="text-blue desc">    الخبر الجنوبية       </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+                    
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=18.2825528401786,42.7318761074097
+
+" data-lat="18.2825528401786" data-lng="42.7318761074097" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">    فرع الخرج       </h2>
+      <h3 class="text-blue desc">       طريق الملك فهد      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+               <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=29.9480875623156,40.1944074392591
+
+
+" data-lat="29.9480875623156" data-lng="40.1944074392591" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">  فرع الخفجي       </h2>
+      <h3 class="text-blue desc">     المحمدية      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+             <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.2375544771317,45.2493221531179
+
+
+
+" data-lat="25.2375544771317" data-lng="45.2493221531179" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title"> فرع الدمام الشاطى       </h2>
+      <h3 class="text-blue desc">      الشاطئ      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+     <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=30.9918690920876,41.0259338449925" data-lat="30.9918690920876" data-lng="41.0259338449925" >
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">   فرع الدوادمي       </h2>
+      <h3 class="text-blue desc">      طريق الملك عبد العزيز       </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+          <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=26.0914174363791,43.9978812178181
+" data-lat="26.0914174363791" data-lng="43.9978812178181" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">    فرع الرس       </h2>
+      <h3 class="text-blue desc">      طريق الملك عبد العزيز       </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>     
+       <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=21.3833046462662,39.8710425007299
+
+" data-lat="21.3833046462662" data-lng="39.8710425007299" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">    فرع التخصصي       </h2>
+      <h3 class="text-blue desc">     التخصصي      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>     
+     <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=24.0803942596983,38.0903131048539" data-lat="24.0803942596983" data-lng="38.0903131048539" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">   مكتب  فرع الروابي       </h2>
+      <h3 class="text-blue desc">     الروابي</h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+     <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=18.5382513,42.0815192
+" data-lat="18.5382513" data-lng="42.0815192" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">    فرع الروضة 
+      </h2>
+      <h3 class="text-blue desc">     الروضة
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.9009045077571,45.3495401144028
+
+" data-lat="25.9009045077571" data-lng="45.3495401144028" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">    فرع القويعية 
+      </h2>
+      <h3 class="text-blue desc">             </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=24.5443500613016,46.6917816270578
+
+
+" data-lat="24.5443500613016" data-lng="46.6917816270578" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">  فرع الياسمين 
+      </h2>
+      <h3 class="text-blue desc">      الياسمين        </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=24.6339691388349,46.5620031952858
+ 
+" data-lat="24.6339691388349" data-lng="46.5620031952858" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title"> وحدة فرع البديعة 
+      </h2>
+      <h3 class="text-blue desc">             </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=26.4066455547616,43.9205546226034
+
+
+" data-lat="26.4066455547616" data-lng="43.9205546226034" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">      فرع الزلفي
+      </h2>
+      <h3 class="text-blue desc">                  </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=27.612313392829112,38.53664249707788
+ 
+" data-lat="27.612313392829112" data-lng="38.53664249707788" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">      وحدة فرع الطائف 
+      </h2>
+      <h3 class="text-blue desc">        خالد بن الوليد 
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=17.5501183351828,44.252366999259
+" data-lat="17.5501183351828" data-lng="44.252366999259" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">     فرع الدمام الفيصلية 
+      </h2>
+      <h3 class="text-blue desc">         الفيصلية
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=29.6265293484604,43.5186042492219
+" data-lat="29.6265293484604" data-lng="43.5186042492219" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       فرع القريات 
+      </h2>
+      <h3 class="text-blue desc">        اليرموك
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a> 
+  <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.62043,49.5489302
+
+" data-lat="25.62043" data-lng="49.5489302" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       وحدة فرع بريده طريق عنيزة  
+      </h2>
+      <h3 class="text-blue desc">                   </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">     فرع القطيف       </h2>
+      <h3 class="text-blue desc">      شارع القدس      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       وحدة فرع المدينة       </h2>
+      <h3 class="text-blue desc">      قيس بن جابر - وادي العقيق      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       فرع  بيشة       </h2>
+      <h3 class="text-blue desc">       النخيل      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       فرع تبوك       </h2>
+      <h3 class="text-blue desc">          الفيصلية الجنوبية      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع جدة الحمدانية 
+      </h2>
+      <h3 class="text-blue desc">        الحمدانية
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">          مكتب فرع جدة حراء 
+      </h2>
+      <h3 class="text-blue desc">          حراء
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       فرع جدة فلسطين 
+      </h2>
+      <h3 class="text-blue desc">       فلسطين
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">         فرع جيزان 
+      </h2>
+      <h3 class="text-blue desc">           طريق الملك فهد
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">           فرع حائل 
+      </h2>
+      <h3 class="text-blue desc">          الوادي
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">         فرع حفر الباطن 
+      </h2>
+      <h3 class="text-blue desc">       العزيزية
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع خميس مشيط 
+ 
+      </h2>
+      <h3 class="text-blue desc">                   </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع سكاكا 
+ 
+      </h2>
+      <h3 class="text-blue desc">    المحمدية ب
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع شقراء 
+ 
+      </h2>
+      <h3 class="text-blue desc">           الشفاء
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       فرع عرعر 
+ 
+      </h2>
+      <h3 class="text-blue desc">     المحمدية
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع عنيزه 
+ 
+      </h2>
+      <h3 class="text-blue desc">         شارع الأمير سلطان بن عبد العزيز
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع مكة 
+ 
+      </h2>
+      <h3 class="text-blue desc">   الدائري الثالث
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       وحدة فرع ينبع 
+ 
+      </h2>
+      <h3 class="text-blue desc">          طريق الملك عبد العزيز 
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        فرع محايل عسير 
+ 
+      </h2>
+      <h3 class="text-blue desc">                   </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       فرع المجمعه 
+ 
+      </h2>
+      <h3 class="text-blue desc">      الملك فهد
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        قسم مبيعات فرع الأحساء 
+
+ 
+      </h2>
+      <h3 class="text-blue desc">      
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        مكتب  فرع الشفاء 
+   
+ 
+      </h2>
+      <h3 class="text-blue desc">   الشفاء
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">      مكتب  فرع وادي لبن 
+
+ 
+      </h2>
+      <h3 class="text-blue desc">    وادي لبن
+
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">        مكتب فرع بريده طريق المدينة 
+
+ 
+      </h2>
+      <h3 class="text-blue desc">    طريق البمدينة 
+
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       وحدة فرع تيماء
+
+ 
+      </h2>
+      <h3 class="text-blue desc">       الأمير سلطان بن عبد العزيز 
+
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">       وحدة فرع نجران
+
+ 
+      </h2>
+      <h3 class="text-blue desc">      
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ <a class="branch-details  p-2 d-flex gap-3 align-items-start pb-4 " href="https://maps.google.com/?q=25.3933496007868,49.5743244594786
+
+
+" data-lat="25.62043" data-lng="49.5743244594786" > 
+  <i class="fa-solid fa-location-dot fa-lg text-blue icon"></i>
+   <div>
+      <h2 class="text-blue title">      وحدة فرع رفحاء
+
+ 
+      </h2>
+      <h3 class="text-blue desc">         المساعدية
+
+      </h3>
+      <span class="text-light-green mt-2 d-block">مفتوح</span>
+   </div>
+</a>
+ 
+ 
+                </div>
+            </div>
+            <div class="col-lg-9">
+<div id="map" style="height: 700px;">
+   <button class="get-direction btn position-absolute  " id="locationButton">Get Directions</button>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end our branches -->
+ <!-- start Inquiries -->
+<div class="inquiries " id="inquiries">
+    <div class="container py-lg-5">
+        <h3 class="text-blue fw-bold title mb-3 mb-lg-5">General Inquiry </h3>
+<form>
+    <div class="row">
+      <div class="col-lg-6">
+           <input type="text" class="form-control pb-4 mb-5"  placeholder="Name" required>
+
+      </div>  
+      <div class="col-lg-6">
+           <input type="email" class="form-control pb-4 mb-5"  required  placeholder="Email ">
+
+      </div>  
+      <div class="col-lg-6">
+           <input type="number" id="phone"  class="form-control pb-4 mb-5"  required  placeholder="Phone Number  ">
+
+      </div>  
+      <div class="col-lg-6">
+                   <input type="text" class="form-control pb-4 mb-5"  placeholder="Complaint" required>
+
+      </div>  
+
+    </div>
+    <button type="submit"  class="btn my-0 my-lg-5"> Request  </button>
+</form>
+    </div>
+</div>
+  <!-- end Inquiries -->
+   <!-- start subscribe  -->
+    
+   <!-- end subscribe  -->
+<div class="subscribe my-5">
+    <div class="container">
+                <h3 class="text-blue fw-bold title ">  Subscribe to our newsletter         </h3>
+            <form>
+                    <div class="row align-items-center">
+                    <div class="col-lg-6">
+                                   <input type="email" class="form-control pb-4 my-3 my-lg-0"  required  placeholder=" Email">
+
+                    </div>
+                    <div class="col-lg-6">
+                            <button type="submit"  class="btn my-0 my-lg-5">Subscribe </button>
+
+                    </div>
+                </div>
+            </form>
+
+    </div>
+</div>
+      <!-- start  companies -->
+      <div class="companies  pb-lg-3">
+         <div class="owl-carousel companies-carousel owl-theme pt-md-5"  data-aos="fade-up" data-aos-delay="300">
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img1.png" alt="company1" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img2.png" alt="company3" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img3.png" alt="company3" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img4.png" alt="company4" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img5.png" alt="company5" >
+            </div>
+            <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img6.png" alt="company6" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img7.png" alt="company7" >
+            </div>
+           
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img9.png" alt="company9" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img10.png" alt="company10" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img11.png" alt="company11" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img12.png" alt="company12" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img13.png" alt="company13" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img14.png" alt="company14" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img15.png" alt="company15" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img16.png" alt="company16" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img17.png" alt="company17" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img18.png" alt="company18" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img19.png" alt="company19" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img20.png" alt="company20" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img21.png" alt="company21" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img22.png" alt="company22" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img23.png" alt="company23" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img24.png" alt="company24" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img25.png" alt="company25" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img26.png" alt="company26" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img27.png" alt="company27" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img28.png" alt="company28" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img29.png" alt="company29" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img30.png" alt="company30" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img31.png" alt="company31" >
+            </div>
+                <div class="d-flex justify-content-center"  >
+               <img src="./images/home/companies/img32.png" alt="company31" >
+            </div>
+         </div>
+      </div>
+      <!-- end  companies -->
+       <!-- start footer -->
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12  col-xl-2">
+                  <div class="d-flex flex-column justify-content-between h-100 pb-4 pb-lg-0">
+                     <div>
+                        <a href="home.html">  <img src="./images/home/footer/logo.svg " style="width: 160px;" class="log" alt="logo"></a>
+                     </div>
+                     <div class="pt-2 mt-2 pt-xl-5 mt-xl-5">
+                        <h4 class="follow-title text-blue fw-bold pb-3">FOLLOW US</h4>
+                        <ul class="d-flex gap-lg-3 gap-2 social">
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-facebook-f text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-x-twitter text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-instagram text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-linkedin-in text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa-brands fa-youtube text-blue fa-xl"></i>
+                              </a>
+                           </li>
+                              <li> 
+                                <a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank">
+                                    <i class="fa-brands fa-whatsapp text-blue fa-xl"></i>
+                                </a>
+                            </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12  col-xl-7 ">
+                  <div class="row   g-4 d-flex justify-content-between py-4 py-xl-0">
+                     <div class="col-6 col-md-3 ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#">Home</a>
+                           </li>
+                           <li>
+                              <a href="#">Our Products</a>
+                           </li>
+                           <li>
+                              <a href="#">New Projects</a>
+                           </li>
+                           <li>
+                              <a href="#"> Careers</a>
+                           </li>
+                           <li>
+                              <a href="#">Customer Support</a>
+                           </li>
+                           <li>
+                              <a href="#"> Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-6 col-md-3  ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#">Our Products</a>
+                           </li>
+                           <li>
+                              <a href="#"> Roller Doors</a>
+                           </li>
+                           <li>
+                              <a href="#"> Window Shutter</a>
+                           </li>
+                           <li>
+                              <a href="#"> Barrier Gates</a>
+                           </li>
+                           <li>
+                              <a href="#"> Steel Doors</a>
+                           </li>
+                           <li>
+                              <a href="#"> Double Doors </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-6 col-md-3  ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#"> About Us</a>
+                           </li>
+                           <li>
+                              <a href="#">About Al Moosa </a>
+                           </li>
+                           <li>
+                              <a href="#">What We Do</a>
+                           </li>
+                           <li>
+                              <a href="#"> How We Work</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-6 col-md-3  ">
+                        <ul class="pages-links d-flex flex-column gap-2">
+                           <li>
+                              <a href="#"> New Projects</a>
+                           </li>
+                           <li>
+                              <a href="#"> Sales & Discounts</a>
+                           </li>
+                           <li>
+                              <a href="#"> Best Sellers</a>
+                           </li>
+                           <li>
+                              <a href="#"> Featured Products</a>
+                           </li>
+                           <li>
+                              <a href="#"> New Arrivals</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 col-xl-3">
+                  <h3 class="contact-us text-blue fw-bold pb-2"> CONTACT US</h3>
+                  <p class="text-blue mb-3 desc">
+                    2929 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                  </p>
+                  <p class="text-blue desc mb-4">
+2929 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do             </p>
+                  <a href="tel:920017000" class="d-flex justify-content-start align-items-center gap-2 contact" >
+                                          <img src="./images/home/footer/phone.svg" alt="phone" class="img-fluid phone">
+
+                     <h4 class=" font-20 number">920017000</h4>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end footer -->
+      <!-- start copyrights -->
+      <div class="copyright bg-main-color py-3">
+         <div class="container ">
+            <div class="d-flex justify-content-between copyright-content">
+               <p class="text-white text-center text-md-start desc">     
+               @ Copyright 2024 ALMOOSA DOORS . All Right Reserved .  
+               </p>
+               <ul class="d-flex flex-column flex-md-row  align-items-center  gap-4 links ">
+                  <li>
+                     <a href="#" >
+                  Privacy Policy
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                     Terms &  Conditions 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                   About Almoosa 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                   Careers
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" >
+                 Sitemap
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- end copyrights -->
+      <script src="js/libraries/all.min.js"></script>
+      <script src="js/libraries/bootstrap.bundle.min.js"></script>
+      <script src="js/libraries/jquery-3.7.1.min.js"></script>
+      <script src="js/libraries/owl.carousel.min.js"></script>
+      <script src="js/libraries/aos.js"></script>
+      <script src="js/libraries/leaflet.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+   window.addEventListener('load', () => {
+      AOS.init({
+  duration: 1000, // Animation duration in milliseconds
+  once: true,     // Ensures animation happens only once when scrolling down
+  offset: 120,    // Change offset (default is 120px)
+});
+  });
+      </script>
+ 
+
+ 
+ 
+   </body>
+</html>
