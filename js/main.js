@@ -354,14 +354,12 @@ links.forEach(function(link) {
     var lng = link.getAttribute('data-lng');
     var location = link.getAttribute('data-location');
 
-    // Store the href of the clicked link
     currentLink = link.getAttribute('href');
 
     addMarker(lat, lng, location);
   });
 });
 
-// Set up the Get Directions button to open the stored link
 locationButton.onclick = function() {
   if (currentLink) {
     window.open(currentLink, '_blank');
