@@ -313,49 +313,57 @@ document.addEventListener("DOMContentLoaded", function () {
   phoneInput.addEventListener('input', function () {
     this.value = this.value.replace(/[^0-9]/g, '');
   });
-});
+   });
+
+
 // map logic in contact us page 
-  var map = L.map('map').setView([51.505, -0.09], 2); 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+var map = L.map('map').setView([51.505, -0.09], 2); 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-  var marker;
-  var locationButton = document.getElementById('locationButton'); // Get the button element
- 
-  var customIcon = L.icon({
-    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-    shadowSize: [41, 41]
-  });
+var marker;
+var locationButton = document.getElementById('locationButton');
+var currentLink = '';
 
-   function addMarker(lat, lng, location) {
-    if (marker) {
-      map.removeLayer(marker); 
-    }
-    marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);  
-    map.setView([lat, lng], 10); 
+var customIcon = L.icon({
+  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+  shadowSize: [41, 41]
+});
 
-  
-    locationButton.onclick = function() {
-       window.open('https://maps.google.com/?q=' + lat + ',' + lng, '_blank');
-    };
-    locationButton.style.display = 'block'; 
+function addMarker(lat, lng, location) {
+  if (marker) {
+    map.removeLayer(marker); 
   }
+  marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);  
+  map.setView([lat, lng], 10); 
 
-   var links = document.querySelectorAll('.branch-details');
-  links.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();  
+  locationButton.style.display = 'block'; 
+}
 
-       var lat = link.getAttribute('data-lat');
-      var lng = link.getAttribute('data-lng');
-      var location = link.getAttribute('data-location');
+var links = document.querySelectorAll('.branch-details');
+links.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();  
 
- 
-      addMarker(lat, lng, location);
-    });
+    var lat = link.getAttribute('data-lat');
+    var lng = link.getAttribute('data-lng');
+    var location = link.getAttribute('data-location');
+
+    // Store the href of the clicked link
+    currentLink = link.getAttribute('href');
+
+    addMarker(lat, lng, location);
   });
+});
+
+// Set up the Get Directions button to open the stored link
+locationButton.onclick = function() {
+  if (currentLink) {
+    window.open(currentLink, '_blank');
+  }
+};
