@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // map logic in contact us page 
-var map = L.map('map').setView([51.505, -0.09], 2); 
+ var map = L.map('map').setView([51.505, -0.09], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -335,14 +335,25 @@ var customIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-function addMarker(lat, lng, location) {
+function addMarker(lat, lng) {
   if (marker) {
     map.removeLayer(marker); 
   }
-  marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);  
-  map.setView([lat, lng], 10); 
 
+  marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+  map.setView([lat, lng], 10); 
   locationButton.style.display = 'block'; 
+
+  // Get location dynamically using reverse geocoding
+  fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`)
+    .then(response => response.json())
+    .then(data => {
+      const location = data.display_name; // Get the location name
+      marker.bindPopup(location).openPopup(); // Bind the popup to the marker with the location
+    })
+    .catch(error => {
+      console.error('Error fetching location:', error);
+    });
 }
 
 var links = document.querySelectorAll('.branch-details');
@@ -352,11 +363,10 @@ links.forEach(function(link) {
 
     var lat = link.getAttribute('data-lat');
     var lng = link.getAttribute('data-lng');
-    var location = link.getAttribute('data-location');
 
     currentLink = link.getAttribute('href');
 
-    addMarker(lat, lng, location);
+    addMarker(lat, lng);
   });
 });
 

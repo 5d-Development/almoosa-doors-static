@@ -3681,6 +3681,8 @@ a {
 }
 
 // customer support styles
+
+
 .familiar-questions {
     padding: 80px 0 0;
 
@@ -3693,6 +3695,10 @@ a {
 
     .title {
         font-size: 2.2rem;
+
+        &:dir(ltr) {
+            font-size: 1.5rem;
+        }
 
         @media (max-width:575px) {
             font-size: 1.2rem;
@@ -3721,6 +3727,11 @@ a {
             color: var(--main-color);
             text-align: right;
 
+            &:dir(ltr) {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+
             &::after {
                 margin-left: 0;
                 margin-right: auto;
@@ -3732,13 +3743,7 @@ a {
 
             }
 
-            &:dir(ltr) {
-                &::after {
-                    margin-right: 0;
 
-                    margin-left: auto;
-                }
-            }
 
             &:focus {
                 box-shadow: none;
@@ -3753,6 +3758,20 @@ a {
             @media (max-width:575px) {
                 font-size: 1.2rem;
             }
+
+            &:dir(ltr) {
+                &::after {
+                    margin-right: 0;
+
+                    margin-left: auto;
+                }
+            }
+
+            @media (max-width:768px) {
+                font-size: 1rem !important;
+                text-align: left;
+                ;
+            }
         }
 
         .accordion-body {
@@ -3763,6 +3782,15 @@ a {
                 margin-bottom: 1rem;
                 padding-inline-start: 1rem;
 
+                &:dir(ltr) {
+                    font-size: 1.2rem;
+
+                    @media (max-width:575px) {
+                        font-size: 1rem;
+                        padding-inline-start: .5rem;
+
+                    }
+                }
 
 
                 &::before {
@@ -3776,6 +3804,21 @@ a {
                     transform: translateY(-50%);
                 }
 
+                &:dir(ltr) {
+
+                    &::before {
+
+                        left: -1rem;
+                        top: 35%;
+
+                        @media (max-width:575px) {
+                            top: 12px;
+                        }
+                    }
+
+
+                }
+
                 @media (max-width:575px) {
                     font-size: 1.2rem;
                 }
@@ -3786,13 +3829,40 @@ a {
                     font-size: 1.2rem;
                     color: var(--secondary-color);
 
+                    &:dir(ltr) {
+                        font-size: 1.1rem;
+
+                        @media (max-width:575px) {
+                            font-size: 1rem;
+                        }
+                    }
+
                     @media (max-width:575px) {
                         font-size: 1rem;
                     }
                 }
             }
+
+            &:dir(ltr) {
+                @media (max-width:575px) {
+                    padding: 0 1rem;
+
+                }
+            }
         }
     }
+}
+
+.customer-support-banner {
+    .banner-title {
+        &:dir(ltr) {
+            @media (max-width :575px) {
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+
+
 }
 
 .customer-contact-form {
@@ -3846,10 +3916,39 @@ a {
             font-size: 1.25rem;
             font-weight: bold;
 
+
             @media (max-width:575px) {
                 font-size: 1.2rem;
             }
         }
+
+        &:dir(ltr) {
+            &::placeholder {
+                font-size: 1.1rem;
+
+                @media (max-width:575px) {
+                    font-size: 1rem;
+                }
+
+            }
+        }
+
+        &:dir(ltr) {
+
+            label {
+                font-size: 1.1rem;
+            }
+
+            span {
+
+                font-size: 1rem;
+
+            }
+
+        }
+
+
+
     }
 
     button[type="submit"] {
