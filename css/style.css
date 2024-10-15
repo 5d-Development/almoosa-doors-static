@@ -3536,9 +3536,6 @@ a {
   }
 }
 
-.our-approach {
-  padding-bottom: 180px;
-}
 @media (max-width: 1700px) {
   .our-approach {
     padding-bottom: 0px;
