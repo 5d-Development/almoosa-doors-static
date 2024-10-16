@@ -4482,6 +4482,10 @@ a {
                 position: relative;
                 padding-inline-start: 50px;
 
+                @media (max-width:575px) {
+                    padding-inline-start: 30px;
+                }
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -4489,6 +4493,10 @@ a {
                     height: 25px;
                     background-color: var(--secondary-color);
                     right: 0px;
+
+                    @media (max-width:575px) {
+                        top: 10px
+                    }
 
                     @media screen and (max-width: 1200px) {
                         width: 15px;

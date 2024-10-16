@@ -4821,6 +4821,11 @@ a {
   position: relative;
   padding-inline-start: 50px;
 }
+@media (max-width: 575px) {
+  .products-offers .tab-content ul li {
+    padding-inline-start: 30px;
+  }
+}
 .products-offers .tab-content ul li::before {
   content: "";
   position: absolute;
@@ -4828,6 +4833,11 @@ a {
   height: 25px;
   background-color: var(--secondary-color);
   right: 0px;
+}
+@media (max-width: 575px) {
+  .products-offers .tab-content ul li::before {
+    top: 10px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .products-offers .tab-content ul li::before {
