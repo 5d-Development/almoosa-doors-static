@@ -213,37 +213,43 @@ $('.products-carousel').owlCarousel({
     }
 })
 //active link in navbar
+
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link");
-
-
   const currentUrl = window.location.pathname;
 
-
+  // Handle the home page
   const homeLink = document.querySelector('a[href="/"]');
-
   if (currentUrl === "/") {
     homeLink.classList.add("active");
   }
 
   navLinks.forEach((link) => {
     if (link.getAttribute("href") === "#") {
-      return; 
+      return; // Skip links with "#" href
     }
 
-    // Extract only the pathname from the link's href (ignore domain)
     const linkPath = new URL(link.href).pathname;
 
-   
     if (linkPath === currentUrl) {
       link.classList.add("active");
 
+      // Check if the link is inside a dropdown
       if (link.closest(".dropdown-menu")) {
-        link
-          .closest(".nav-item")
-          .querySelector(".nav-link")
-          .classList.add("active");
+        const parentNavItem = link.closest(".nav-item");
+        parentNavItem.querySelector(".nav-link").classList.add("active");
       }
+    }
+  });
+
+  // Special case for the "منتجاتنا" menu
+  const productDropdownItems = document.querySelectorAll('.dropdown-item[href*="roller-doors.html"]');
+  
+  productDropdownItems.forEach((item) => {
+    const itemPath = new URL(item.href).pathname;
+    if (itemPath === currentUrl) {
+      const parentNavItem = item.closest(".nav-item");
+      parentNavItem.querySelector(".nav-link").classList.add("active");
     }
   });
 });
