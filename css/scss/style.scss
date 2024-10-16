@@ -345,6 +345,7 @@ a {
             position: relative;
             padding: 1.6rem 0;
 
+
             &:dir(ltr) {
                 padding: 2rem 0;
             }
@@ -413,6 +414,7 @@ a {
 
             .nav-link {
                 font-size: 1.25rem;
+                padding-bottom: 4px;
 
                 &:dir(ltr) {
                     font-size: 1rem;
@@ -3984,6 +3986,7 @@ a {
                 font-weight: bold;
 
 
+
                 &.active {
                     background-color: transparent;
                     border: 0;
@@ -4222,7 +4225,28 @@ a {
 
     }
 
+    &.our-products {
+        padding: 0;
 
+        .card {
+            .card-title {
+                font-size: 1.9rem !important;
+
+                @media (max-width:991px) {
+                    font-size: 1.5rem !important
+                }
+            }
+
+            .desc {
+                color: #53565AB3;
+                font-size: 1.7rem !important;
+
+                @media (max-width:991px) {
+                    font-size: 1.5rem !important
+                }
+            }
+        }
+    }
 }
 
 // products page style 

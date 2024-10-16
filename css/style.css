@@ -1493,6 +1493,7 @@ a {
 }
 .navbar .navbar-nav .nav-item .nav-link {
   font-size: 1.25rem;
+  padding-bottom: 4px;
 }
 .navbar .navbar-nav .nav-item .nav-link:dir(ltr) {
   font-size: 1rem;
@@ -4611,6 +4612,26 @@ a {
   .our-new-projects #project-criteria .criteria-layer {
     left: 2.4em;
     top: 33.5%;
+  }
+}
+.our-new-projects.our-products {
+  padding: 0;
+}
+.our-new-projects.our-products .card .card-title {
+  font-size: 1.9rem !important;
+}
+@media (max-width: 991px) {
+  .our-new-projects.our-products .card .card-title {
+    font-size: 1.5rem !important;
+  }
+}
+.our-new-projects.our-products .card .desc {
+  color: rgba(83, 86, 90, 0.7019607843);
+  font-size: 1.7rem !important;
+}
+@media (max-width: 991px) {
+  .our-new-projects.our-products .card .desc {
+    font-size: 1.5rem !important;
   }
 }
 
