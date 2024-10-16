@@ -213,24 +213,42 @@ $('.products-carousel').owlCarousel({
     }
 })
 //active link in navbar
-   document.addEventListener("DOMContentLoaded", function () {
-     const navLinks = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-link");
 
-     const currentUrl = window.location.href;
 
-     navLinks.forEach((link) => {
-       if (link.href === currentUrl) {
-         link.classList.add("active");
+  const currentUrl = window.location.pathname;
 
-         if (link.closest(".dropdown-menu")) {
-           link
-             .closest(".nav-item")
-             .querySelector(".nav-link")
-             .classList.add("active");
-         }
-       }
-     });
-   });
+
+  const homeLink = document.querySelector('a[href="/"]');
+
+  if (currentUrl === "/") {
+    homeLink.classList.add("active");
+  }
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === "#") {
+      return; 
+    }
+
+    // Extract only the pathname from the link's href (ignore domain)
+    const linkPath = new URL(link.href).pathname;
+
+   
+    if (linkPath === currentUrl) {
+      link.classList.add("active");
+
+      if (link.closest(".dropdown-menu")) {
+        link
+          .closest(".nav-item")
+          .querySelector(".nav-link")
+          .classList.add("active");
+      }
+    }
+  });
+});
+
+
 //  companies section  logic
 $('.companies-carousel').owlCarousel({
    loop:true,
