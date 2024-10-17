@@ -4634,6 +4634,26 @@ a {
     font-size: 1.5rem !important;
   }
 }
+.our-new-projects .new-arrival-banner {
+  min-height: 350px;
+  border-radius: 20px;
+}
+@media (max-width: 991px) {
+  .our-new-projects .new-arrival-banner {
+    min-height: 200px;
+  }
+}
+.our-new-projects .new-arrival-banner .title {
+  font-size: 4rem;
+}
+@media (max-width: 575px) {
+  .our-new-projects .new-arrival-banner .title {
+    font-size: 2rem;
+  }
+}
+.our-new-projects .new-arrival-banner img {
+  width: 220px;
+}
 
 .products-banner .banner-container {
   min-height: 350px;

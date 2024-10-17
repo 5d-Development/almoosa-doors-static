@@ -1,0 +1,1527 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-230706768-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-230706768-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/index.ico">
+    <title>CairoScan</title>
+    <meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="../css/jquery.steps.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script src="../js/vue.min.js"></script>
+	<style>
+	footer a:link, footer a:visited {
+  color: #fff;
+}
+footer a:active, footer a:hover {
+  color: #fcf6c9;
+}
+
+
+	</style>
+</head>
+
+<body>
+    <div class="preloader"></div><!-- /.preloader -->
+    <div class="page-wrapper">
+	<!--end preloader-->
+	
+        <!-- start whatsapp -->
+
+        <div class="joinchat joinchat--left" data-settings='{"telephone":"2⁦01272203258⁩","mobile_only":false,"button_delay":3,"whatsapp_web":false,"message_views":2,"message_delay":10,"message_badge":false,"message_send":"","message_hash":""}'>
+            <div class="joinchat__button">
+                <div class="joinchat__button__open"></div>
+                <div class="joinchat__button__sendtext">Open chat</div>
+            </div>
+            <svg height="0" width="0"><defs><clipPath id="joinchat__message__peak"><path d="M17 25V0C17 12.877 6.082 14.9 1.031 15.91c-1.559.31-1.179 2.272.004 2.272C9.609 18.182 17 18.088 17 25z" /></clipPath></defs></svg>
+        </div>
+
+
+        <!-- end whatsapp -->
+        <!-- page top-header -->
+        <!--popup window -->
+        <div class="hover_bkgr_fricc">
+            <span class="helper"></span>
+            <div>
+                <div id="appointment_vue_window">
+
+                    <div class="popupCloseButton">&times;</div>
+                    <main class="page-content special_window">
+
+                        <div class="">
+                            <div class="grid-col ">
+                                <article class="feedback widget-appointment">
+                                    <div class="widget-title">Make an Appointment</div>
+
+
+                                    <form action="" id="contact-us-form">
+                                        <fieldset>
+                                            <div class="clearfix">
+                                                <div class="input">
+                                                    <div class="lable_alig">
+                                                        <label>Full Name:</label>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <input class="name" type="text" placeholder="Full Name       *" name="name" v-model='newAppointment.Name'>
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="lable_alig">
+                                                        <label>Phone Number:</label>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <input class="phone" type="tel" placeholder="Phone Number       *" name="phone" v-model='newAppointment.Phone'>
+                                                        <i class="fa fa-phone"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="input">
+                                                    <div class="lable_alig">
+
+                                                        <label>Examination Type :</label>
+                                                    </div>
+                                                    <section class="widget widget-departments">
+                                                        <dl>
+                                                            <dt><i class="fa fa-medkit"></i>Examination Type       *</dt>
+                                                            <dd style="padding:0px">
+                                                                <input class="inp-cbx" id="MRIiqq" value='Cardiac CT with Calcium Scoring' name='exam' type="checkbox" v-model="othertest" />
+                                                                <label class="cbx" for="MRIiqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Cardiac CT with Calcium Scoring</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="CTtqq" value='CT Angiography' type="checkbox" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="CTtqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Angiography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="Nuclear Imaginggqq" value='CT Colonography ' type="checkbox" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="Nuclear Imaginggqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Colonography </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="Women imaginggqq" value='CT Scanning of Abdomen/Pelvis' type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="Women imaginggqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Abdomen and Pelvis</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="Xrayyqq" value="CT Scanning of Enterography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="Xrayyqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Enterography </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="Ultrasounddqq" value="CT Scanning of the Body" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="Ultrasounddqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Scanning of the Body</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="agfqq" value="CT Scanning of the Chest" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="agfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Scanning of the Chest</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="bgfqq" value="CT Scanning of the Head" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="bgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Scanning of the Head</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="cgfqq" value="CT Scanning of the Sinuses" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="cgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Scanning of the Sinuses</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="dgfqq" value="CT Scanning of the Spine" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="dgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Scanning of the Spine</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="egfqq" value="CT Scanning of Urography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="egfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>CT Scanning of Urography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="fgfsqq" value="General Ultrasound Imaging" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="fgfsqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>General Ultrasound Imaging</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="Electrocardiography (ECG)fqq" value="Electrocardiography (ECG)fqq" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="Electrocardiography (ECG)fqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Electrocardiography (ECG)</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ggfqq" value="Ultrasound - Abdomen" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ggfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Abdominal Ultrasound</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="hgfqq" value="Ultrasound – Carotid" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="hgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Carotid Doppler</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="igfqq" value="Ultrasound Imaging of the Prostate" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="igfqq ">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Prostatic Ultrasound</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="jgfqq" value="Ultrasound Imaging of the Scrotum" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="jgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Scrotal Ultrasound</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="kgfqq" value="Ultrasound of the Thyroid" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="kgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Ultrasound of the Thyroid</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="lgfqq" value="Ultrasound - Venous" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="lgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Venous Doppler </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="mgfqq" value="Vascular Ultrasound" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="mgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Vascular Ultrasound</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="Echocardiographyfqq" value="Echocardiography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="Echocardiographyfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Echocardiography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ngfqq" value="Bone X-Ray" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ngfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Bone X-Ray</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ogfqq" value="chest X-Ray" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ogfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>chest X-Ray</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="pgfqq" value="Dental X-Ray" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="pgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Panoramic Dental X-ray</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="qgfqq" value="DXA Scan" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="qgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Bone Densitometry (DXA)</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="rgfqq" value="Intravenous Pyelogram (IVP)" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="rgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Intravenous Pyelogram (IVP)</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="sgfqq" value="Lower GI Tract Radiography " type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="sgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Lower GI Tract Radiography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="tgfqq" value="Upper GI-tract radiography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="tgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Upper GI-tract radiography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ugfqq" value="Voiding Cystourethrography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ugfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Voiding Cystourethrography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="vgfqq" value="X-ray (Radiography) – Abdomen" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="vgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Abdominal X-ray</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="wgfqq" value="Breast Ultrasound" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="wgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Breast Ultrasound</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="xgfqq" value="Galactography Ductography " type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="xgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Galactography / Ductography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ygfqq" value="Hysterosalpingography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ygfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Hysterosalpingography</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="zgfqq" value="Mammography & Tomosynthesis" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="zgfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Mammography / Tomosynthesis</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="agafqq" value="MRI of the Breast" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="agafqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>MRI of the Breast</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="bgbfqq" value="Obstetrical Ultrasound" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="bgbfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Obstetrical Ultrasound</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="cgcfqq" value="Ultrasound Guided Breast Biopsy" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="cgcfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Ultrasound Guided Breast Biopsy</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="dgdfqq" value="Ultrasound - Pelvis" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="dgdfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Ultrasound  Pelvis</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="egefqq" value="Cardiac Nuclear Medicine" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="egefqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Cardiac Nuclear Medicine</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="fgffdqq" value="Hepatobiliary Nuclear Medicine " type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="fgffdqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Hepatobiliary Nuclear Medicine </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="gggfqq" value="PET CT" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="gggfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>PET CT</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="hghfqq" value="Radioiodine I(131)Therapy" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="hghfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Radioiodine I(131)Therapy</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="igifqq" value="Renal Scintigraphy" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="igifqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Renal Scintigraphy (Renal Scan)</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="jgjfqq" value="Skeletal Scintigraphy Bone Scan" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="jgjfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Bone Scintigraphy (Bone Scan)</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="kgkfqq" value="Thyroid Scan and Uptake" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="kgkfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Thyroid Scan and Uptake </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="lglfqq" value="Cardiac MRI" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="lglfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Cardiac MRI</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="mgmfqq" value="Knee MRI" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="mgmfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Knee MRI</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ngnfqq" value="MR Angiography " type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ngnfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>MRI Angiography </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ogofqq" value="Magnetic Resonance Cholangiopancreatography (MRCP)" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ogofqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Magnetic Resonance Cholangiopancreatography (MRCP) </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="pgpfqq" value="MRI of the abdomen and pelvis" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="pgpfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Abdomen and Pelvis MRI </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="qgqfqq" value="MRI of the Chest" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="qgqfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Chest MRI</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="rgrfqq" value="MRI of the Head" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="rgrfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Head MRI</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="sgsfqq" value="MRI of the Prostate" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="sgsfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>MRI of the Prostate</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="tgtfqq" value="MRI of the shoulder" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="tgtfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Shoulder MRI </span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="ugufqq" value="MRI of the Spine" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="ugufqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>MRI of the Spine</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="vgvfqq" value="Urography" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="vgvfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>MRI Urography</span>
+                                                                </label>
+
+                                                                <input class="inp-cbx" id="vgvggfqq" value="Breast cancer" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="vgvggfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Breast cancer</span>
+                                                                </label>
+
+                                                                <input class="inp-cbx" id="vgvgggfqq" value="Lung Cancer" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="vgvgggfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Lung Cancer</span>
+                                                                </label>
+                                                                <input class="inp-cbx" id="vgvggggfqq" value="Exercise ECG" type="checkbox" style="display: none" name='exam' v-model="othertest" />
+                                                                <label class="cbx" for="vgvggggfqq">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check"></use>
+                                                                        </svg>
+                                                                    </span><span>Exercise ECG</span>
+                                                                </label>
+
+                                                                <svg class="inline-svg">
+                                                                    <symbol id="check" viewbox="0 0 12 10">
+                                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                                    </symbol>
+                                                                </svg>
+                                                            </dd>
+                                                        </dl>
+                                                    </section>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="lable_alig">
+                                                        <label>Preferred Branch :</label>
+
+                                                    </div>
+                                                    <section class="widget widget-departments">
+                                                        <dl>
+                                                            <dt>
+                                                                <i class="fa fa-map-marker"></i>
+                                                                Preferred Branch       *
+                                                            </dt>
+                                                            <dd style="padding:0px">
+
+                                                                                        <input class="inp-cbx" id="Mohandssenqq" value="Heliopolis" type="radio" style="display: none" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Mohandssenqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Heliopolis</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Gizaqq" value="Nasr City 1" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Gizaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Nasr City 1</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Octoberqq" value="Nasr City 2 (Dar Al Fouad Medical Tower)" type="radio" style="display: none" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Octoberqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Nasr City 2 (Dar Al Fouad Medical Tower)</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Masr Elgadedaqq" value="Mokattam" type="radio" style="display: none" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Masr Elgadedaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Mokattam</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Tagamoaqq" value="Shubra 1" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Tagamoaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Shubra 1</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Women Health Fifth Settlementqq" value="Shubra 2" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Women Health Fifth Settlementqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Shubra 2</span>
+                                            </label>
+
+                                            <input class="inp-cbx" id="Maadiqq" value="Hadayiq Alquba" name="branchy" type="radio" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Maadiqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Hadayiq Alquba</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Maadi Women's Healthqq" value="Downtown" type="radio" style="display: none" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Maadi Women's Healthqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Downtown</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Shobra-Misrqq" value="Roxy" type="radio" style="display: none" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Shobra-Misr"qq>
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Roxy</span>
+                                            </label>
+
+                                            <input class="inp-cbx" id="Shoubra El khimaqq" value="Maadi" name="branchy" type="radio" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Shoubra El khimaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Maadi</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Banhaqq" value="Helwan" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Banhaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Helwan</span>
+                                            </label>
+
+                                            <input class="inp-cbx" id="10th ramadanqq" value="Othman Bin-Affan" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="10th ramadanqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Othman Bin-Affan</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Zagazig Qawmiaqq" value="Mohandessin 1" name="branchy" type="radio" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Zagazig Qawmiaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Mohandessin 1</span>
+                                            </label>
+
+                                            <input class="inp-cbx" id="Zagazig Montazahqq" value="Mohandessin 2" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Zagazig Montazahqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Mohandessin 2</span>
+                                            </label>
+                                            <input class="inp-cbx" id="Ismaliaqq" value="women's health unit" type="radio" style="display: none" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Ismaliaqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>women's health unit</span>
+                                            </label>
+
+
+
+
+                                            <input class="inp-cbx" id="Mansuoraqq" value="Giza" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Mansuoraqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Giza</span>
+                                            </label>
+
+
+                                            <input class="inp-cbx" id="Dommiatqq" value="Faisal" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Dommiatqq">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Faisal</span>
+                                            </label>
+
+<input class="inp-cbx" id="Dommiatddxh" value="Alharam" type="radio" name="branchy" v-model="newAppointment.Branch">
+                                            <label class="cbx" for="Dommiatddxh">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span><span>Alharam</span>
+                                            </label>
+                                           
+
+                                            <svg class="inline-svg">
+                                                <symbol id="check" viewBox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
+                                            </svg>
+                                        </dd>
+                                    </dl>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="input">
+                                                    <div class="lable_alig">
+
+                                                        <label>Preferred Date :</label>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <input id='datepicker1' class='date-g1' type="date" placeholder="Preferred Date       *" name="date" v-model='newAppointment.Date'>
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input">
+                                                    <div class="lable_alig">
+                                                        <label>Preferred Time :</label>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <input id="time1" class="bs-timepicker1 time-g1" type="time" placeholder="Preferred Time       *" name="time" v-model='newAppointment.Time'>
+                                                        <i class="fa fa-clock-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lable_alig">
+                                                <label>Message:</label>
+                                            </div>
+                                            <div class="row">
+                                                <textarea rows="6" class="message-contact" placeholder="Message" name="message" v-model='newAppointment.Message'></textarea>
+                                                <i class="fa fa-align-left"></i>
+                                            </div>
+                                            <div class="clearfix ">
+                                                <button id="my-button" type="submit" class="button" value="Submit" @click.prevent="onSubmit">Send Message</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </article>
+                            </div>
+
+                        </div>
+                    </main>
+
+                    <!--/ page content -->
+                </div>
+
+                <script type="text/javascript" src="../layout/vue_files/appointment_window.js"></script>
+            </div>
+        </div>
+        <!--popup window -->
+        <div class="solid-row"></div>
+        <div class="top-bar light">
+            <div class="container">
+                <ul class="top-lang">
+                  <li><a href="https://www.cairoscan.com.eg/Ar/ar/index.aspx">عربى</a></li>
+                                        <li><a class="active" href="https://www.cairoscan.com.eg/En/en/index.aspx">English</a></li>
+
+                </ul>
+                <div class="top-login">
+                    
+                                        <a href="tel:19144"><i class="fa fa-lg fa-phone" aria-hidden="true"></i>19144</a>
+
+                </div>
+                <ul class="social_icons">
+                    <li class="facebook"><a href="https://www.facebook.com/CairoScanRadiologyLabs/?fref=ts" target="_blank"><i class="fa fa-facebook"></i> </a></li>
+                    <li class="whatsapp"><a href="https://api.whatsapp.com/send?phone=201272203421" target="_blank"><i class="fa fa-whatsapp"></i> </a></li>
+                    <li class="mail"><a href="mailto:Radreport@cairoscan.com.eg" target="_blank"><i class="fa fa-at"></i> </a></li>
+                     <li class="linkedin"><a href="https://www.linkedin.com/company/cairo-scan"><i class="fa fa-linkedin"></i></a></li> 
+
+
+                </ul>
+                <div class="top-hotline">
+                    <button id="myBtn" type="button" class="trigger_popup_fricc btn btn-default">
+                        Make an appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+        <header class="site-header header-two">
+            <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky">
+                <div class="container clearfix">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="logo-box clearfix">
+                        <a class="navbar-brand " href="https://www.cairoscan.com.eg/En/en/index.aspx">
+                            <img src="../images/cairologo.png" class="main-logo" alt="Awesome Image" style="width: 180px;height: 70px;" />
+                        </a>
+                        <button class="menu-toggler" data-target=".main-navigation">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                    </div><!-- /.logo-box -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="main-navigation">
+                        <ul class=" navigation-box">
+                            <li class="current">
+                                <a href="https://www.cairoscan.com.eg/En/en/index.aspx">Home</a>
+                                <ul class="" style="display: none;">
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Dental One</a></li>
+                                    <li><a href="#">Dental Two</a></li>
+                                    <li><a href="#">Blood Dontation</a></li>
+                                    <li>
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+                            </li>
+                            <li>
+                                <a href="https://www.cairoscan.com.eg/En/main/About.aspx">About Us</a>
+                                <ul class="" style="display: none;">
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Dental One</a></li>
+                                    <li><a href="#">Dental Two</a></li>
+                                    <li><a href="#">Blood Dontation</a></li>
+                                    <li>
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+                            </li>
+                            <li>
+                                <a href="https://www.cairoscan.com.eg/En/main/services.aspx">Radiology</a>
+                                <ul class="submenu" >
+                                    <li><a href="https://www.cairoscan.com.eg/En/MRI-EXAMS/MRI_of_the_Head.aspx">Magnetic Resonance Imaging (MRI) </a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/ct_tests/CT_Scanning_of_the_Head.aspx">Computed Tomography (CT) </a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/Nuclear_Medicine/PET_CT.aspx">Nuclear Medicine</a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/Women_Imaging/Mammography_Tomosynthesis.aspx">Women Imaging</a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/ultra_tests/General_Ultrasound_Imaging.aspx">Ultrasound / Echocardiography / Doppler </a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/xray_tests/DentalX_Ray.aspx">Conventional X-ray</a></li>
+                                    
+                                </ul><!-- /.submenu -->
+                            </li>
+                            <li>
+                                
+                                <a href="#">Labs</a>
+                                <ul class="submenu">
+                                    <li><a href="https://www.cairoscan.com.eg/En/Labs/LabServices.aspx">Services</a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/Labs/LabBranches.aspx">Branches</a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/Labs/LabTestDetails.aspx">Test profiles</a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/Ar/Labs/TestPrecautions.aspx">Test precautions</a></li>
+                                    <li><a href="https://www.cairoscan.com.eg/En/Labs/LabTestResult.aspx">Test results</a></li>
+                                    <li style="display:none">
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+
+                            </li>
+                            <li>
+                                <a href="https://www.cairoscan.com.eg/En/main/branches.aspx">Locations</a>
+                                <ul class="" style="display: none;">
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Dental One</a></li>
+                                    <li><a href="#">Dental Two</a></li>
+                                    <li><a href="#">Blood Dontation</a></li>
+                                    <li>
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+
+                            </li>
+							<li>
+                                <a href="https://www.cairoscan.com.eg/En/main/Contracts.aspx">Contracts</a>
+                                <ul class="" style="display: none;">
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Dental One</a></li>
+                                    <li><a href="#">Dental Two</a></li>
+                                    <li><a href="#">Blood Dontation</a></li>
+                                    <li>
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+
+                            </li>
+                            <li>
+                                <a href="https://www.cairoscan.com.eg/En/main/contacts.aspx">Contact Us</a>
+                                <ul class="" style="display: none;">
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Dental One</a></li>
+                                    <li><a href="#">Dental Two</a></li>
+                                    <li><a href="#">Blood Dontation</a></li>
+                                    <li>
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+                            </li>
+
+                           
+                            <li>
+                                <a href="https://www.cairoscan.com.eg/En/survey/landingPage.aspx">Take Our Survey</a>
+                                <ul class="" style="display: none;">
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Dental One</a></li>
+                                    <li><a href="#">Dental Two</a></li>
+                                    <li><a href="#">Blood Dontation</a></li>
+                                    <li>
+                                        <a href="#">Header Versions</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Header One</a></li>
+                                            <li><a href="#">Header Two</a></li>
+                                            <li><a href="#">Header Three</a></li>
+                                            <li><a href="#">Header Four</a></li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.submenu -->
+                            </li>
+<li>
+                            <a id="quick-search-switcherr" href="#" class="fa fa-search g_alink"></a>
+                        </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header><!-- /.header-one -->
+<form id="quick-search" class="quick-search">
+        <fieldset>
+            <legend>Quick Search:</legend>
+                        
+            <input type="text" placeholder="Search By Branch" id="docname2" name="docname" class="ui-autocomplete-input" autocomplete="off">
+
+             
+            <input type="text" placeholder="Search By Examination" id="docname" name="docname" class="ui-autocomplete-input" autocomplete="off">
+
+            
+            <div class="switcher">
+                <button id="quick-search-switcher" type="button">Search</button>
+            </div>
+        </fieldset>				
+    </form>
+        
+
+		<style>
+
+	</style>
+   <section class="page-title">
+                    <div class="container">
+						<div class="row">
+							<div class="col-lg-6"><h2>Locations</h2></div>
+                        
+                       <div class="col-lg-6"> <nav class="bread-crumbs">
+                            <a href="https://cairoscan.com.eg/En/en/index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;
+                            <a href="https://cairoscan.com.eg/En/main/branches.aspx">Locations</a>
+						   </nav></div>
+                    </div>
+	   </div>
+                </section>
+			<!-- page content -->
+			<main class="page-content locator">
+                <div class="container">
+					<!-- map -->
+	
+					<section class="map">
+						<div class="row">
+
+						<div class="col-sm-12 col-lg-9">
+							<div class="widget-title">Our Branches Locations</div>
+
+						   <div class="google-map">
+							<iframe id='frame'  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.2026887612524!2d31.343366084883222!3d30.117013081856058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9b3d35b4d0a9dad!2z2YPYp9mK2LHZiCDYs9mD2KfZhg!5e0!3m2!1sar!2seg!4v1632738048879!5m2!1sar!2seg"  width="830" height="540" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>						
+
+						   </div>
+						</div>
+						<div class="col-sm-12 col-lg-3">						
+							<!-- contacts -->
+							<section class="widget widget-contacts">
+								<div class="widget-title">Branch Details</div>
+								<div >
+								<dl id="rearrange">
+									<dt  class="opened loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.2026887612524!2d31.343366084883222!3d30.117013081856058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9b3d35b4d0a9dad!2z2YPYp9mK2LHZiCDYs9mD2KfZhg!5e0!3m2!1sar!2seg!4v1632738048879!5m2!1sar!2seg">Heliopolis</dt>
+									<dd id="dd_remove" style="display: block;">
+										<ul>
+											<li><i class="fa fa-map-marker"></i>7 A Fareed Semeika Street - Opposite Elshams Club</li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt  class=" loadiframe" data-width="830" data-height="540" data-src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.4549551260384!2d31.34833018488464!3d30.052490981879416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6ee00f4762ff19b!2z2YPYp9mK2LHZiCDYs9mD2KfZhg!5e0!3m2!1sar!2seg!4v1632738307326!5m2!1sar!2seg'>Nasr City 1</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 15  Samir Abdel Raouf Street - Makram Ebeid</li>
+                                            <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class="loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.990591114136!2d31.321997884884336!3d30.065804181874555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x774c9bed02ff44c3!2sCairo%20Scan%20Radiology%20%26%20Labs!5e0!3m2!1sar!2seg!4v1632738421336!5m2!1sar!2seg"> Nasr City 2 (Dar Al Fouad Medical Tower)</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> Dar El Fouad Medical Tower, Intersection of 
+El Nasr Road and Youssef Abbas Street</li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class="loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27638.758591292026!2d31.2730864!3d30.0126118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145838c96e6fd707%3A0xf343100c3df4c31c!2sCairo%20Scan!5e0!3m2!1sar!2seg!4v1632738580283!5m2!1sar!2seg"> Mokattam</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 420  Street 9 Mokattam - OppositeTotal petrol station</li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.8909426553682!2d31.247438284884243!3d30.06866038187344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd55a3bb9e91c5c87!2z2YPYp9mK2LHZiCDYs9mD2KfZhiDZhNmE2KfYtNi52Ycg2YjYp9mE2KrYrdin2YTZitmE!5e0!3m2!1sar!2seg!4v1632740869269!5m2!1sar!2seg" >Shubra 1</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 59  Shoubra Street - above Vodafone branch</li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.654444707825!2d31.247147084884087!3d30.075438081871052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x368df55ea6076b65!2z2YPYp9mK2LHZiCDYs9mD2KfZhiDZhNmE2KfYtNi52Kkg2YjYp9mE2KrYrdin2YTZitmE!5e0!3m2!1sar!2seg!4v1632741319460!5m2!1sar!2seg" >Shubra 2</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 66  Shoubra Street - next to Eltawfeekeya school</li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.3707872456803!2d31.284521484883992!3d30.083565481868128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ad831ea35070672!2z2YPYp9mK2LHZiCDYs9mD2KfZhiDZhNmE2KPYtNi52Kkg2YjYp9mE2KrYrdin2YTZitmE!5e0!3m2!1sar!2seg!4v1632743290229!5m2!1sar!2seg">Hadayiq Alquba</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 123  Misr & El Sudan St., above Al Ahly Bank  </li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class="loadiframe"  data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.700434746483!2d31.23800558488493!3d30.045450981881935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1877ec90a1488e8!2sCairo%20Scan%20Radiology%20%26%20Labs!5e0!3m2!1sar!2seg!4v1632743433275!5m2!1sar!2seg"> Downtown</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 15  Tahrir Square - next to KFC</li>
+											<li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.0068177281473!2d31.31629598488373!3d30.09399108186425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3cbb6defedab0fa1!2z2YPYp9mK2LHZiCDYs9mD2KfZhiAo2YHYsdi5INix2YjZg9iz2Yop!5e0!3m2!1sar!2seg!4v1632743544461!5m2!1sar!2seg">Roxy</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 18  Alkobba Street - Next To The Adventist Church</li>
+                                           <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.164661268252!2d31.278208984886476!3d29.974697481907693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7430741ef6968c02!2z2YPYp9mK2LHZiNiz2YPYp9mGINin2YTZhdi52KfYr9mK!5e0!3m2!1sar!2seg!4v1632743661354!5m2!1sar!2seg" >Maadi</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i>43  Elgazar street - Above Ragab Sons Supermarket -</li>
+                                            <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.5794852526155!2d31.332364084889544!3d29.84755758195442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x391169360a3e8e5!2sCairo%20Scan%20Radiology%20%26%20Labs!5e0!3m2!1sar!2seg!4v1632743799307!5m2!1sar!2seg">Helwan</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 41  Mohamed Sayed Ahmed Street - Elnady Tower - Opposite Mo’men restaurant</li>
+                                           <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.3707872456803!2d31.284521484883992!3d30.083565481868128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ad831ea35070672!2z2YPYp9mK2LHZiCDYs9mD2KfZhiDZhNmE2KPYtNi52Kkg2YjYp9mE2KrYrdin2YTZitmE!5e0!3m2!1sar!2seg!4v1632743900137!5m2!1sar!2seg">Othman Bin-Affan</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 25 Othman ben Affan St. – Masr Elgdida above
+QNB Bank</li>
+                                            <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5135681235515!2d31.203293484884693!3d30.050810181880063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb625c59bccf3c4f6!2z2YPYp9mK2LHZiNiz2YPYp9mGINmE2YTYo9i02LnYqSDZiNin2YTYqtit2KfZhNmK2YQ!5e0!3m2!1sar!2seg!4v1632744666512!5m2!1sar!2seg">Mohandessin 1</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i>  35  Soliman Abaza Street</li>
+                                            <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.404869485412!2d31.21158028488463!3d30.0539271818789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebd5703a4a4ce8a!2z2YPYp9mK2LHZiCDYs9mD2KfZhiDZhNmE2KrYrdin2YTZitmE!5e0!3m2!1sar!2seg!4v1632744803027!5m2!1sar!2seg">Mohandessin 2</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i>55 Abdel Moneim Riad Street - First Floor</li>
+                                             <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class="loadiframe"  data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.404869485412!2d31.21158028488463!3d30.0539271818789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebd5703a4a4ce8a!2z2YPYp9mK2LHZiCDYs9mD2KfZhiDZhNmE2KrYrdin2YTZitmE!5e0!3m2!1sar!2seg!4v1632745007614!5m2!1sar!2seg"> women's health unit</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 55 Abdel Moneim Riad Street - Fourteenth Floor</li>
+											 <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.5607461730815!2d31.21878898488554!3d30.020766681890954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb880e2283521af7!2z2YPYp9mK2LHZiNiz2YPYp9mGINmE2YTYo9i02LnYqSDZiNin2YTYqtit2KfZhNmK2YQ!5e0!3m2!1sar!2seg!4v1632745096502!5m2!1sar!2seg">Giza</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 15 Mourad Street - Above Ragab Sons Supermarket</li>
+											 <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+								
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13820.799234615752!2d31.1621345!3d30.0024186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458419a14fcd3e1%3A0xf318f5c7c7b04740!2sCairo%20Scan%20Radiology%20%26%20Labs!5e0!3m2!1sen!2seg!4v1632745277080!5m2!1sen!2seg">Faisal</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 319 Faysal Street - next to oriental weavers</li>
+                                           <li><i class="fa fa-phone"></i>Call us: 19144</li>
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+									
+									<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.4565071094808!2d31.16170371511402!3d29.995045681900272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845dbf535ab87%3A0x3ea165324e4862ee!2s197%20Al%20Haram%2C%20Street%2C%20El%20Talbia%2C%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1635842510861!5m2!1sen!2sus">Alharam</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i> 197 Haram Street next to CIB Bank</li>
+                                            <li><i class="fa fa-phone"></i>Call us: 19144</li>											
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+										<dt class=" loadiframe" data-width="830" data-height="540" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13817.825989194404!2d31.012898!3d30.0237588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75dabb8adbbb29e0!2zQ2Fpcm8gU2NhbiBGb3IgUmFkaW9sb2d5ICYgTGFicyAtINmD2KfZitix2Ygg2LPZg9in2YYg2KfZhNi02YrYriDYstin2YrYrw!5e0!3m2!1sen!2seg!4v1674563192025!5m2!1sen!2seg">El Sheikh Zayed</dt>
+									<dd id="dd_remove">
+										<ul>
+											<li><i class="fa fa-map-marker"></i>Twin Towers, Rivulet mall, El-Sheikh Zayed, Building A -1st floor</li>
+                                            <li><i class="fa fa-phone"></i>Call us: 19144</li>											
+											<li><i class="fa fa-envelope"></i>Radreport@cairoscan.com.eg</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							</section>
+							<!--/ contacts -->
+							
+						</div>
+						</div>
+					</section>
+					<!--/ map -->
+				</div>
+				
+			
+			</main>
+			<!--/ page content -->
+
+			
+
+
+        <footer class="footer-one">
+            <!--<img src="../images/Group .png">-->
+
+            <div class="footer-one__middle">
+                <div class="container">
+                    <div class="inner-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="footer-one__widget about-widget">
+                                    <a href="#" class="footer-one__logo wow fadeInLeft" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;"><img src="../images/cairologo.png" alt="Awesome Image" /></a>
+                                    <p class="footer-one__text">is the leading private provider of diagnostic and interventional imaging services across Egypt. We bring the most skilled professionals in the field, together with cutting-edge technology under one roof to ensure the highest standards of quality care for you.</p>
+                                    <a href="https://cairoscan.com.eg/En/main/branches.aspx" class="feature-three__btn">View branches on google map</a>
+                                </div><!-- /.footer-one_widget -->
+                            </div><!-- /.col-lg-4 -->
+                            <div class="col-lg-3 col-md-12 col-sm-12">
+                                <div class="footer-one__widget footer-one__link-widget">
+                                    <h3 class="footer-one__widget-title" style="margin-top: 42px;">Follow Us</h3><!-- /.footer-one__widget-title -->
+                                    <div class="footer-one__social">
+									<ul>
+									<li class="tell-footer"><a href="tel:+19144" target="_blank"><i class="fa fa-phone"></i> </a></li>
+									 <li class="facebook-footer"><a href="https://www.facebook.com/CairoScanRadiologyLabs/?fref=ts" target="_blank"><i class="fa fa-facebook"></i> </a></li>
+                    <li class="whatsapp-footer"><a href="https://api.whatsapp.com/send?phone=201272203421" target="_blank"><i class="fa fa-whatsapp"></i> </a></li>
+                    <li class="mail-footer"><a href="mailto:Radreport@cairoscan.com.eg" target="_blank"><i class="fa fa-at"></i> </a></li>
+                     <li class="linkedin-footer"><a href="https://www.linkedin.com/company/cairo-scan"><i class="fa fa-linkedin"></i></a></li> 
+
+									
+									</ul>
+                                        
+
+
+                                    </div><!-- /.footer-one__social -->
+
+                                </div><!-- /.footer-one__widget -->
+                                <div class="footer-one__widget contact-widget" style="margin-top: 10px;">
+                                    <h3 class="footer-one__widget-title">For Reservations</h3><!-- /.footer-one__widget-title -->
+                                    <ul class="footer-one__contact-list">
+                                        <li class="footer-one__contact-list-item"><a href="mailto:reservations@cairoscan.com.eg">reservations@cairoscan.com.eg</a></li>
+                                    </ul><!-- /.footer-one__contact-list -->
+                                </div>
+								<div class="footer-one__widget contact-widget" style="margin-top: 10px;">
+                                    <h3 class="footer-one__widget-title">For Hiring </h3><!-- /.footer-one__widget-title -->
+                                    <ul class="footer-one__contact-list">
+                                        <li class="footer-one__contact-list-item"><a href="mailto:hiring@cairoscan.com.eg">hiring@cairoscan.com.eg</a>
+</li>
+<li class="footer-one__contact-list-item"><a href="https://api.whatsapp.com/send?phone=201284453994">Send your CV on WhatsApp : 01284453994</a>
+</li>
+                                    </ul><!-- /.footer-one__contact-list -->
+                                </div>
+								<div class="footer-one__widget contact-widget" style="margin-top: 10px;">
+                                    <h3 class="footer-one__widget-title">Payment methods </h3><!-- /.footer-one__widget-title -->
+                                    <ul class="footer-one__contact-list Payment_methods">
+                                        <li><img src="../images/MASTER CARD.jpg"></li>
+										<li><img src="../images/VISA.jpg"</li>
+										<li><img src="../images/VALU.jpg"</li>
+										<li><img src="../images/fawry.jpeg"</li>
+										<li><img src="../images/premium.jpeg"</li>
+										
+                                    </ul><!-- /.footer-one__contact-list -->
+                                </div>
+                            </div><!-- /.col-lg-2 -->
+
+                            <div class="col-lg-5 col-md-12 col-sm-12">
+                                <div class="schedule-one wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                                    <div class="inner-content">
+                                        <ul class="nav nav-tabs schedule-one__tab-title" role="tablist">
+                                            <li class="nav-item schedule-one__tab-title-item">
+                                                <a class="nav-link schedule-one__tab-title-link active" href="#consultation" role="tab" data-toggle="tab"><i class="material-icons">access_time</i>WORKING HOURS</a>
+                                            </li>
+                                            <li class="nav-item schedule-one__tab-title-item">
+                                                <a class="nav-link schedule-one__tab-title-link" href="#emergency" role="tab" data-toggle="tab"><i class="material-icons">access_time</i>Friday</a>
+                                            </li>
+                                        </ul>
+                                        <div class="schedule-one__tab-content tab-content">
+                                            <div role="tabpanel" class="tab-pane show active animated fadeInUp  animated fadeInUp" id="consultation">
+                                                <div class="schedule-one__content">
+                                                    <address style="text-align:center;padding-top: 20px;color: #0f4469;">Operating hours for all branches (except Fridays)</address>
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Saturday</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">8:30 am - 11:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Sunday</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">8:30 am - 11:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Monday</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">8:30 am - 11:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Tuesday</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">8:30 am - 11:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Wednesday</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">8:30 am - 11:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Thursday</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">8:30 am - 11:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+
+
+                                                </div><!-- /.schedule-one__content -->
+                                            </div><!-- /.tab-pane -->
+                                            <div role="tabpanel" class="tab-pane animated fadeInUp" id="emergency">
+                                                <div class="schedule-one__content">
+                                                    <address style="text-align:center;padding-top: 20px;color: #0f4469;">The following branches operate on Fridays </address>
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Mohandseen</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">10:00 am - 08:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+													 <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Maadi</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">10:00 am - 08:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day" style="width: 105px;">Masr Elgadeda</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">10:00 am - 08:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+                                                    <div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Nasr City</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">10:00 am - 08:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+													<div class="schedule-one__time-wrap">
+                                                        <span class="schedule-one__day">Shoubra</span>
+                                                        <span class="schedule-one__sep">—</span>
+                                                        <span class="schedule-one__time">10:00 am - 08:00 pm</span>
+                                                    </div><!-- /.schedule-one__time-wrap -->
+
+                                                </div><!-- /.schedule-one__content -->
+                                            </div><!-- /.tab-pane -->
+                                        </div><!-- /.tab-content -->
+                                    </div><!-- /.inner-content -->
+                                </div><!-- /.schedule-one -->
+                            </div><!-- /.col-lg-3 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.inner-container -->
+                </div><!-- /.container -->
+            </div><!-- /.footer-one__middle -->
+            <div class="footer-one__bottom">
+                <div class="container">
+                    <p class="footer-one__copy-text">Powered By  كايروسكان للأشعة والتحاليل</p><!-- /.copy-text -->
+                    <!-- /.footer-one__bottom-links -->
+                </div><!-- /.container -->
+            </div><!-- /.footer-one__bottom -->
+        </footer><!-- /.footer-one -->
+    </div><!-- /.page-wrapper -->
+    <a href="#" data-target="html" data-target-offset="0" class="scroll-to-target scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
+    <!-- /.scroll-to-top -->
+	  
+    <script src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.vidbacking.js"></script>
+
+  <script>
+   $(window).load(function () {
+
+                $(".trigger_popup_fricc").click(function () {
+                    $('.hover_bkgr_fricc').show();
+                });
+                /*$('.hover_bkgr_fricc').click(function(){
+                    $('.hover_bkgr_fricc').hide();
+                });*/
+                $('.popupCloseButton').click(function () {
+                    $('.hover_bkgr_fricc').hide();
+                });
+ $(".trigger_popup_fric").click(function () {
+                    $('.hover_bkgr_fric').show();
+                });
+                /*$('.hover_bkgr_fric').click(function(){
+                    $('.hover_bkgr_fric').hide();
+                });*/
+                $('.popupCloseButton').click(function () {
+                    $('.hover_bkgr_fric').hide();
+                });
+});
+	/*$(function(){
+    		$('#video-back').vidbacking();
+	});*/
+
+  $("video").prop('muted', true);
+
+  $("#mute-video").click( function (){
+    if( $("video").prop('muted') ) {
+          $("video").prop('muted', false);
+    } else {
+      $("video").prop('muted', true);
+    }
+  });
+  </script>
+        
+     <script src="../js/custom.js"></script>
+    <script src="../js/custom-select.js"></script>
+    		    <script type="text/javascript" src="../js/widget.js"></script>
+		<script type="text/javascript" src="../js/rate.js"></script>
+	<script type="text/javascript" src="../js/jquery.fancybox.pack.js"></script>
+	<script src="../js/layerslider.kreaturamedia.jquery.js"></script>
+    <script src="../js/layerslider.transitions.js"></script>
+	<script type="text/javascript" src="../js/TweenMax.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+	    <script src="../js/isotope.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/nouislider.js"></script>
+    <script src="../js/bootstrap-datepicker.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/mcVideoPlugin.js"></script>
+    <!--<script src="../js/js-image-slider.js"></script>-->
+    <script src="../js/wow.min.js"></script>
+	<script src="../js/jquery.autocomplete.min.js"></script>
+    <script src="../js/joinchat.js"></script>
+    <!--<script src="../js/jquery.bxslider.min.js"></script>-->
+<script type="text/javascript" src="../js/SmtpJS.js"></script>
+		<script type="text/javascript" src="../js/sweetalert.min.js"></script>
+<script src="../js/theme.js"></script>
+
+<script>
+$(function() {
+$('.pop-up').hide();
+$('.pop-up').fadeIn(1000);
+$('.close-button').click(function (e) {
+$('.pop-up').fadeOut(700);
+$('#overlay').removeClass('blur-in');
+$('#overlay').addClass('blur-out');
+e.stopPropagation();
+});
+});
+</script>
+</body>
+
+</html>

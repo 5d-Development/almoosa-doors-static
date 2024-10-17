@@ -4247,6 +4247,27 @@ a {
             }
         }
     }
+
+    .new-arrival-banner {
+        min-height: 350px;
+        border-radius: 20px;
+
+        @media(max-width:991px) {
+            min-height: 200px;
+        }
+
+        .title {
+            font-size: 4rem;
+
+            @media (max-width:575px) {
+                font-size: 2rem;
+            }
+        }
+
+        img {
+            width: 220px;
+        }
+    }
 }
 
 // products page style 
