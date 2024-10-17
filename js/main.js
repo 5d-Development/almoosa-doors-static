@@ -341,61 +341,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // map logic in contact us page 
- var map = L.map('map').setView([51.505, -0.09], 2);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
 
-var marker;
-var locationButton = document.getElementById('locationButton');
-var currentLink = '';
+function updateIframe(element) {
+    var iframe = document.getElementById('map');
 
-var customIcon = L.icon({
-  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-  shadowSize: [41, 41]
-});
+    var newSrc = element.getAttribute("href");
 
-function addMarker(lat, lng) {
-  if (marker) {
-    map.removeLayer(marker); 
-  }
+    iframe.src = newSrc;
 
-  marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
-  map.setView([lat, lng], 10); 
-  locationButton.style.display = 'block'; 
-
-  // Get location dynamically using reverse geocoding
-  fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`)
-    .then(response => response.json())
-    .then(data => {
-      const location = data.display_name; // Get the location name
-      marker.bindPopup(location).openPopup(); // Bind the popup to the marker with the location
-    })
-    .catch(error => {
-      console.error('Error fetching location:', error);
-    });
+    return false;
 }
-
-var links = document.querySelectorAll('.branch-details');
-links.forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();  
-
-    var lat = link.getAttribute('data-lat');
-    var lng = link.getAttribute('data-lng');
-
-    currentLink = link.getAttribute('href');
-
-    addMarker(lat, lng);
-  });
-});
-
-locationButton.onclick = function() {
-  if (currentLink) {
-    window.open(currentLink, '_blank');
-  }
-};
