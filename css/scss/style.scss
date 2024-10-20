@@ -3688,6 +3688,8 @@ a {
 .customer-contact-form {
     margin: 100px 0;
 
+
+
     @media (max-width:575px) {
         margin: 30px 0;
     }
@@ -4038,7 +4040,7 @@ a {
                 .card-title {
                     font-size: 1.7rem;
                     color: #0250A3;
-                    width: 75%;
+
 
                     @media (max-width:991px) {
                         font-size: 1rem;
@@ -4239,7 +4241,7 @@ a {
 
             .desc {
                 color: #53565AB3;
-                font-size: 1.7rem !important;
+                font-size: 1.4rem !important;
 
                 @media (max-width:991px) {
                     font-size: 1.5rem !important
@@ -4248,9 +4250,15 @@ a {
         }
     }
 
-    .new-arrival-banner {
+    .new-arrival-banner,
+    .offers-discounts-banner,
+    .featured-products-banner,
+    .best-seller-banner,
+    .sales-request-banner,
+    .maintenance-request-banner {
         min-height: 350px;
         border-radius: 20px;
+        overflow: hidden;
 
         @media(max-width:991px) {
             min-height: 200px;
@@ -4265,9 +4273,95 @@ a {
         }
 
         img {
-            width: 220px;
+            width: 280px;
+            left: -36px;
+            transform: rotateY(180deg);
+            bottom: -1rem 
         }
     }
+
+    #offers-discounts {
+        .offers-discounts-banner {
+            background-color: #0093B2;
+
+        }
+
+
+
+        .discount-icon {
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .btn {
+            border-radius: 10px;
+
+            &:hover {
+                background-color: #0093B2 !important;
+                color: red;
+            }
+        }
+    }
+
+    #featured-products,
+    #best-seller {
+        .featured-products-banner {
+            background-color: var(--secondary-color);
+        }
+
+        del {
+            color: #0250A3B3;
+            font-size: 18px;
+        }
+
+    }
+
+    #sales-request,
+    #maintenance-request {
+        .sales-request-banner {
+            background-color: #0093B2;
+
+        }
+
+        .maintenance-request-banner {
+            background-color: var(--secondary-color);
+        }
+
+        .customer-contact-form {
+            margin-top: 0;
+
+            .form-control {
+                margin-bottom: 4.5rem !important;
+
+                @media (max-width:575px) {
+                    margin-bottom: 2rem !important;
+                }
+            }
+        }
+
+        .sales-request-image,
+        .maintenance-request-image {
+            height: 600px;
+            overflow: hidden;
+            border-radius: 20px;
+
+            @media (max-width:575px) {
+                height: 350px;
+            }
+
+            background-image: url(../../images/products/sales-request.svg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .maintenance-request-image {
+            background-image: url(../../images/products/maintenance-request.svg);
+
+        }
+    }
+
+
 }
 
 // products page style 
