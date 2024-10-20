@@ -27,7 +27,7 @@
              let searchInput = document.getElementById("search-input");
              let searchResults = document.getElementById("search-results");
          
-             const pages = ["about-us.html", "career-1.html", "career-2.html", "contact-us.html", "customer-support.html", "home.html", "how-we-work.html", "our-clients.html", "products.html", "what-we-do.html"];
+             const pages = ["about-us-en.html" , "about-us.html", "car-park-barrier-system.html",  "career-1.html", "career-2.html", "contact-us.html","contact-us-en.html" ,"customer-support-en.html",  "customer-support.html","double-leaf-doors-operation.html","hollow-metal-doors.html" , "home-en.html" ,  "home.html", "how-we-work.html","how-we-work-en.html" , "new-projects.html"  , "metal-Shutter-doors.html","metallic-shutters.html" ,"side-doors-operation.html" ,    "our-clients.html" , "roller-grills-doors.html","our-products.html" , "roller-doors.html" ,  "our-products-en.html","sectional-overhead-doors.html" ,  "search.html",  "what-we-do.html" , "what-we-do-en.html"];
              document.querySelectorAll(".search-icon").forEach(function(icon) {
                  icon.addEventListener("click", function() {
                      searchBar.classList.toggle("d-none");
