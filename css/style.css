@@ -4353,6 +4353,13 @@ a {
     display: none !important;
   }
 }
+.search-banner .banner-container .banner-container-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
 .search-banner .title {
   bottom: 1.8em;
   font-size: 2.8rem;
@@ -4402,10 +4409,20 @@ a {
   border-bottom: 20px solid rgba(122, 225, 191, 0.1803921569);
   padding-bottom: 1rem;
 }
+@media (max-width: 768px) {
+  .our-new-projects .nav-tabs:dir(ltr) {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+}
 .our-new-projects .nav-tabs .nav-item .nav-link {
   font-size: 1.7rem;
   color: #0250A3;
   font-weight: bold;
+}
+.our-new-projects .nav-tabs .nav-item .nav-link:dir(ltr) {
+  font-size: 1.2rem;
+  text-wrap: nowrap;
 }
 .our-new-projects .nav-tabs .nav-item .nav-link.active {
   background-color: transparent;
@@ -4619,6 +4636,10 @@ a {
 .our-new-projects.our-products .card .card-title {
   font-size: 1.9rem !important;
 }
+.our-new-projects.our-products .card .card-title:dir(ltr) {
+  font-size: 1.3rem !important;
+  margin: 0 !important;
+}
 @media (max-width: 991px) {
   .our-new-projects.our-products .card .card-title {
     font-size: 1.5rem !important;
@@ -4628,10 +4649,17 @@ a {
   color: rgba(83, 86, 90, 0.7019607843);
   font-size: 1.4rem !important;
 }
+.our-new-projects.our-products .card .desc:dir(ltr) {
+  font-size: 1.2rem !important;
+}
 @media (max-width: 991px) {
   .our-new-projects.our-products .card .desc {
     font-size: 1.5rem !important;
   }
+}
+.our-new-projects.our-products .card del {
+  color: rgba(2, 80, 163, 0.7019607843);
+  font-weight: 600;
 }
 .our-new-projects .new-arrival-banner,
 .our-new-projects .offers-discounts-banner,
@@ -4660,6 +4688,26 @@ a {
 .our-new-projects .sales-request-banner .title,
 .our-new-projects .maintenance-request-banner .title {
   font-size: 4rem;
+}
+.our-new-projects .new-arrival-banner .title:dir(ltr),
+.our-new-projects .offers-discounts-banner .title:dir(ltr),
+.our-new-projects .featured-products-banner .title:dir(ltr),
+.our-new-projects .best-seller-banner .title:dir(ltr),
+.our-new-projects .sales-request-banner .title:dir(ltr),
+.our-new-projects .maintenance-request-banner .title:dir(ltr) {
+  font-size: 3.2rem;
+  letter-spacing: 4px;
+}
+@media (max-width: 768px) {
+  .our-new-projects .new-arrival-banner .title:dir(ltr),
+  .our-new-projects .offers-discounts-banner .title:dir(ltr),
+  .our-new-projects .featured-products-banner .title:dir(ltr),
+  .our-new-projects .best-seller-banner .title:dir(ltr),
+  .our-new-projects .sales-request-banner .title:dir(ltr),
+  .our-new-projects .maintenance-request-banner .title:dir(ltr) {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 @media (max-width: 575px) {
   .our-new-projects .new-arrival-banner .title,

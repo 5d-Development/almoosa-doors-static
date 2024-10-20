@@ -3915,6 +3915,14 @@ a {
                 display: none !important;
             }
         }
+
+        .banner-container-overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, .4);
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+        }
     }
 
 
@@ -3981,11 +3989,23 @@ a {
         border-bottom: 20px solid #7AE1BF2E;
         padding-bottom: 1rem;
 
+        &:dir(ltr) {
+            @media (max-width:768px) {
+                flex-wrap: nowrap;
+                overflow: auto;
+            }
+        }
+
         .nav-item {
             .nav-link {
                 font-size: 1.7rem;
                 color: #0250A3;
                 font-weight: bold;
+
+                &:dir(ltr) {
+                    font-size: 1.2rem;
+                    text-wrap: nowrap;
+                }
 
 
 
@@ -4234,6 +4254,14 @@ a {
             .card-title {
                 font-size: 1.9rem !important;
 
+                &:dir(ltr) {
+                    font-size: 1.3rem !important;
+
+
+                    margin: 0 !important;
+
+                }
+
                 @media (max-width:991px) {
                     font-size: 1.5rem !important
                 }
@@ -4243,9 +4271,21 @@ a {
                 color: #53565AB3;
                 font-size: 1.4rem !important;
 
+                &:dir(ltr) {
+                    font-size: 1.2rem !important;
+
+
+
+                }
+
                 @media (max-width:991px) {
                     font-size: 1.5rem !important
                 }
+            }
+
+            del {
+                color: #0250A3B3;
+                font-weight: 600;
             }
         }
     }
@@ -4267,6 +4307,16 @@ a {
         .title {
             font-size: 4rem;
 
+            &:dir(ltr) {
+                font-size: 3.2rem;
+                letter-spacing: 4px;
+
+                @media (max-width:768px) {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
+
             @media (max-width:575px) {
                 font-size: 2rem;
             }
@@ -4276,7 +4326,7 @@ a {
             width: 280px;
             left: -36px;
             transform: rotateY(180deg);
-            bottom: -1rem 
+            bottom: -1rem
         }
     }
 
@@ -4389,6 +4439,8 @@ a {
                 display: none !important;
             }
         }
+
+
     }
 
 
