@@ -955,6 +955,10 @@ a {
 
         font-size: 3rem;
 
+        &:dir(ltr) {
+            font-size: 2.5rem;
+        }
+
         @media (max-width:575px) {
             font-size: 2rem;
 
@@ -1019,6 +1023,7 @@ a {
 
             &:dir(ltr) {
                 font-weight: bold;
+                font-size: 23px;
             }
 
             &:last-of-type {
@@ -1081,7 +1086,7 @@ a {
             padding-top: 80px;
 
             @media (max-width:1200px) {
-                padding-top: 40px 0;
+                padding-top: 40px;
             }
         }
     }
@@ -4490,6 +4495,11 @@ a {
         .title {
             font-size: 2.8rem;
 
+            &:dir(ltr) {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+
             @media (max-width:575px) {
                 font-size: 2.5rem;
             }
@@ -4498,6 +4508,15 @@ a {
         .desc {
             font-size: 1.4rem;
             font-weight: 600;
+
+            &:dir(ltr) {
+                font-size: 1.2rem;
+                line-height: 34px;
+
+                @media (max-width:575px) {
+                    font-size: 1rem;
+                }
+            }
 
             @media (max-width:575px) {
                 font-size: 1.2rem;
@@ -4605,14 +4624,14 @@ a {
 
         }
 
-        @media screen and (max-width: 991px) {
-            justify-content: space-between;
+        // @media screen and (max-width: 991px) {
+        //     justify-content: space-between;
 
-        }
+        // }
 
-        @media screen and (max-width: 768px) {
-            justify-content: space-between;
-        }
+        // @media screen and (max-width: 768px) {
+        //     justify-content: space-between;
+        // }
 
         .nav-link {
             text-align: right;
@@ -4624,6 +4643,14 @@ a {
             border: 0;
             background-color: transparent;
 
+            &:dir(ltr) {
+                text-align: left;
+                font-size: 1.2rem;
+
+                @media (max-width:575px) {
+                    font-size: 1rem;
+                }
+            }
 
             &.active {
                 font-weight: bold;
@@ -4640,6 +4667,33 @@ a {
                     background-color: var(--main-color);
                     bottom: -5px;
                     right: 0;
+
+                }
+
+                &:dir(ltr) {
+                    text-align: left;
+                    font-size: 1.2rem;
+
+                    @media (max-width:5758px) {
+                        font-size: 1rem;
+                    }
+
+                    &::after {
+                        left: 0;
+                        width: 150px;
+
+                        @media (max-width:575px) {
+                      
+
+                                width: 115px;
+
+
+                     
+                        }
+
+                    }
+
+
                 }
 
                 ;
@@ -4661,6 +4715,12 @@ a {
             .desc {
                 font-size: 1.3rem;
                 font-weight: 600;
+
+                &:dir(ltr) {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    line-height: 30px;
+                }
             }
         }
 
@@ -4672,6 +4732,8 @@ a {
                 margin-bottom: 1rem;
                 position: relative;
                 padding-inline-start: 50px;
+
+
 
                 @media (max-width:575px) {
                     padding-inline-start: 30px;
@@ -4700,6 +4762,14 @@ a {
                         right: 0;
                     }
                 }
+
+                &:dir(ltr) {
+                    font-size: 1.1rem;
+
+                    &::before {
+                        left: 0;
+                    }
+                }
             }
         }
 
@@ -4720,6 +4790,10 @@ a {
                 &:focus {
                     border: none;
                     box-shadow: none;
+                }
+
+                &:dir(ltr) {
+                    font-size: 1.1rem;
                 }
             }
 
@@ -4750,6 +4824,6 @@ a {
     }
 
     &+.our-products {
-        padding-top: 3rem
+        padding-top: 3rem 
     }
 }
