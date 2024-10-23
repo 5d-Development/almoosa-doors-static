@@ -5004,7 +5004,7 @@ a {
   text-align: left;
   font-size: 1.2rem;
 }
-@media (max-width: 5758px) {
+@media (max-width: 575px) {
   .products-offers .nav-tabs .nav-link.active:dir(ltr) {
     font-size: 1rem;
   }
