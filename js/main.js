@@ -354,8 +354,13 @@ function updateIframe(element) {
 // projects page logic 
  
    const allContent = document.getElementById("All").querySelector(".row") ; 
-   const redSeaContent = document.getElementById("red-sea-projects").querySelector(".row")  ; 
-   const SevenProjectsContent = document.getElementById("seven-projects").querySelector(".row")  ; 
- allContent.innerHTML = SevenProjectsContent.innerHTML + redSeaContent.innerHTML 
+ 
 
+const projectsContent = document.querySelectorAll(".tab-pane-projects").forEach((item) => {
+    const projectItem = item;
+ allContent.innerHTML+=projectItem.querySelector(".row").innerHTML
+    
+    
+ 
+})
  
