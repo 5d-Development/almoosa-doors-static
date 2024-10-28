@@ -1548,7 +1548,7 @@ a {
 .navbar.scrolled.awake {
   margin-top: 0px;
   transition: 0.3s all ease-out;
-  z-index: 99;
+  z-index: 99999999;
 }
 .navbar.scrolled.sleep {
   transition: 0.3s all ease-out;

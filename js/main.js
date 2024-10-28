@@ -27,7 +27,7 @@
              let searchInput = document.getElementById("search-input");
              let searchResults = document.getElementById("search-results");
          
-             const pages = ["about-us-en.html" , "about-us.html", "car-park-barrier-system.html",  "career-1.html", "career-2.html", "contact-us.html","contact-us-en.html" ,"customer-support-en.html",  "customer-support.html","double-leaf-doors-operation.html","hollow-metal-doors.html" , "home-en.html" ,  "home.html", "how-we-work.html","how-we-work-en.html" , "new-projects.html"  , "metal-Shutter-doors.html","metallic-shutters.html" ,"side-doors-operation.html" ,    "our-clients.html" , "roller-grills-doors.html","our-products.html" , "roller-doors.html" ,  "our-products-en.html","sectional-overhead-doors.html" ,  "search.html",  "what-we-do.html" , "what-we-do-en.html"];
+             const pages = ["about-us-en.html" , "about-us.html", "car-park-barrier-system.html",  "career-1.html", "career-2.html", "contact-us.html","contact-us-en.html" ,"customer-support-en.html",  "customer-support.html","double-leaf-doors-operation.html","hollow-metal-doors.html" , "home-en.html" ,  "home.html", "how-we-work.html","how-we-work-en.html" , "new-projects.html"  , "metal-Shutter-doors.html","metallic-shutters.html" ,"side-doors-operation.html" ,    "our-clients.html" , "roller-grills-doors.html","our-products.html","new-projects-en.html" , "roller-doors.html" ,  "our-products-en.html","sectional-overhead-doors.html" , "our-products.html",  "roller-doors-en.html",  "what-we-do.html" , "what-we-do-en.html"];
              document.querySelectorAll(".search-icon").forEach(function(icon) {
                  icon.addEventListener("click", function() {
                      searchBar.classList.toggle("d-none");
@@ -99,7 +99,13 @@
                          tempElement.innerHTML = html;
          
                          // Remove footer
-                         const footer = tempElement.querySelector('footer');
+                         const navbar = tempElement.querySelector('.navbar');
+                         if (navbar) {
+                             navbar.remove();
+                         }
+         
+                         // Remove footer
+                         const footer = tempElement.querySelector('.footer');
                          if (footer) {
                              footer.remove();
                          }
@@ -108,6 +114,11 @@
                          const copyrightSection = tempElement.querySelector('.copyright');
                          if (copyrightSection) {
                              copyrightSection.remove();
+                         }
+         
+                         const offcanvasSection = tempElement.querySelector('.offcanvas');
+                         if (offcanvasSection) {
+                             offcanvasSection.remove();
                          }
          
                          const title = tempElement.querySelector('.banner-title')?.innerHTML;
