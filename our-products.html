@@ -13,6 +13,9 @@
       <link rel="stylesheet" href="css/libraries/bootstrap.min.css">
       <link rel="stylesheet" href="css/libraries/aos.css">
       <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 </head>
 <body>
    <div id="search-bar" class="d-none search-bar position-absolute w-100 end-0 top-0 start-0 d-flex justify-content-center align-items-center">
@@ -788,24 +791,17 @@
 
 </div>
 <div class="row pt-5 mt-lg-5 justify-content-lg-between">
-   <div class="col-lg-5 ">
-      <div class="customer-contact-form" id="customer-contact-form">
-               <form>
- 
-                   <input type="text" class="form-control pb-4 mb-5"  placeholder="الاسم" required>
- 
-           <input type="number" id="Phone"  class="form-control pb-4 mb-5"  required  placeholder="رقم الهاتف">
- 
-                   <input type="email" class="form-control pb-4 mb-5"  placeholder="البريد الالكتروني" required>
-      <input type="text" class="form-control pb-4 mb-5"  placeholder="اطلب" required>
- 
- 
-    <button type="submit"  class="btn"> ارسال الطلب    </button>
- 
-</form>
-      </div>
-
-   </div>
+ <div class="col-lg-5">
+  <div class="customer-contact-form" id="customer-contact-form">
+    <form id="sales-request-form" enctype="multipart/form-data">
+      <input type="text" name="name" id="name" class="form-control pb-4 mb-5" placeholder="الاسم" required>
+      <input type="number" name="phone" id="Phone" class="form-control pb-4 mb-5" placeholder="رقم الهاتف" required>
+      <input type="email" name="email" id="email" class="form-control pb-4 mb-5" placeholder="البريد الالكتروني" required>
+      <input type="text" name="request" id="request" class="form-control pb-4 mb-5" placeholder="اطلب" required>
+      <button type="submit" class="btn"> ارسال الطلب </button>
+    </form>
+  </div>
+</div>
    <div class="col-lg-6  text-lg-start ">
 <div class="sales-request-image">
  
@@ -822,14 +818,14 @@
 <div class="row pt-5 mt-lg-5 justify-content-lg-between">
    <div class="col-lg-5 ">
       <div class="customer-contact-form" id="customer-contact-form">
-               <form>
+               <form id="maintenance-request-form" enctype="multipart/form-data">
  
-                   <input type="text" class="form-control pb-4 mb-5"  placeholder="الاسم" required>
+                   <input type="text" name ="name" class="form-control pb-4 mb-5"  placeholder="الاسم" required>
  
-           <input type="number" id="Phone"  class="form-control pb-4 mb-5"  required  placeholder="رقم الهاتف">
+           <input type="number" id="Phone" name="phone" class="form-control pb-4 mb-5"  required  placeholder="رقم الهاتف">
  
-                   <input type="email" class="form-control pb-4 mb-5"  placeholder="البريد الالكتروني" required>
-      <input type="text" class="form-control pb-4 mb-5"  placeholder="اطلب" required>
+                   <input type="email" name="email" class="form-control pb-4 mb-5"  placeholder="البريد الالكتروني" required>
+      <input type="text" class="form-control pb-4 mb-5" name="request"  placeholder="اطلب" required>
  
  
     <button type="submit"  class="btn"> ارسال الطلب  </button>
@@ -1137,7 +1133,91 @@
       <script src="js/libraries/jquery-3.7.1.min.js"></script>
       <script src="js/libraries/owl.carousel.min.js"></script>
       <script src="js/libraries/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
       <script src="js/main.js"></script>
+  
+<script type="text/javascript">
+  // Initialize EmailJS and set up form submissions for both forms
+  window.onload = function () {
+    emailjs.init("ytxIwvo3plZ-HBxyJ"); // Replace with your actual Public Key
+    console.log("EmailJS initialized"); // Debugging: Confirm initialization
+
+    const serviceId = "service_jskajyt";
+    const templateId = "template_w04yxyb";
+
+    function sendEmail(serviceId, templateId, formData, resetFormId) {
+      emailjs.send(serviceId, templateId, formData).then(
+        function (response) {
+          console.log("Email sent successfully!", response); // Debugging
+          Swal.fire({
+            title: "تم الارسال بنجاح",
+            showClass: {
+              popup: "animate__animated animate__fadeInUp animate__faster"
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutDown animate__faster"
+            }
+          });
+          document.getElementById(resetFormId).reset();
+        },
+        function (error) {
+          console.log("Failed to send email", error); // Debugging
+          Swal.fire({
+            title: "عذرا ، فشل في الارسال. حاول مرة اخرى في وقت لاحق.",
+            showClass: {
+              popup: "animate__animated animate__fadeInUp animate__faster"
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutDown animate__faster"
+            }
+          });
+        }
+      );
+    }
+
+    // Set up the sales request form
+    document
+      .getElementById("sales-request-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log("Sales request form submission triggered"); // Debugging
+
+        const formData = {
+          to_name: "the magsement center",
+          from_name: this.name.value,
+          name: this.name.value,
+          phone: this.phone.value,
+          email: this.email.value,
+          request: this.request.value,
+        };
+        console.log("Sales form data:", formData); // Debugging
+
+        sendEmail(serviceId, templateId, formData, "sales-request-form");
+      });
+
+    // Set up the maintenance request form
+    document
+      .getElementById("maintenance-request-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log("Maintenance request form submission triggered"); // Debugging
+
+        const formData = {
+          to_name: "the magsement center",
+          from_name: this.name.value,
+          name: this.name.value,
+          phone: this.phone.value,
+          email: this.email.value,
+          request: this.request.value,
+        };
+        console.log("Maintenance form data:", formData); // Debugging
+
+        sendEmail(serviceId, templateId, formData, "maintenance-request-form");
+      });
+  };
+</script>
+
       <script>
    window.addEventListener('load', () => {
       AOS.init({
@@ -1169,5 +1249,6 @@
     this.value = this.value.replace(/[^0-9]/g, '');
   });
 });</script>
+
 </body>
 </html>
