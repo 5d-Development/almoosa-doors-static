@@ -4804,16 +4804,19 @@ a {
   color: red;
 }
 .our-new-projects #featured-products .featured-products-banner,
-.our-new-projects #best-seller .featured-products-banner {
+.our-new-projects #best-seller .featured-products-banner,
+.our-new-projects #new-arrival .featured-products-banner {
   background-color: var(--secondary-color);
 }
 .our-new-projects #featured-products del,
-.our-new-projects #best-seller del {
+.our-new-projects #best-seller del,
+.our-new-projects #new-arrival del {
   color: rgba(2, 80, 163, 0.7019607843);
   font-size: 18px;
 }
 .our-new-projects #featured-products .btn,
-.our-new-projects #best-seller .btn {
+.our-new-projects #best-seller .btn,
+.our-new-projects #new-arrival .btn {
   border-radius: 10px;
 }
 .our-new-projects #sales-request .sales-request-banner,
