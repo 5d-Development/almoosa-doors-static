@@ -4812,6 +4812,10 @@ a {
   color: rgba(2, 80, 163, 0.7019607843);
   font-size: 18px;
 }
+.our-new-projects #featured-products .btn,
+.our-new-projects #best-seller .btn {
+  border-radius: 10px;
+}
 .our-new-projects #sales-request .sales-request-banner,
 .our-new-projects #maintenance-request .sales-request-banner {
   background-color: #0093B2;
