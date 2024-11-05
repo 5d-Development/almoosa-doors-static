@@ -4474,20 +4474,21 @@ a {
             overflow: hidden;
             border-radius: 20px;
 
+            // background-image: url(../../images/products/sales-request.svg);
+            // background-size: cover;
+            // background-position: center center;
+            // background-repeat: no-repeat;
+
             @media (max-width:575px) {
                 height: 350px;
             }
 
-            background-image: url(../../images/products/sales-request.svg);
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
         }
 
-        .maintenance-request-image {
-            background-image: url(../../images/products/maintenance-request.svg);
+        // .maintenance-request-image {
+        //     background-image: url(../../images/products/maintenance-request.svg);
 
-        }
+        // }
     }
 
 

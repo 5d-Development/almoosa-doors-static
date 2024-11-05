@@ -4848,10 +4848,6 @@ a {
   height: 600px;
   overflow: hidden;
   border-radius: 20px;
-  background-image: url(../../images/products/sales-request.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 @media (max-width: 575px) {
   .our-new-projects #sales-request .sales-request-image,
@@ -4860,10 +4856,6 @@ a {
   .our-new-projects #maintenance-request .maintenance-request-image {
     height: 350px;
   }
-}
-.our-new-projects #sales-request .maintenance-request-image,
-.our-new-projects #maintenance-request .maintenance-request-image {
-  background-image: url(../../images/products/maintenance-request.svg);
 }
 
 .products-banner .banner-container {
