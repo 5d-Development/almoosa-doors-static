@@ -4366,6 +4366,7 @@ a {
     }
 
     .new-arrival-banner,
+    .our-products-banner,
     .offers-discounts-banner,
     .featured-products-banner,
     .best-seller-banner,
@@ -4430,7 +4431,8 @@ a {
 
     #featured-products,
     #best-seller,
-    #new-arrival {
+    #new-arrival,
+    #our-products {
         .featured-products-banner {
             background-color: var(--secondary-color);
         }
@@ -4446,8 +4448,11 @@ a {
     }
 
     #sales-request,
-    #maintenance-request {
-        .sales-request-banner {
+    #maintenance-request,
+    #our-products {
+
+        .sales-request-banner,
+        .our-products-banner {
             background-color: #0093B2;
 
         }

@@ -4721,6 +4721,7 @@ a {
   font-weight: 600;
 }
 .our-new-projects .new-arrival-banner,
+.our-new-projects .our-products-banner,
 .our-new-projects .offers-discounts-banner,
 .our-new-projects .featured-products-banner,
 .our-new-projects .best-seller-banner,
@@ -4732,6 +4733,7 @@ a {
 }
 @media (max-width: 991px) {
   .our-new-projects .new-arrival-banner,
+  .our-new-projects .our-products-banner,
   .our-new-projects .offers-discounts-banner,
   .our-new-projects .featured-products-banner,
   .our-new-projects .best-seller-banner,
@@ -4741,6 +4743,7 @@ a {
   }
 }
 .our-new-projects .new-arrival-banner .title,
+.our-new-projects .our-products-banner .title,
 .our-new-projects .offers-discounts-banner .title,
 .our-new-projects .featured-products-banner .title,
 .our-new-projects .best-seller-banner .title,
@@ -4749,6 +4752,7 @@ a {
   font-size: 4rem;
 }
 .our-new-projects .new-arrival-banner .title:dir(ltr),
+.our-new-projects .our-products-banner .title:dir(ltr),
 .our-new-projects .offers-discounts-banner .title:dir(ltr),
 .our-new-projects .featured-products-banner .title:dir(ltr),
 .our-new-projects .best-seller-banner .title:dir(ltr),
@@ -4759,6 +4763,7 @@ a {
 }
 @media (max-width: 768px) {
   .our-new-projects .new-arrival-banner .title:dir(ltr),
+  .our-new-projects .our-products-banner .title:dir(ltr),
   .our-new-projects .offers-discounts-banner .title:dir(ltr),
   .our-new-projects .featured-products-banner .title:dir(ltr),
   .our-new-projects .best-seller-banner .title:dir(ltr),
@@ -4770,6 +4775,7 @@ a {
 }
 @media (max-width: 575px) {
   .our-new-projects .new-arrival-banner .title,
+  .our-new-projects .our-products-banner .title,
   .our-new-projects .offers-discounts-banner .title,
   .our-new-projects .featured-products-banner .title,
   .our-new-projects .best-seller-banner .title,
@@ -4779,6 +4785,7 @@ a {
   }
 }
 .our-new-projects .new-arrival-banner img,
+.our-new-projects .our-products-banner img,
 .our-new-projects .offers-discounts-banner img,
 .our-new-projects .featured-products-banner img,
 .our-new-projects .best-seller-banner img,
@@ -4805,46 +4812,59 @@ a {
 }
 .our-new-projects #featured-products .featured-products-banner,
 .our-new-projects #best-seller .featured-products-banner,
-.our-new-projects #new-arrival .featured-products-banner {
+.our-new-projects #new-arrival .featured-products-banner,
+.our-new-projects #our-products .featured-products-banner {
   background-color: var(--secondary-color);
 }
 .our-new-projects #featured-products del,
 .our-new-projects #best-seller del,
-.our-new-projects #new-arrival del {
+.our-new-projects #new-arrival del,
+.our-new-projects #our-products del {
   color: rgba(2, 80, 163, 0.7019607843);
   font-size: 18px;
 }
 .our-new-projects #featured-products .btn,
 .our-new-projects #best-seller .btn,
-.our-new-projects #new-arrival .btn {
+.our-new-projects #new-arrival .btn,
+.our-new-projects #our-products .btn {
   border-radius: 10px;
 }
 .our-new-projects #sales-request .sales-request-banner,
-.our-new-projects #maintenance-request .sales-request-banner {
+.our-new-projects #sales-request .our-products-banner,
+.our-new-projects #maintenance-request .sales-request-banner,
+.our-new-projects #maintenance-request .our-products-banner,
+.our-new-projects #our-products .sales-request-banner,
+.our-new-projects #our-products .our-products-banner {
   background-color: #0093B2;
 }
 .our-new-projects #sales-request .maintenance-request-banner,
-.our-new-projects #maintenance-request .maintenance-request-banner {
+.our-new-projects #maintenance-request .maintenance-request-banner,
+.our-new-projects #our-products .maintenance-request-banner {
   background-color: var(--secondary-color);
 }
 .our-new-projects #sales-request .customer-contact-form,
-.our-new-projects #maintenance-request .customer-contact-form {
+.our-new-projects #maintenance-request .customer-contact-form,
+.our-new-projects #our-products .customer-contact-form {
   margin-top: 0;
 }
 .our-new-projects #sales-request .customer-contact-form .form-control,
-.our-new-projects #maintenance-request .customer-contact-form .form-control {
+.our-new-projects #maintenance-request .customer-contact-form .form-control,
+.our-new-projects #our-products .customer-contact-form .form-control {
   margin-bottom: 4.5rem !important;
 }
 @media (max-width: 575px) {
   .our-new-projects #sales-request .customer-contact-form .form-control,
-  .our-new-projects #maintenance-request .customer-contact-form .form-control {
+  .our-new-projects #maintenance-request .customer-contact-form .form-control,
+  .our-new-projects #our-products .customer-contact-form .form-control {
     margin-bottom: 2rem !important;
   }
 }
 .our-new-projects #sales-request .sales-request-image,
 .our-new-projects #sales-request .maintenance-request-image,
 .our-new-projects #maintenance-request .sales-request-image,
-.our-new-projects #maintenance-request .maintenance-request-image {
+.our-new-projects #maintenance-request .maintenance-request-image,
+.our-new-projects #our-products .sales-request-image,
+.our-new-projects #our-products .maintenance-request-image {
   height: 600px;
   overflow: hidden;
   border-radius: 20px;
@@ -4853,7 +4873,9 @@ a {
   .our-new-projects #sales-request .sales-request-image,
   .our-new-projects #sales-request .maintenance-request-image,
   .our-new-projects #maintenance-request .sales-request-image,
-  .our-new-projects #maintenance-request .maintenance-request-image {
+  .our-new-projects #maintenance-request .maintenance-request-image,
+  .our-new-projects #our-products .sales-request-image,
+  .our-new-projects #our-products .maintenance-request-image {
     height: 350px;
   }
 }
