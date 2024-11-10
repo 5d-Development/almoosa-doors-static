@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (activeTab === "newArrival") {
         document.querySelector('button[data-bs-target="#new-arrival"]').click();
-      } else if (activeTab === "offresAndDicounts") {
+      } else if (activeTab === "offersAndDiscounts") {
         document.querySelector('button[data-bs-target="#offers-discounts"]').click();
       }
     });
