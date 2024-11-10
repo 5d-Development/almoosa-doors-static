@@ -1,3 +1,16 @@
+//our products tabs logic    
+document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const activeTab = urlParams.get("tab");
+
+      if (activeTab === "newArrival") {
+        document.querySelector('button[data-bs-target="#new-arrival"]').click();
+      } else if (activeTab === "offresAndDicounts") {
+        document.querySelector('button[data-bs-target="#offers-discounts"]').click();
+      }
+    });
+
+  
 //  our products forms logic 
    window.onload = function () {
     emailjs.init("ytxIwvo3plZ-HBxyJ");  
