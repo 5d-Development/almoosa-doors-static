@@ -1,16 +1,26 @@
+// translation 
+document.addEventListener("DOMContentLoaded", function() {
+   // Check the dir attribute
+   const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+
+   // Select all elements with data-ar and data-en attributes
+   document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
+      element.textContent = isRTL ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+   });
+});
+
+
 //our products tabs logic    
 document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const activeTab = urlParams.get("tab");
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeTab = urlParams.get("tab");
 
-      if (activeTab === "newArrival") {
-        document.querySelector('button[data-bs-target="#new-arrival"]').click();
-      } else if (activeTab === "offersAndDiscounts") {
-        document.querySelector('button[data-bs-target="#offers-discounts"]').click();
-      }
-    });
+    if (activeTab) {
+        // select dynamically the button where data-bs-target equals `#${activeTab}`
+        document.querySelector(`button[data-bs-target="#${activeTab}"]`)?.click();
+    }
+});
 
-  
 //  our products forms logic 
    window.onload = function () {
     emailjs.init("ytxIwvo3plZ-HBxyJ");  
@@ -91,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sendEmail(serviceId, templateId, formData, "maintenance-request-form");
       });
   };
- 
  
    document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('collaborate-with-us-form');
@@ -464,8 +473,5 @@ function updateIframe(element) {
 const projectsContent = document.querySelectorAll(".tab-pane-projects").forEach((item) => {
     const projectItem = item;
  allContent.innerHTML+=projectItem.querySelector(".row").innerHTML
-    
-    
- 
+  
 })
- 
