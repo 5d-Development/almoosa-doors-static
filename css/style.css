@@ -4558,15 +4558,15 @@ a {
 .our-new-projects #collaborate-with-us .collaborate-with-us-form button[type=submit]:hover {
   background-color: var(--secondary-color);
 }
-.our-new-projects #project-criteria {
+.our-new-projects .project-criteria {
   padding-top: 60px;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria {
+  .our-new-projects .project-criteria {
     padding: 0;
   }
 }
-.our-new-projects #project-criteria .desc {
+.our-new-projects .project-criteria .desc {
   font-size: 1.6rem;
   text-align: justify;
   position: relative;
@@ -4574,12 +4574,12 @@ a {
   padding-right: 2.5rem;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc {
+  .our-new-projects .project-criteria .desc {
     padding-right: 1rem;
     margin-bottom: 1.8rem;
   }
 }
-.our-new-projects #project-criteria .desc::before {
+.our-new-projects .project-criteria .desc::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -4589,7 +4589,7 @@ a {
   top: 0%;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc::before {
+  .our-new-projects .project-criteria .desc::before {
     content: "";
     position: absolute;
     width: 10px;
@@ -4601,77 +4601,77 @@ a {
   }
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc::before:dir(ltr) {
+  .our-new-projects .project-criteria .desc::before:dir(ltr) {
     top: 0.5rem;
   }
 }
-.our-new-projects #project-criteria .desc:dir(ltr)::before {
+.our-new-projects .project-criteria .desc:dir(ltr)::before {
   right: auto;
   left: 0;
 }
-.our-new-projects #project-criteria .desc p:first-child {
+.our-new-projects .project-criteria .desc p:first-child {
   line-height: 2rem;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc p:first-child {
+  .our-new-projects .project-criteria .desc p:first-child {
     font-size: 1.2rem;
     line-height: normal;
   }
 }
-.our-new-projects #project-criteria .desc p:first-child:dir(ltr) {
+.our-new-projects .project-criteria .desc p:first-child:dir(ltr) {
   text-align: left;
   font-size: 1.4rem;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc p:first-child:dir(ltr) {
+  .our-new-projects .project-criteria .desc p:first-child:dir(ltr) {
     font-size: 1.2rem;
   }
 }
-.our-new-projects #project-criteria .desc p.sub-desc {
+.our-new-projects .project-criteria .desc p.sub-desc {
   font-size: 1.1rem;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc p.sub-desc {
+  .our-new-projects .project-criteria .desc p.sub-desc {
     font-size: 1rem;
   }
 }
-.our-new-projects #project-criteria .desc p.sub-desc:dir(ltr) {
+.our-new-projects .project-criteria .desc p.sub-desc:dir(ltr) {
   font-size: 1rem;
 }
-.our-new-projects #project-criteria .desc:dir(ltr) {
+.our-new-projects .project-criteria .desc:dir(ltr) {
   padding-inline-start: 2em;
   text-align: left;
 }
 @media (max-width: 575px) {
-  .our-new-projects #project-criteria .desc:dir(ltr) {
+  .our-new-projects .project-criteria .desc:dir(ltr) {
     padding-inline-start: 1rem;
   }
 }
-.our-new-projects #project-criteria .criteria-img {
+.our-new-projects .project-criteria .criteria-img {
   left: 0em;
   top: 49%;
   width: 25%;
   transform: translateY(-50%);
 }
-.our-new-projects #project-criteria .criteria-img:dir(ltr) {
+.our-new-projects .project-criteria .criteria-img:dir(ltr) {
   left: auto;
   right: 0em !important;
   width: 19%;
   top: 42%;
 }
 @media (max-width: 1600px) {
-  .our-new-projects #project-criteria .criteria-img:dir(ltr) {
+  .our-new-projects .project-criteria .criteria-img:dir(ltr) {
     top: 45%;
   }
 }
-.our-new-projects #project-criteria .criteria-layer {
+.our-new-projects .project-criteria .criteria-layer {
   left: 2em;
   top: 20.5%;
   width: 42%;
   z-index: 9;
 }
 @media (max-width: 1700px) and (min-width: 1400px) {
-  .our-new-projects #project-criteria .criteria-layer {
+  .our-new-projects .project-criteria .criteria-layer {
     left: 2.4em;
     top: 29.5%;
     width: 42%;
@@ -4679,12 +4679,12 @@ a {
   }
 }
 @media (max-width: 1400px) and (min-width: 1200px) {
-  .our-new-projects #project-criteria .criteria-layer {
+  .our-new-projects .project-criteria .criteria-layer {
     left: 2.4em;
     top: 33.5%;
   }
 }
-.our-new-projects #project-criteria .criteria-layer:dir(ltr) {
+.our-new-projects .project-criteria .criteria-layer:dir(ltr) {
   left: auto;
   right: 2em !important;
   width: 36%;
