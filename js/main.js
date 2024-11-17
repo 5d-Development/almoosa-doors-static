@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//our products tabs logic    
+ //our products tabs logic    
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const activeTab = urlParams.get("tab");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // select dynamically the button where data-bs-target equals `#${activeTab}`
         document.querySelector(`button[data-bs-target="#${activeTab}"]`)?.click();
     }
-});
+}); 
 
 //  our products forms logic 
    window.onload = function () {
