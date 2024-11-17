@@ -1508,6 +1508,9 @@ a {
   border-radius: 4px;
   top: 72px;
 }
+.navbar .navbar-nav .nav-item:dir(ltr):last-of-type .active::after {
+  width: 100%;
+}
 .navbar .navbar-nav .dropdown-menu.show {
   top: 90px !important;
   padding: 0;
