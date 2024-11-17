@@ -1493,7 +1493,7 @@ a {
 }
 .navbar .navbar-nav .nav-item .nav-link {
   font-size: 1.25rem;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
 }
 .navbar .navbar-nav .nav-item .nav-link:dir(ltr) {
   font-size: 1rem;
@@ -1506,10 +1506,13 @@ a {
   height: 18px;
   background-color: var(--secondary-color);
   border-radius: 4px;
-  top: 72px;
+  top: 64px;
 }
 .navbar .navbar-nav .nav-item:dir(ltr):last-of-type .active::after {
   width: 100%;
+}
+.navbar .navbar-nav .nav-item:dir(ltr).our-projects:hover::after {
+  width: 70%;
 }
 .navbar .navbar-nav .dropdown-menu.show {
   top: 90px !important;

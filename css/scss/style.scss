@@ -372,6 +372,8 @@ a {
                 }
             }
 
+
+
             &:last-child {
 
 
@@ -414,7 +416,7 @@ a {
 
             .nav-link {
                 font-size: 1.25rem;
-                padding-bottom: 4px;
+                padding-bottom: 0px;
 
                 &:dir(ltr) {
                     font-size: 1rem;
@@ -433,7 +435,7 @@ a {
                     height: 18px;
                     background-color: var(--secondary-color);
                     border-radius: 4px;
-                    top: 72px;
+                    top: 64px;
 
                 }
 
@@ -446,12 +448,20 @@ a {
 
 
                         &::after {
-                           
+
                             width: 100%;
-                             
+
 
                         }
 
+                    }
+                }
+
+                &.our-projects {
+                    &:hover {
+                        &::after {
+                            width: 70%;
+                        }
                     }
                 }
             }
