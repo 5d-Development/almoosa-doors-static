@@ -4816,72 +4816,72 @@ a {
   background-color: #0093B2 !important;
   color: red;
 }
-.our-new-projects #featured-products .featured-products-banner,
-.our-new-projects #best-seller .featured-products-banner,
-.our-new-projects #new-arrival .featured-products-banner,
-.our-new-projects #our-products .featured-products-banner {
+.our-new-projects .featured-products .featured-products-banner,
+.our-new-projects .best-seller .featured-products-banner,
+.our-new-projects .new-arrival .featured-products-banner,
+.our-new-projects .our-products .featured-products-banner {
   background-color: var(--secondary-color);
 }
-.our-new-projects #featured-products del,
-.our-new-projects #best-seller del,
-.our-new-projects #new-arrival del,
-.our-new-projects #our-products del {
+.our-new-projects .featured-products del,
+.our-new-projects .best-seller del,
+.our-new-projects .new-arrival del,
+.our-new-projects .our-products del {
   color: rgba(2, 80, 163, 0.7019607843);
   font-size: 18px;
 }
-.our-new-projects #featured-products .btn,
-.our-new-projects #best-seller .btn,
-.our-new-projects #new-arrival .btn,
-.our-new-projects #our-products .btn {
+.our-new-projects .featured-products .btn,
+.our-new-projects .best-seller .btn,
+.our-new-projects .new-arrival .btn,
+.our-new-projects .our-products .btn {
   border-radius: 10px;
 }
-.our-new-projects #sales-request .sales-request-banner,
-.our-new-projects #sales-request .our-products-banner,
-.our-new-projects #maintenance-request .sales-request-banner,
-.our-new-projects #maintenance-request .our-products-banner,
-.our-new-projects #our-products .sales-request-banner,
-.our-new-projects #our-products .our-products-banner {
+.our-new-projects .sales-request .sales-request-banner,
+.our-new-projects .sales-request .our-products-banner,
+.our-new-projects .maintenance-request .sales-request-banner,
+.our-new-projects .maintenance-request .our-products-banner,
+.our-new-projects .our-products .sales-request-banner,
+.our-new-projects .our-products .our-products-banner {
   background-color: #0093B2;
 }
-.our-new-projects #sales-request .maintenance-request-banner,
-.our-new-projects #maintenance-request .maintenance-request-banner,
-.our-new-projects #our-products .maintenance-request-banner {
+.our-new-projects .sales-request .maintenance-request-banner,
+.our-new-projects .maintenance-request .maintenance-request-banner,
+.our-new-projects .our-products .maintenance-request-banner {
   background-color: var(--secondary-color);
 }
-.our-new-projects #sales-request .customer-contact-form,
-.our-new-projects #maintenance-request .customer-contact-form,
-.our-new-projects #our-products .customer-contact-form {
+.our-new-projects .sales-request .customer-contact-form,
+.our-new-projects .maintenance-request .customer-contact-form,
+.our-new-projects .our-products .customer-contact-form {
   margin-top: 0;
 }
-.our-new-projects #sales-request .customer-contact-form .form-control,
-.our-new-projects #maintenance-request .customer-contact-form .form-control,
-.our-new-projects #our-products .customer-contact-form .form-control {
+.our-new-projects .sales-request .customer-contact-form .form-control,
+.our-new-projects .maintenance-request .customer-contact-form .form-control,
+.our-new-projects .our-products .customer-contact-form .form-control {
   margin-bottom: 4.5rem !important;
 }
 @media (max-width: 575px) {
-  .our-new-projects #sales-request .customer-contact-form .form-control,
-  .our-new-projects #maintenance-request .customer-contact-form .form-control,
-  .our-new-projects #our-products .customer-contact-form .form-control {
+  .our-new-projects .sales-request .customer-contact-form .form-control,
+  .our-new-projects .maintenance-request .customer-contact-form .form-control,
+  .our-new-projects .our-products .customer-contact-form .form-control {
     margin-bottom: 2rem !important;
   }
 }
-.our-new-projects #sales-request .sales-request-image,
-.our-new-projects #sales-request .maintenance-request-image,
-.our-new-projects #maintenance-request .sales-request-image,
-.our-new-projects #maintenance-request .maintenance-request-image,
-.our-new-projects #our-products .sales-request-image,
-.our-new-projects #our-products .maintenance-request-image {
+.our-new-projects .sales-request .sales-request-image,
+.our-new-projects .sales-request .maintenance-request-image,
+.our-new-projects .maintenance-request .sales-request-image,
+.our-new-projects .maintenance-request .maintenance-request-image,
+.our-new-projects .our-products .sales-request-image,
+.our-new-projects .our-products .maintenance-request-image {
   height: 600px;
   overflow: hidden;
   border-radius: 20px;
 }
 @media (max-width: 575px) {
-  .our-new-projects #sales-request .sales-request-image,
-  .our-new-projects #sales-request .maintenance-request-image,
-  .our-new-projects #maintenance-request .sales-request-image,
-  .our-new-projects #maintenance-request .maintenance-request-image,
-  .our-new-projects #our-products .sales-request-image,
-  .our-new-projects #our-products .maintenance-request-image {
+  .our-new-projects .sales-request .sales-request-image,
+  .our-new-projects .sales-request .maintenance-request-image,
+  .our-new-projects .maintenance-request .sales-request-image,
+  .our-new-projects .maintenance-request .maintenance-request-image,
+  .our-new-projects .our-products .sales-request-image,
+  .our-new-projects .our-products .maintenance-request-image {
     height: 350px;
   }
 }

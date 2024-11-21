@@ -1,3 +1,35 @@
+// our products tabs logic 
+ 
+document.addEventListener('DOMContentLoaded', function () {
+  // Function to update URL with tab query parameter
+  function updateURL(tabId) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', tabId);
+      window.history.pushState({}, '', url); // Update the URL without reloading the page
+  }
+
+  // Get all tab buttons
+  const tabButtons = document.querySelectorAll('.nav-link');
+
+  // Add event listener for each tab button
+  tabButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          const tabId = this.getAttribute('data-tab'); // Get the tab ID from data-tab attribute
+          updateURL(tabId); // Update the URL with the selected tab
+      });
+  });
+
+  // Optional: Load the correct tab based on URL (if user refreshes or navigates directly to a specific tab)
+  const params = new URLSearchParams(window.location.search);
+  const tabFromUrl = params.get('tab');
+  if (tabFromUrl) {
+      const targetTab = document.querySelector(`[data-tab="${tabFromUrl}"]`);
+      if (targetTab) {
+          new bootstrap.Tab(targetTab).show(); // Activate the tab programmatically
+      }
+  }
+});
+
 // translation 
 document.addEventListener("DOMContentLoaded", function() {
    // Check the dir attribute

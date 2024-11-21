@@ -4457,10 +4457,10 @@ a {
         }
     }
 
-    #featured-products,
-    #best-seller,
-    #new-arrival,
-    #our-products {
+    .featured-products,
+    .best-seller,
+    .new-arrival,
+    .our-products {
         .featured-products-banner {
             background-color: var(--secondary-color);
         }
@@ -4475,9 +4475,9 @@ a {
         }
     }
 
-    #sales-request,
-    #maintenance-request,
-    #our-products {
+    .sales-request,
+    .maintenance-request,
+    .our-products {
 
         .sales-request-banner,
         .our-products-banner {
