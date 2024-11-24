@@ -1914,6 +1914,9 @@ a {
 .offers:dir(ltr) .row {
   flex-direction: row-reverse;
 }
+.offers:dir(ltr) .btn-container {
+  justify-content: flex-start !important;
+}
 
 .our-products {
   padding: 150px 0 80px 0;
