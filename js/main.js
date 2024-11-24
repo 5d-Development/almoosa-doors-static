@@ -1,31 +1,22 @@
-// Get dropdown items and current language display
-const dropdownItems = document.querySelectorAll('.dropdown-item');
-const currentLanguageDisplay = document.getElementById('current-language');
-
-// Function to set language and update URL
+// Function to set the language and update the direction
 function setLanguage(lang) {
-    // Update language and direction
     if (lang === 'ar') {
         document.documentElement.lang = 'ar';
         document.documentElement.dir = 'rtl';
-        currentLanguageDisplay.textContent = 'AR';
+        document.querySelector('.dropdown-toggle').textContent = 'AR';
 
-        // Remove "/en" from the URL if it exists
-        const currentPath = window.location.pathname;
-        if (currentPath.endsWith('/en')) {
-            const newPath = currentPath.replace('/en', '');
-            window.history.replaceState(null, '', newPath);
-        }
+        // Remove "/en" from the URL
+        const newURL = window.location.pathname.replace('/en', '');
+        window.history.replaceState(null, '', newURL);
     } else if (lang === 'en') {
         document.documentElement.lang = 'en';
         document.documentElement.dir = 'ltr';
-        currentLanguageDisplay.textContent = 'EN';
+        document.querySelector('.dropdown-toggle').textContent = 'EN';
 
-        // Add "/en" to the URL if not already present
-        const currentPath = window.location.pathname;
-        if (!currentPath.endsWith('/en')) {
-            const newPath = `${currentPath}/en`;
-            window.history.replaceState(null, '', newPath);
+        // Add "/en" to the URL
+        if (!window.location.pathname.endsWith('/en')) {
+            const newURL = window.location.pathname + '/en';
+            window.history.replaceState(null, '', newURL);
         }
     }
 
@@ -33,18 +24,31 @@ function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
 }
 
-// Apply the saved language on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'ar';
-    setLanguage(savedLanguage);
-});
+// Function to initialize the language based on URL or saved preference
+function initializeLanguage() {
+    const currentPath = window.location.pathname;
+    const savedLanguage = localStorage.getItem('selectedLanguage');
 
-// Add event listeners to dropdown items
-dropdownItems.forEach((item) => {
-    item.addEventListener('click', (event) => {
-        event.preventDefault();
-        const selectedLanguage = item.getAttribute('data-lang');
-        setLanguage(selectedLanguage);
+    // If "/en" is in the URL, use English; otherwise, use Arabic
+    if (currentPath.endsWith('/en')) {
+        setLanguage('en');
+    } else if (savedLanguage) {
+        setLanguage(savedLanguage);
+    } else {
+        setLanguage('ar'); // Default to Arabic
+    }
+}
+
+// Event listener for dropdown items
+document.addEventListener('DOMContentLoaded', () => {
+    initializeLanguage();
+
+    document.querySelectorAll('.dropdown-item').forEach((item) => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+            const lang = item.getAttribute('data-lang');
+            setLanguage(lang);
+        });
     });
 });
 
