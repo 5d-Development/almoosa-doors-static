@@ -1,52 +1,49 @@
-// Function to set the language and update the direction
-function setLanguage(lang) {
-    if (lang === 'ar') {
-        document.documentElement.lang = 'ar';
-        document.documentElement.dir = 'rtl';
-        document.querySelector('.dropdown-toggle').textContent = 'AR';
+     const languageDropdown = document.querySelector('.language-dropdown');
 
- 
-        const newURL = window.location.pathname.replace('/en', '');
-        window.history.replaceState(null, '', newURL);
-    } else if (lang === 'en') {
-        document.documentElement.lang = 'en';
-        document.documentElement.dir = 'ltr';
-        document.querySelector('.dropdown-toggle').textContent = 'EN';
- 
-        if (!window.location.pathname.endsWith('/en')) {
-            const newURL = window.location.pathname + '/en';
-            window.history.replaceState(null, '', newURL);
+    // Add event listener to the language dropdown items
+    languageDropdown.addEventListener('click', function(event) {
+        const target = event.target;
+
+        if (target && target.classList.contains('dropdown-item')) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            // Get the selected language (AR or EN)
+            const lang = target.getAttribute('data-lang');
+
+            // Change the language display
+            document.getElementById('current-language').textContent = lang.toUpperCase();
+
+            // Get the current URL and split it into parts
+            const currentUrl = window.location.href;
+            const urlParts = currentUrl.split('/');
+            const lastSegment = urlParts[urlParts.length - 1];
+
+            // Remove '/en' if the selected language is 'ar'
+            if (lang === 'en' && lastSegment === 'en') {
+                urlParts.pop(); // Remove 'en'
+            }
+
+            // If the selected language is 'en', append '/en' to the URL
+            if (lang === 'en') {
+                urlParts.push('en'); // Append 'en' to the URL
+            }
+
+            // Construct the new URL and navigate to it
+            const newUrl = urlParts.join('/');
+
+            // Change the page direction and apply styles
+            if (lang === 'en') {
+                document.documentElement.dir = 'ltr';  // Set direction to LTR
+                document.documentElement.style.fontFamily = 'Arial, sans-serif'; // LTR styles (example)
+            } else {
+                document.documentElement.dir = 'rtl';  // Set direction to RTL
+                document.documentElement.style.fontFamily = 'Tahoma, sans-serif'; // RTL styles (example)
+            }
+
+            // Redirect to the new URL
+            window.location.href = newUrl;
         }
-    }
-
-     localStorage.setItem('selectedLanguage', lang);
-}
-
- function initializeLanguage() {
-    const currentPath = window.location.pathname;
-    const savedLanguage = localStorage.getItem('selectedLanguage');
- 
-    if (currentPath.endsWith('/en')) {
-        setLanguage('en');
-    } else if (savedLanguage) {
-        setLanguage(savedLanguage);
-    } else {
-        setLanguage('ar'); 
-    }
-}
- 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeLanguage();
-
-    document.querySelectorAll('.dropdown-item').forEach((item) => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-            const lang = item.getAttribute('data-lang');
-            setLanguage(lang);
-        });
     });
-});
-
 // our products tabs logic 
  
 document.addEventListener('DOMContentLoaded', function () {
