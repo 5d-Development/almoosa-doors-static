@@ -2377,6 +2377,8 @@ a {
             justify-content: flex-end;
         }
     }
+
+
 }
 
 .our-vision {
@@ -4771,6 +4773,12 @@ a {
         ;
 
 
+    }
+
+    &:dir(ltr) {
+        .row {
+            flex-direction: row-reverse;
+        }
     }
 }
 
