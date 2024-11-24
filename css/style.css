@@ -1386,6 +1386,9 @@ a {
   background-color: var(--secondary-color) !important;
   color: #fff;
 }
+.topbar .dropdown-menu:dir(rtl) {
+  transform: translate(-1.937rem, 2.75rem) !important;
+}
 .topbar .dropdown {
   background-color: transparent !important;
 }

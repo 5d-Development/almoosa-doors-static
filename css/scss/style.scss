@@ -244,6 +244,9 @@ a {
             }
         }
 
+        &:dir(rtl) {
+            transform: translate(-1.937rem, 2.75rem) !important
+        }
     }
 
     .dropdown {
@@ -968,6 +971,7 @@ a {
         @media (min-width:1500px) {
             padding-top: 360px;
         }
+
         @media (min-width:1500px) {
             padding-top: 400px;
         }

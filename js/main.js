@@ -1,3 +1,38 @@
+// Get dropdown items and current language display
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const currentLanguageDisplay = document.getElementById('current-language');
+
+// Function to set direction and language
+function setLanguage(lang) {
+    if (lang === 'ar') {
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+        currentLanguageDisplay.textContent = 'AR'; // Update the dropdown display
+    } else if (lang === 'en') {
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+        currentLanguageDisplay.textContent = 'EN'; // Update the dropdown display
+    }
+
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// On page load, apply the saved language and direction
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'ar'; // Default to 'ar'
+    setLanguage(savedLanguage); // Apply saved or default language
+});
+
+// Add click event listeners to dropdown items
+dropdownItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        const selectedLanguage = item.getAttribute('data-lang'); // Get the selected language
+        setLanguage(selectedLanguage); // Apply the selected language
+    });
+});
+
 // our products tabs logic 
  
 document.addEventListener('DOMContentLoaded', function () {
