@@ -110,24 +110,7 @@
     this.value = this.value.replace(/[^0-9]/g, '');
   });
 }); 
- document.addEventListener('DOMContentLoaded', function() {
-    const searchResults = document.getElementById('searchResults');
-    const results = JSON.parse(sessionStorage.getItem('searchResults')) || [];
-    console.log('Results on Search Page:', results); // Debugging line
-    if (results.length === 0) {
-        let noDataItem = document.createElement("div");
-        noDataItem.className = "result-item";
-        noDataItem.innerHTML = "<p>No data found</p>";
-        searchResults.appendChild(noDataItem);
-    } else {
-        results.forEach(result => {
-            let item = document.createElement("div");
-            item.className = "result-item";
-            item.innerHTML = `<h3 class="text-green">${result.title}</h3><p class="search-context">${result.context}</p><a href="${result.url}">${window.location.origin}/${result.url}</a>`;
-            searchResults.appendChild(item);
-        });
-    }
-});
+ 
  
 
 
