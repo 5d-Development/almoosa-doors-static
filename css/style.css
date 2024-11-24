@@ -1410,6 +1410,14 @@ a {
     padding: 0em 5.5em;
   }
 }
+.topbar:dir(ltr) .social {
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+}
+.topbar:dir(ltr) .topbar-info {
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important;
+}
 
 .navbar {
   position: fixed;
@@ -1864,7 +1872,7 @@ a {
 }
 @media (min-width: 1900px) {
   .offers .offers-layer:dir(ltr) {
-    top: 12%;
+    top: 22%;
     left: 5%;
   }
 }
@@ -1889,6 +1897,19 @@ a {
   .offers .container {
     padding: 0 24px !important;
   }
+}
+@media (min-width: 1500px) {
+  .offers:dir(ltr) {
+    padding-top: 360px;
+  }
+}
+@media (min-width: 1500px) {
+  .offers:dir(ltr) {
+    padding-top: 400px;
+  }
+}
+.offers:dir(ltr) .row {
+  flex-direction: row-reverse;
 }
 
 .our-products {
@@ -2040,6 +2061,9 @@ a {
   .our-products .container:dir(ltr) {
     padding: 0 24px;
   }
+}
+.our-products:dir(ltr) .title {
+  text-align: left !important;
 }
 
 .our-news .news-container {
@@ -2209,6 +2233,13 @@ a {
   .our-news .news-container .news-content .btn {
     font-size: 1.2rem;
   }
+}
+.our-news .news-container:dir(ltr) {
+  justify-content: flex-start !important;
+}
+.our-news .news-container:dir(ltr) .btn-container {
+  justify-content: flex-start !important;
+  padding-inline-start: 0 !important;
 }
 @media (max-width: 575px) {
   .our-news {
