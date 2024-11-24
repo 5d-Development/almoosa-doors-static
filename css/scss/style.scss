@@ -3107,6 +3107,7 @@ a {
                     font-size: 1.2rem;
                     font-weight: 600;
 
+
                     @media (max-width:575px) {
                         font-size: 1rem;
                     }
@@ -3124,6 +3125,7 @@ a {
                 &:dir(ltr) {
                     font-size: 1.2rem;
                     font-weight: 600;
+                    margin-inline-end: 1.5rem;
 
                     @media (max-width:575px) {
                         font-size: 1rem;
@@ -3184,6 +3186,7 @@ a {
             &:dir(ltr) {
                 font-size: 1.2rem;
                 font-weight: 600;
+
 
 
                 @media (max-width:575px) {
@@ -4846,6 +4849,7 @@ a {
             &:dir(ltr) {
                 text-align: left;
                 font-size: 1.2rem;
+
 
                 @media (max-width:575px) {
                     font-size: 1rem;

@@ -3692,6 +3692,7 @@ a {
 .contact-method .desc span:last-of-type:dir(ltr) {
   font-size: 1.2rem;
   font-weight: 600;
+  margin-inline-end: 1.5rem;
 }
 @media (max-width: 575px) {
   .contact-method .desc span:last-of-type:dir(ltr) {
