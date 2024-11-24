@@ -291,6 +291,14 @@ a {
         .topbar-info {
             flex-direction: row-reverse !important;
             justify-content: flex-start !important;
+
+            @media (max-width:575px) {
+                justify-content: center !important;
+            }
+        }
+
+        .phone {
+            margin: 0 10px;
         }
     }
 }
@@ -981,7 +989,7 @@ a {
         }
 
         .btn-container {
-            justify-content: flex-start!important;
+            justify-content: flex-start !important;
         }
     }
 }
@@ -1193,6 +1201,10 @@ a {
             min-height: 920px;
             text-align: center;
             width: 90%;
+
+            &:dir(ltr) {
+                margin: auto;
+            }
 
         }
 

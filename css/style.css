@@ -1421,6 +1421,14 @@ a {
   flex-direction: row-reverse !important;
   justify-content: flex-start !important;
 }
+@media (max-width: 575px) {
+  .topbar:dir(ltr) .topbar-info {
+    justify-content: center !important;
+  }
+}
+.topbar:dir(ltr) .phone {
+  margin: 0 10px;
+}
 
 .navbar {
   position: fixed;
@@ -2090,6 +2098,9 @@ a {
     min-height: 920px;
     text-align: center;
     width: 90%;
+  }
+  .our-news .news-container:dir(ltr) {
+    margin: auto;
   }
 }
 @media (min-width: 575px) {
