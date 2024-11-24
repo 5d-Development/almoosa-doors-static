@@ -5,41 +5,36 @@ function setLanguage(lang) {
         document.documentElement.dir = 'rtl';
         document.querySelector('.dropdown-toggle').textContent = 'AR';
 
-        // Remove "/en" from the URL
+ 
         const newURL = window.location.pathname.replace('/en', '');
         window.history.replaceState(null, '', newURL);
     } else if (lang === 'en') {
         document.documentElement.lang = 'en';
         document.documentElement.dir = 'ltr';
         document.querySelector('.dropdown-toggle').textContent = 'EN';
-
-        // Add "/en" to the URL
+ 
         if (!window.location.pathname.endsWith('/en')) {
             const newURL = window.location.pathname + '/en';
             window.history.replaceState(null, '', newURL);
         }
     }
 
-    // Save the selected language in localStorage
-    localStorage.setItem('selectedLanguage', lang);
+     localStorage.setItem('selectedLanguage', lang);
 }
 
-// Function to initialize the language based on URL or saved preference
-function initializeLanguage() {
+ function initializeLanguage() {
     const currentPath = window.location.pathname;
     const savedLanguage = localStorage.getItem('selectedLanguage');
-
-    // If "/en" is in the URL, use English; otherwise, use Arabic
+ 
     if (currentPath.endsWith('/en')) {
         setLanguage('en');
     } else if (savedLanguage) {
         setLanguage(savedLanguage);
     } else {
-        setLanguage('ar'); // Default to Arabic
+        setLanguage('ar'); 
     }
 }
-
-// Event listener for dropdown items
+ 
 document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
 
