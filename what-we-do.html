@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
       <link rel="stylesheet" href="css/libraries/all.css">
       <link rel="stylesheet" href="css/libraries/owl.carousel.min.css">
       <link rel="stylesheet" href="css/libraries/owl.theme.default.min.css">
@@ -574,13 +576,32 @@
       <script src="js/libraries/aos.js"></script>
       <script src="js/main.js"></script>
       <script>
-   window.addEventListener('load', () => {
-      AOS.init({
-  duration: 1000, // Animation duration in milliseconds
-  once: true,     // Ensures animation happens only once when scrolling down
-  offset: 120,    // Change offset (default is 120px)
-});
+ window.addEventListener('load', () => {
+  // Detect the current language from the <html> tag or set it manually
+  const language = document.documentElement.lang || 'en';
+
+  // Adjust AOS directions based on the language
+  document.querySelectorAll('[data-aos]').forEach((element) => {
+    const aosType = element.getAttribute('data-aos');
+
+    // Switch directions if in English
+    if (language === 'en') {
+      if (aosType === 'fade-right') {
+        element.setAttribute('data-aos', 'fade-left');
+      } else if (aosType === 'fade-left') {
+        element.setAttribute('data-aos', 'fade-right');
+      }
+    }
   });
+
+  // Initialize AOS with your settings
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: true,     // Ensures animation happens only once when scrolling down
+    offset: 120,    // Change offset (default is 120px)
+  });
+});
+
       </script>
    </body>
 </html>
