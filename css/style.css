@@ -2891,6 +2891,9 @@ a {
     font-size: 1.6rem;
   }
 }
+.about-mission:dir(ltr) .row {
+  flex-direction: row-reverse;
+}
 
 .about-banner .banner-container {
   min-height: 350px;
@@ -3006,6 +3009,11 @@ a {
     padding-inline-start: 0 !important;
   }
 }
+@media (min-width: 991px) {
+  .about-history .about-history-content:dir(ltr) .title {
+    text-align: left !important;
+  }
+}
 .about-history .overlay {
   top: 40%;
   width: 4%;
@@ -3021,6 +3029,13 @@ a {
     top: 27%;
     width: 6%;
   }
+}
+.about-history:dir(ltr) .row {
+  flex-direction: row-reverse;
+}
+.about-history:dir(ltr) .about-history-img-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 575px) {

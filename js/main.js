@@ -1,29 +1,50 @@
 // Get dropdown items and current language display
 const dropdownItems = document.querySelectorAll('.dropdown-item');
 const currentLanguageDisplay = document.getElementById('current-language');
+
+// Function to set language and update URL
 function setLanguage(lang) {
+    // Update language and direction
     if (lang === 'ar') {
         document.documentElement.lang = 'ar';
         document.documentElement.dir = 'rtl';
         currentLanguageDisplay.textContent = 'AR';
+
+        // Remove "/en" from the URL if it exists
+        const currentPath = window.location.pathname;
+        if (currentPath.endsWith('/en')) {
+            const newPath = currentPath.replace('/en', '');
+            window.history.replaceState(null, '', newPath);
+        }
     } else if (lang === 'en') {
         document.documentElement.lang = 'en';
         document.documentElement.dir = 'ltr';
-        currentLanguageDisplay.textContent = 'EN'; 
+        currentLanguageDisplay.textContent = 'EN';
+
+        // Add "/en" to the URL if not already present
+        const currentPath = window.location.pathname;
+        if (!currentPath.endsWith('/en')) {
+            const newPath = `${currentPath}/en`;
+            window.history.replaceState(null, '', newPath);
+        }
     }
 
+    // Save the selected language in localStorage
     localStorage.setItem('selectedLanguage', lang);
 }
+
+// Apply the saved language on page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'ar';
-    setLanguage(savedLanguage); 
+    setLanguage(savedLanguage);
 });
 
+// Add event listeners to dropdown items
 dropdownItems.forEach((item) => {
     item.addEventListener('click', (event) => {
         event.preventDefault();
         const selectedLanguage = item.getAttribute('data-lang');
-        setLanguage(selectedLanguage); 
+        setLanguage(selectedLanguage);
     });
 });
 

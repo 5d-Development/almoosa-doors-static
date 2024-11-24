@@ -2202,6 +2202,12 @@ a {
 
         }
     }
+
+    &:dir(ltr) {
+        .row {
+            flex-direction: row-reverse;
+        }
+    }
 }
 
 // about banner
@@ -2332,7 +2338,16 @@ a {
             @media (min-width:2000px) {
                 padding-inline-start: 0 !important;
             }
+
+            @media (min-width:991px) {
+
+                .title {
+                    text-align: left !important
+                }
+
+            }
         }
+
 
     }
 
@@ -2352,7 +2367,16 @@ a {
         }
     }
 
+    &:dir(ltr) {
+        .row {
+            flex-direction: row-reverse;
+        }
 
+        .about-history-img-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
 
 .our-vision {
