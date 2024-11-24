@@ -4557,23 +4557,23 @@ a {
 .our-new-projects .tab-content .all-tab-content .card .card-title:dir(ltr) {
   font-size: 1.2rem;
 }
-.our-new-projects #collaborate-with-us {
+.our-new-projects .collaborate-with-us {
   padding: 80px 0;
 }
 @media (max-width: 991px) {
-  .our-new-projects #collaborate-with-us {
+  .our-new-projects .collaborate-with-us {
     padding: 30px 0;
   }
 }
-.our-new-projects #collaborate-with-us .collaborate-with-us-form .title {
+.our-new-projects .collaborate-with-us .collaborate-with-us-form .title {
   font-size: 2.2rem;
 }
 @media (max-width: 575px) {
-  .our-new-projects #collaborate-with-us .collaborate-with-us-form .title {
+  .our-new-projects .collaborate-with-us .collaborate-with-us-form .title {
     font-size: 1.2rem;
   }
 }
-.our-new-projects #collaborate-with-us .collaborate-with-us-form .form-control {
+.our-new-projects .collaborate-with-us .collaborate-with-us-form .form-control {
   border: 0;
   border-radius: 0;
   border-bottom: 2px solid rgba(2, 79, 164, 0.7);
@@ -4584,31 +4584,31 @@ a {
   font-size: 1.25rem;
 }
 @media (max-width: 1700px) {
-  .our-new-projects #collaborate-with-us .collaborate-with-us-form .form-control {
+  .our-new-projects .collaborate-with-us .collaborate-with-us-form .form-control {
     margin-bottom: 3.5rem;
   }
 }
 @media (max-width: 991px) {
-  .our-new-projects #collaborate-with-us .collaborate-with-us-form .form-control {
+  .our-new-projects .collaborate-with-us .collaborate-with-us-form .form-control {
     width: 100%;
     margin-bottom: 2.5rem;
   }
 }
-.our-new-projects #collaborate-with-us .collaborate-with-us-form .form-control:focus {
+.our-new-projects .collaborate-with-us .collaborate-with-us-form .form-control:focus {
   box-shadow: none;
   color: rgba(2, 79, 164, 0.7);
 }
-.our-new-projects #collaborate-with-us .collaborate-with-us-form .form-control::placeholder {
+.our-new-projects .collaborate-with-us .collaborate-with-us-form .form-control::placeholder {
   color: rgba(2, 79, 164, 0.7);
   font-size: 1.25rem;
   font-weight: bold;
 }
 @media (max-width: 575px) {
-  .our-new-projects #collaborate-with-us .collaborate-with-us-form .form-control::placeholder {
+  .our-new-projects .collaborate-with-us .collaborate-with-us-form .form-control::placeholder {
     font-size: 1.2rem;
   }
 }
-.our-new-projects #collaborate-with-us .collaborate-with-us-form button[type=submit] {
+.our-new-projects .collaborate-with-us .collaborate-with-us-form button[type=submit] {
   font-size: 1.5rem;
   transition: 0.3s all ease;
   background-color: var(--main-color);
@@ -4621,11 +4621,11 @@ a {
   width: 90%;
 }
 @media (max-width: 991px) {
-  .our-new-projects #collaborate-with-us .collaborate-with-us-form button[type=submit] {
+  .our-new-projects .collaborate-with-us .collaborate-with-us-form button[type=submit] {
     width: 100%;
   }
 }
-.our-new-projects #collaborate-with-us .collaborate-with-us-form button[type=submit]:hover {
+.our-new-projects .collaborate-with-us .collaborate-with-us-form button[type=submit]:hover {
   background-color: var(--secondary-color);
 }
 .our-new-projects .project-criteria {
