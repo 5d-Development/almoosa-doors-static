@@ -2068,6 +2068,12 @@ a {
             @media (max-width:575px) {
                 font-size: 2rem;
             }
+
+            &:dir(ltr) {
+                @media (min-width:991px) {
+                    text-align: left !important;
+                }
+            }
         }
 
         .desc {
@@ -2119,7 +2125,7 @@ a {
         z-index: 99;
 
         &:dir(ltr) {
-            top: 30% !important;
+            top: 10% !important;
 
         }
 
@@ -2278,6 +2284,7 @@ a {
     .about-history-img {
         width: 70%;
         object-fit: contain;
+
     }
 
     .about-history-content {
@@ -2434,6 +2441,12 @@ a {
 
             @media (max-width:575px) {
                 font-size: 2rem;
+            }
+
+            &:dir(ltr) {
+                @media (min-width:991px) {
+                    text-align: left !important;
+                }
             }
         }
 
@@ -2599,6 +2612,12 @@ a {
             @media (max-width:575px) {
                 padding: 0 24px;
             }
+        }
+    }
+
+    &:dir(ltr) {
+        .row {
+            flex-direction: row-reverse;
         }
     }
 }

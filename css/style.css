@@ -2786,6 +2786,11 @@ a {
     font-size: 2rem;
   }
 }
+@media (min-width: 991px) {
+  .about-mission .about-mission-content .title:dir(ltr) {
+    text-align: left !important;
+  }
+}
 .about-mission .about-mission-content .desc {
   font-size: 1.5rem;
   text-align: justify;
@@ -2823,7 +2828,7 @@ a {
   z-index: 99;
 }
 .about-mission .about-mission-layer:dir(ltr) {
-  top: 30% !important;
+  top: 10% !important;
 }
 @media (max-width: 1730px) {
   .about-mission .about-mission-layer {
@@ -3081,6 +3086,11 @@ a {
     font-size: 2rem;
   }
 }
+@media (min-width: 991px) {
+  .our-vision .our-vision-content .title:dir(ltr) {
+    text-align: left !important;
+  }
+}
 .our-vision .our-vision-content .desc {
   font-size: 1.5rem;
   text-align: justify;
@@ -3237,6 +3247,9 @@ a {
   .our-vision.our-vision-en .container {
     padding: 0 24px;
   }
+}
+.our-vision:dir(ltr) .row {
+  flex-direction: row-reverse;
 }
 
 .our-goals {
