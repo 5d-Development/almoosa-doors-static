@@ -1250,6 +1250,11 @@ a {
                 font-size: 3rem;
                 color: #fff;
 
+                &:dir(ltr) {
+                    font-size: 2rem;
+                    font-weight: light;
+                }
+
 
 
                 @media (max-width:1400px) {
@@ -1298,6 +1303,12 @@ a {
                     color: #fff;
                     text-align: center;
                 }
+
+                &:dir(ltr) {
+                    padding-top: 2rem;
+                    padding-bottom: .5rem;
+                    font-weight: bold;
+                }
             }
 
             .second-desc {
@@ -1308,6 +1319,12 @@ a {
 
                 &:dir(ltr) {
                     text-align: left;
+                    margin: .5rem 0;
+                    font-size: 1rem;
+
+                    &:last-of-type {
+                        margin-top: 2rem;
+                    }
                 }
 
                 @media (max-width:1400px) {
@@ -1336,6 +1353,18 @@ a {
                 color: var(--secondary-color);
                 font-size: 1.5rem;
 
+                &:dir(ltr) {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+            }
+
+            .btn-container {
+
+                &:dir(ltr) {
+                    margin-top: 2.5rem !important;
+                }
             }
 
             .btn {
@@ -1361,6 +1390,10 @@ a {
                 }
             }
 
+            &:dir(ltr) {
+                left: 3rem;
+            }
+
         }
 
         &:dir(ltr) {
@@ -1369,6 +1402,19 @@ a {
             .btn-container {
                 justify-content: flex-start !important;
                 padding-inline-start: 0 !important;
+            }
+        }
+
+        &:dir(ltr) {
+            @media (max-width:991px) {
+                width: 90%;
+            }
+
+            @media (max-width: 575px) {
+
+                min-height: 1200px;
+
+
             }
         }
     }
@@ -1394,6 +1440,8 @@ a {
                 .date {
                     font-size: 1rem;
                     font-weight: 500;
+
+
                 }
 
                 .second-desc {
