@@ -1808,6 +1808,7 @@ a {
 }
 .offers .offers-content .title:dir(ltr) {
   font-weight: 450;
+  text-align: left !important;
 }
 .offers .offers-content .desc {
   font-size: 1.5rem;

@@ -857,7 +857,8 @@ a {
             }
 
             &:dir(ltr) {
-                font-weight: 450
+                font-weight: 450;
+                text-align: left !important;
             }
         }
 
