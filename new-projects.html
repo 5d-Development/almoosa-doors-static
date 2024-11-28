@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="ltr">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,15 +75,16 @@
                <div class="col-lg-7 ">
                   <div class="d-flex justify-content-center flex-wrap justify-content-lg-end  gap-sm-4 align-items-center">
                      <!-- language dropdown -->
-                     <div class="dropdown">
-                        <a class="btn text-white  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-chevron-down ms-2 cheveron"></i> AR 
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                           <li><a class="dropdown-item" href="#">AR</a></li>
-                           <li><a class="dropdown-item" href="#">EN</a></li>
-                        </ul>
-                     </div>
+                           <div class="dropdown language-dropdown ">
+    <a class="btn text-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-chevron-down ms-2 cheveron"></i> <span id="current-language">AR</span>
+    </a>
+    <ul class="dropdown-menu language-selector" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#" data-lang="ar">AR</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="en">EN</a></li>
+    </ul>
+</div>
+
                      <ul class="d-flex topbar-links ">
                         <li>
                            <a href="https://almoosadoorsuat.themagsmen.com/careers/careers.html" class="text-white">الوظائف</a>
@@ -276,7 +277,7 @@
  <div class="our-new-projects">
   <div class="container mt-lg-5">
     <!-- Tab Navigation -->
-    <ul class="nav nav-tabs our-projects-tabs" >
+    <ul class="nav nav-tabs " >
         <li class="nav-item" >
              <button class="nav-link active" data-bs-toggle="tab" data-bs-target=".all" type="button" aria-selected="true">الكل</button>
 

@@ -1,66 +1,70 @@
- const languageDropdown = document.querySelector('.language-dropdown');
 
-// add event listener to the language dropdown ar,en
-languageDropdown.addEventListener('click', function(event) {
+// Add event listener to the language dropdown items
+const languageDropdown = document.querySelector('.language-dropdown');
+
+// Add event listener to the language dropdown items
+languageDropdown.addEventListener('click', function (event) {
     const target = event.target;
 
     if (target && target.classList.contains('dropdown-item')) {
         event.preventDefault();
 
         const lang = target.getAttribute('data-lang');
+        const currentUrl = new URL(window.location.href);
 
-    
-        document.getElementById('current-language').textContent = lang.toUpperCase();
-
- 
-        const currentUrl = window.location.href;
-        const urlParts = currentUrl.split('/');
-        const lastSegment = urlParts[urlParts.length - 1];
-
-      
-        if (lang === 'ar' && (lastSegment === 'en' || lastSegment === '')) {
-            urlParts.pop();  
-        }
-
-        // logic for english language
-        if (lang !== 'ar') {
-            const newUrl = urlParts.join('/').replace(/\/$/, ''); // remove any trailing slash
-            if (!newUrl.endsWith(/${lang})) {
-                // append en if it's not already at the end
-                window.location.href = newUrl + '/' + lang;
-                return;
+        // Update language in the URL path
+        if (lang === 'ar') {
+            currentUrl.pathname = currentUrl.pathname.replace(/\/en\/?/, '/'); // Remove 'en'
+        } else {
+            if (!currentUrl.pathname.endsWith(`/${lang}`)) {
+                currentUrl.pathname = currentUrl.pathname.replace(/\/$/, '') + `/${lang}`; // Add 'en'
             }
         }
 
-        // if Arabic or not changed navigate to the constructed URL
-        const newUrl = urlParts.join('/');
-        window.location.href = newUrl;
+        // Navigate to the updated URL
+        window.location.href = currentUrl.toString();
     }
 });
 
- 
+
+// Set the text direction based on the URL
+// Set the text direction and language logic based on the URL
 function updateDirectionBasedOnURL() {
     const currentUrl = window.location.href;
-    if (currentUrl.endsWith('/en')) {
-        document.documentElement.dir = 'ltr';
+
+    // Check if the URL includes '/en' for English
+    if (currentUrl.includes('/en')) {
+        document.documentElement.dir = 'ltr'; // Set left-to-right
+        document.documentElement.lang = 'en'; // Set language to English
     } else {
-        document.documentElement.dir = 'rtl';
+        document.documentElement.dir = 'rtl'; // Set right-to-left
+        document.documentElement.lang = 'ar'; // Set language to Arabic
     }
 }
 
- 
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', function () {
+    updateDirectionBasedOnURL();
+});
+
+// Listen for changes in history to re-check direction
+window.addEventListener('popstate', updateDirectionBasedOnURL);
+
+
+// Call this function on page load
 document.addEventListener('DOMContentLoaded', function () {
     updateDirectionBasedOnURL();
 
- 
+    // Translation logic
     const isRTL = document.documentElement.getAttribute("dir") === "rtl";
 
-     document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
+    // Update text content based on language direction
+    document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
         element.textContent = isRTL ? element.getAttribute('data-ar') : element.getAttribute('data-en');
     });
 });
 
-// tab
+// Tab logic (unchanged)
 document.addEventListener('DOMContentLoaded', function () {
     function updateURL(tabId) {
         const url = new URL(window.location.href);
@@ -68,23 +72,41 @@ document.addEventListener('DOMContentLoaded', function () {
         window.history.pushState({}, '', url);
     }
 
-    const tabButtons = document.querySelectorAll('.nav-link');
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const tabId = this.getAttribute('data-tab');
-            updateURL(tabId);
-        });
+  const tabButtons = document.querySelectorAll('[data-bs-toggle="tab"]');
+
+// Add event listener for tab clicks
+tabButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const tabName = this.getAttribute('data-bs-target').replace('.', '');
+        const currentUrl = new URL(window.location.href);
+
+        // Update or add the 'tab' query parameter
+        currentUrl.searchParams.set('tab', tabName);
+
+        // Update the URL without refreshing the page
+        history.pushState(null, '', currentUrl.toString());
     });
+});
 
     const params = new URLSearchParams(window.location.search);
     const tabFromUrl = params.get('tab');
     if (tabFromUrl) {
-        const targetTab = document.querySelector([data-tab="${tabFromUrl}"]);
+        const targetTab = document.querySelector(`[data-tab="${tabFromUrl}"]`);
         if (targetTab) {
             new bootstrap.Tab(targetTab).show();
         }
     }
 });
+
+
+
+
+
+
+
+
+
+
 
 // customer support page 
 
@@ -116,10 +138,11 @@ document.addEventListener('DOMContentLoaded', function () {
 // our products tabs logic 
  
 document.addEventListener('DOMContentLoaded', function () {
+  // Function to update URL with tab query parameter
   function updateURL(tabId) {
       const url = new URL(window.location.href);
       url.searchParams.set('tab', tabId);
-      window.history.pushState({}, '', url); 
+      window.history.pushState({}, '', url); // Update the URL without reloading the page
   }
 
   // Get all tab buttons

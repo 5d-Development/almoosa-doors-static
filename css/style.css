@@ -5323,10 +5323,4 @@ a {
   padding-top: 3rem;
 }
 
-.our-projects-tabs li.nav-item:nth-of-type(4),
-.our-projects-tabs li.nav-item:nth-of-type(5),
-.our-projects-tabs li.nav-item:nth-of-type(6) {
-  display: none;
-}
-
 /*# sourceMappingURL=style.css.map */
