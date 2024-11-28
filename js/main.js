@@ -116,11 +116,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // our products tabs logic 
  
 document.addEventListener('DOMContentLoaded', function () {
-  // Function to update URL with tab query parameter
   function updateURL(tabId) {
       const url = new URL(window.location.href);
       url.searchParams.set('tab', tabId);
-      window.history.pushState({}, '', url); // Update the URL without reloading the page
+      window.history.pushState({}, '', url); 
   }
 
   // Get all tab buttons
