@@ -9,17 +9,17 @@ languageDropdown.addEventListener('click', function(event) {
 
         const lang = target.getAttribute('data-lang');
 
-        // update the current language display
+    
         document.getElementById('current-language').textContent = lang.toUpperCase();
 
-        // get the current URL and split it into parts
+ 
         const currentUrl = window.location.href;
         const urlParts = currentUrl.split('/');
         const lastSegment = urlParts[urlParts.length - 1];
 
-        // logic for Arabic (default) language
+      
         if (lang === 'ar' && (lastSegment === 'en' || lastSegment === '')) {
-            urlParts.pop(); // remove 'en' or trailing slash for Arabic
+            urlParts.pop();  
         }
 
         // logic for english language
@@ -38,7 +38,7 @@ languageDropdown.addEventListener('click', function(event) {
     }
 });
 
-// set the styling direction based on the URL
+ 
 function updateDirectionBasedOnURL() {
     const currentUrl = window.location.href;
     if (currentUrl.endsWith('/en')) {
@@ -48,15 +48,14 @@ function updateDirectionBasedOnURL() {
     }
 }
 
-// call function on page load
+ 
 document.addEventListener('DOMContentLoaded', function () {
     updateDirectionBasedOnURL();
 
-    // translation
+ 
     const isRTL = document.documentElement.getAttribute("dir") === "rtl";
 
-    // Update text content based on language direction
-    document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
+     document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
         element.textContent = isRTL ? element.getAttribute('data-ar') : element.getAttribute('data-en');
     });
 });
