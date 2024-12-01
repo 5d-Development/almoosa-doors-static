@@ -1,4 +1,16 @@
 
+// translate function for forms placeholders 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+
+
+    document.querySelectorAll('[data-ar][data-en]').forEach(function (element) {
+        const placeholderText = isRTL ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+        element.setAttribute('placeholder', placeholderText);
+    });
+});
+
 // Add event listener to the language dropdown items
 const languageDropdown = document.querySelector('.language-dropdown');
 
