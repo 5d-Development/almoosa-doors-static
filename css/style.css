@@ -4613,6 +4613,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding-top: 0;
 }
 .our-new-projects .tab-content .all-tab-content .card .card-body .card-body-heading {
   min-height: 88px;
