@@ -4265,6 +4265,7 @@ a {
                     color: #0250A3;
 
 
+
                     @media (max-width:991px) {
                         font-size: 1rem;
                         width: 90%;
@@ -4272,6 +4273,17 @@ a {
 
                     &:dir(ltr) {
                         font-size: 1.2rem;
+                    }
+                }
+
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    .card-body-heading {
+                        min-height: 88px;
                     }
                 }
             }
