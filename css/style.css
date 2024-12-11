@@ -5137,6 +5137,10 @@ a {
 .window-shutter:dir(ltr) .row {
   flex-direction: row-reverse;
 }
+.window-shutter .window-carousel img {
+  border-radius: 50px;
+  border: 20px solid #fff;
+}
 
 .products-offers {
   padding-top: 150px;

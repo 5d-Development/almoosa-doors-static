@@ -4870,6 +4870,13 @@ a {
             flex-direction: row-reverse;
         }
     }
+
+    .window-carousel {
+        img {
+            border-radius: 50px;
+            border: 20px solid #fff;
+        }
+    }
 }
 
 
