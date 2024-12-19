@@ -4595,6 +4595,13 @@ a {
 .our-new-projects .tab-content .all-tab-content .card {
   border: 0;
 }
+.our-new-projects .tab-content .all-tab-content .card .card-img-container {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.our-new-projects .tab-content .all-tab-content .card .card-img-container img {
+  max-width: 100%;
+}
 .our-new-projects .tab-content .all-tab-content .card .card-title {
   font-size: 1.7rem;
   color: #0250A3;

@@ -4259,6 +4259,13 @@ a {
         .all-tab-content {
             .card {
                 border: 0;
+            .card-img-container{
+                overflow: hidden;
+                border-radius: 20px;
+                img{
+                    max-width: 100%;
+                }
+            }
 
                 .card-title {
                     font-size: 1.7rem;
