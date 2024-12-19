@@ -2,13 +2,19 @@
 // translate function for forms placeholders 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+  const isRTL = document.documentElement.getAttribute("dir") === "rtl";
 
+  document.querySelectorAll('[data-ar][data-en]').forEach(function (element) {
+      const placeholderText = isRTL ? element.getAttribute('data-ar') : element.getAttribute('data-en');
 
-    document.querySelectorAll('[data-ar][data-en]').forEach(function (element) {
-        const placeholderText = isRTL ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-        element.setAttribute('placeholder', placeholderText);
-    });
+      // Check if it's an input element and set the placeholder
+      if (element.tagName.toLowerCase() === 'input') {
+          element.setAttribute('placeholder', placeholderText);
+      } else if (element.tagName.toLowerCase() === 'button') {
+          // For button elements, update the text content
+          element.textContent = placeholderText;
+      }
+  });
 });
 
 // Add event listener to the language dropdown items
